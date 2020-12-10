@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html >
+<head>
+<style>
+*{
+margin:0;
+padding:0;
+
+}
+header{
+width:100%;
+height:100px;
+display:flex;
+justify-content:space-between;
+align-items: center;
+background-color: black;
+background-image: none;
+}
+.div1{
+text-transform: uppercase;
+color:white;
+text-shadow: 2px 2px 2px violet;
+width:25%;
+text-align: center;
+font-size: 26px;
+}
+.div2{
+    display:flex;
+    justify-content: space-between;
+    margin:50px;
+    text-decoration: none;
+}
+a{
+padding:20px;
+text-decoration: none;
+color:white;
+font-weight: bold;
+background-image: none;
+}
+.perimg{
+height:100px;
+width:auto;
+}
+div ul li{
+list-style: none;
+position: relative;
+}
+div ul li ul{
+    display:none;
+    position:absolute;
+    background-color:black;
+    border-radius: 0px 0px 4px 4px;
+    border:2px solid darkgray;
+}
+
+div ul li:hover ul{
+display:block;
+}
+
+div ul li ul li{
+padding-top:14px;
+}
+</style>
+    <meta charset="UTF-8">
+</head>
+<body>
+<header>
+<div class="div1">BPAK</div>
+<div>
+    <img src="logo.png" alt="" class="perimg">
+</div>
+<div class="div2">
+<div>
+<a href="">Home</a>
+</div>
+<div>
+    <a href="">Sign up</a>
+    </div>
+    <div>
+        <a href="">Contacts</a>
+        </div>
+        <div>
+            <a href="">Gallery</a>
+            </div>
+    
+    <ul>
+<li>
+    <a href="#">Qytetet</a>
+    <ul>
+        <li><a href="#" >Prishtine</a></li>
+        <li><a href="">Vushtrri</a></li>
+        <li><a href="">Mitrovice</a></li>
+    </ul>
+</li>
+    </ul>
+</div>
+</header>
+</body>
+</html>
