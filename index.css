@@ -1,0 +1,24 @@
+.first {
+    background-color: rgb(228, 228, 228);
+    height: 650px;
+    width:1300px;
+    float: right;
+}
+.tekst 
+{
+    padding-right: 100px;
+}
+
+p.tekst {
+    position: fixed;
+    top:270px;
+    right:640px;
+
+}
+
+h1.teksti {
+    position: fixed;
+    top:170px;
+    right:700px;
+
+}
