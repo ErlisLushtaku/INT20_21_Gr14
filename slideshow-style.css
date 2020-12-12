@@ -106,6 +106,7 @@ body {
 
 .slide h1 {
     color: white;
+    text-shadow: 0px 0px 20px black;
     position: absolute;
     width: 100%;
     margin-top: -266px;
@@ -116,6 +117,7 @@ body {
 .slide p {
     color: white;
     font-size: 18px;
+    text-shadow: 0px 0px 20px black;
     position: absolute;
     width: 100%;
     margin-top: -230px;
