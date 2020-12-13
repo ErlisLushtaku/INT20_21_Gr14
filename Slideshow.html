@@ -5,7 +5,33 @@
     <meta charset="utf-8">
     <title>Image Slider</title>
     <link rel="stylesheet" href="slideshow-style.css">
+     <link rel="stylesheet" href="homepage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .containeri {
+          background-color: rgb(228,228,228);
+          width: 85%;
+          height: 620px;
+          float:right;
+          margin-top: 20px;
+          /* padding-top:100px ; */
+          /* padding-left: 150px; */
+         
+         
+         
+      }
+    .gridContainer {
+          display: grid;
+          grid-template-columns: repeat(6,1fr) ;
+          grid-auto-rows: minmax(400px,auto); 
+          align-items: center;
+          column-gap: 2em;
+      }
+    #foto1 {
+        width: 320px;
+        height: 400px;
+    }
+</style>
 </head>
 
 <body>
@@ -102,6 +128,30 @@
             }
         }, 5000);
     </script>
+    <div class="containeri">
+        <div class="gridContainer">
+            <!-- <div> -->
+            <p class="teksti"><h1>HELLO WORLD</h1> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Officiis dolor nulla rem tempore iusto obcaecati alias natus
+                porro minus itaque, ipsum aliquid. Adipisci nobis blanditiis
+                 tempora enim debitis aperiam, maxime atque pariatur voluptatem 
+                 repellendus corrupti est quisquam laborum inventore veniam.
+              .</p>
+            <!-- </div> -->
+            
+            <!-- <div> -->
+            <svg width="400" height="500" id="SVG" >
+                <rect width="360" height="400" fill="none" stroke="rgb(135, 141, 141)" stroke-width="3"></rect>
+            </svg>
+            <!-- </div> -->
+           
+            <!-- <div id="foto"> -->
+            <img src="foto1.jpg" id="foto1"> 
+            <!-- </div> -->
+            
+        </div>
+    </div>
+<footer>
      <p class="footerii">
         The Clearing provides forward-looking strategic consulting services 
         to increase organizational effectiveness, growth, and innovation.
@@ -161,7 +211,7 @@
           </ul>
         </div>
       </div>
-
+    </footer>
 </body>
 
 </html>
