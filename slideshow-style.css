@@ -403,3 +403,55 @@ background-color:#33353d
 {
   background-color:red;
 }
+.parent {
+  height: 80vh;
+  border-left: 130px solid white;
+  border-right: 20px solid white;
+  border-top: 40px solid white;
+  border-bottom: 20px solid white;
+  background: rgb(228, 228, 228);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  
+}
+
+.child1 {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -20px;
+  margin-left: 150px;
+  z-index: 5;
+}
+.child1 p {
+  margin:20px 0;
+ 
+}
+.child1 a{
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px 30px;
+  display: inline-block;
+  letter-spacing: 2px;
+}
+.child2 {
+  width: 350px;
+  height: 450px;
+  margin-left: -120px;
+  /* background: crimson; */
+  z-index: 1;
+}
+.child3 {
+  width: 330px;
+  height: 430px;
+  background:url(images/foto1.jpg) no-repeat center/cover ; 
+  z-index: 2;
+  margin-left: -160px;
+  margin-top:-130px;
+}
