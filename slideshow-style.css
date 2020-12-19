@@ -435,16 +435,18 @@ background-color:#33353d
   text-decoration: none;
   text-transform: uppercase;
   border: 2px solid black;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 10px 30px;
   display: inline-block;
   letter-spacing: 2px;
+  color:black;
+  text-shadow: -2px 0px 2px rgb(129, 129, 129);
 }
 .child2 {
   width: 350px;
   height: 450px;
   margin-left: -120px;
-  /* background: crimson; */
+  margin-top:40px;
   z-index: 1;
 }
 .child3 {
@@ -453,5 +455,5 @@ background-color:#33353d
   background:url(images/foto1.jpg) no-repeat center/cover ; 
   z-index: 2;
   margin-left: -160px;
-  margin-top:-130px;
+  margin-top:-110px;
 }
