@@ -77,7 +77,7 @@ section
     align-items: center;
     padding: 100px;
     box-sizing: border-box;
-    background: linear-gradient(180deg,#3a3a3a,#BEBEBE,#e4e1e1), url(kosovo1.png);
+    background: linear-gradient(180deg,#3a3a3a,#BEBEBE,#e4e1e1), url(images/kosovo1.png);
     background-blend-mode: screen;
     background-repeat: no-repeat;
     background-size: 100%;
