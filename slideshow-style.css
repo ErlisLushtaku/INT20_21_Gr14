@@ -20,10 +20,10 @@ header {
 .div1 {
     text-transform: uppercase;
     color: white;
-    text-shadow: 2px 2px 2px violet;
+    text-shadow: 2px 2px 2px rgb(49, 49, 49);
     width: 25%;
     text-align: center;
-    font-size: 26px;
+    font-size: 40px;
     z-index: 5000;
 }
 
@@ -38,9 +38,11 @@ header {
 a {
     padding: 20px;
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     background-image: none;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px rgb(49, 49, 49);
     z-index: 5000;
 }
 
@@ -59,9 +61,9 @@ div ul li {
 div ul li ul {
     display: none;
     position: absolute;
-    background-color: black;
+    background-color:  transparent;
     border-radius: 0px 0px 4px 4px;
-    border: 2px solid darkgray;
+    /* border: 2px solid darkgray; */
     z-index: 5000;
 }
 
