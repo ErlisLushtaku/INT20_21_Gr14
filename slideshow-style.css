@@ -14,6 +14,7 @@ header {
     align-items: center;
     background-color: transparent;
     background-image: none;
+    z-index: 5000;
 }
 
 .div1 {
@@ -23,6 +24,7 @@ header {
     width: 25%;
     text-align: center;
     font-size: 26px;
+    z-index: 5000;
 }
 
 .div2 {
@@ -30,6 +32,7 @@ header {
     justify-content: space-between;
     margin: 50px;
     text-decoration: none;
+    z-index: 5000;
 }
 
 a {
@@ -38,16 +41,19 @@ a {
     color: white;
     font-weight: bold;
     background-image: none;
+    z-index: 5000;
 }
 
 .perimg {
     height: 100px;
     width: auto;
+    z-index: 5000;
 }
 
 div ul li {
     list-style: none;
     position: relative;
+    z-index: 5000;
 }
 
 div ul li ul {
@@ -56,14 +62,17 @@ div ul li ul {
     background-color: black;
     border-radius: 0px 0px 4px 4px;
     border: 2px solid darkgray;
+    z-index: 5000;
 }
 
 div ul li:hover ul {
     display: block;
+    z-index: 5000;
 }
 
 div ul li ul li {
     padding-top: 14px;
+    z-index: 5000;
 }
 
 body {
