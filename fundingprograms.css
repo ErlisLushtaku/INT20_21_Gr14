@@ -113,7 +113,13 @@ margin:20px;
 box-sizing:border-box;
 overflow: hidden;
 text-align:center;
+transition: 1s;
 
+}
+.conteiner .box:hover{
+  transform: scale(1.2);
+    box-shadow: 2px 2px 2px #000;
+    z-index: 2;
 }
 .conteiner .box .icon{
 position: relative;
