@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="contact2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+    <title>Document</title>
+</head>
+<body>
+   <div><span>CONTACT US</span></div>
+<div>
+<table>
+<tr>
+<td colspan="3" style="font-family:'Lobster',cursive;font-size:22px;">Get in touch with us!</td>
+</tr>
+<tr>
+<td style="border-right:3px solid #C56F5D"><i class="fas fa-phone"></i><br/>Phone<br/>
+<p>Phone:+38344111222</p>
+<p>Second:+38345121212</p>
+</td>
+<td style="border-right:3px solid #C56F5D"><i class="fas fa-map-marker-alt"></i><br/>Adress<br/>
+<p>Rr.Pejton,Prishtine afer Katedrales</p>
+</td>
+<td><i class="far fa-envelope"></i><br/>Email<br/>
+<p>BPAK@gmail.com</p>
+<p>contactbusiness@gmail.com</p>
+</td>
+</tr>
+</table>
+</div>
+<h3>IF YOU GOT ANY QUESTIONS<br/>PLEASE DO NOT HESITATE TO SEND US A MESSAGE.</h3>
+
+<form>
+    <input type="text" name="name" class="text-box"  placeholder="Your Name" required>
+    <input type="email" name="email" class="text-box" placeholder="Email" required>
+    <input type="text" name="subject" class="text-box" placeholder="Subject" required><br/>
+    <textarea name="komente" placeholder="Comments"></textarea>
+    <input type="submit" name="submit" value="Send message">
+</form>
+<p id="perconnect">Connect with us!</p>
+<div class="divalign">
+    <p class="fab fa-facebook-square"></p>
+    <p class="fab fa-twitter-square"></p>
+    <p class="fab fa-instagram-square"></p>
+    <p class="fab fa-pinterest-square"></p>
+</div>
+
+</body>
+</html>
