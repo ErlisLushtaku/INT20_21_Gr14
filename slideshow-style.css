@@ -228,7 +228,7 @@ body {
     filter: opacity(0.7) blur(90%) grayscale(80%);
     color:white;
     text-align:center;
-    font-family:rajdhani;
+    /* font-family:rajdhani; */
     white-space: pre-wrap;
     font-size:25px;
     display:inline-block;
