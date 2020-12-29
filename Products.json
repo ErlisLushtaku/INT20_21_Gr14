@@ -1,0 +1,18 @@
+{
+    "products": [
+      {
+        "title": "Men Casual Shoe",
+        "price": "2000.99",
+        "image": "./images/pic1.png",
+        "category": "featured",
+        "city":  "Prishtina"
+      },
+      {
+        "title": "Men Casual Shoe",
+        "price": "2000.99",
+        "image": "./images/pic2.png",
+        "category": "trend",
+        "city": "Prishtina"
+      }
+    ]
+  }
