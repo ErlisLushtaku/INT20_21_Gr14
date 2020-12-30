@@ -252,6 +252,7 @@ h3:hover span {
     overflow: hidden;
     z-index: 4000;
     font-size: 20px;
+    transition-duration: 1s;
 }
 h3 span:nth-child(even){
     overflow: hidden;
