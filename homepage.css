@@ -101,14 +101,15 @@ div ul li ul li {
     background-blend-mode: screen;
     background-repeat: no-repeat;
     background-size: 100%;
-    margin-top: -80px;
+    /* margin-top: -80px; */
 }
 .wave {
     position: absolute;
     bottom: 0;
     left: 0;
+    margin-bottom:-70px;
 }
-/* @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
 
 :root {
   --level-1:translateZ(3rem);
@@ -128,15 +129,15 @@ div ul li ul li {
 }
 body {
   height: 100vh;
-  display: flex;
-  place-items: center;
+  /* display: flex;
+  place-items: center; */
   /* font-family: 'Rajdhani', sans-serif; */
 }
 .karta {
   width: 400px;   
   z-index: 1000;
-  margin-left:210px;
-  margin-top: 140px;
+  margin-left:170px;
+  
 }
 .permbajtja_para {
   text-align: center;
@@ -224,7 +225,7 @@ align-content: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;  
+    /* min-height: 100vh;   */
 }
 .logo h3 {
     margin:0;
@@ -241,7 +242,7 @@ h3 span {
     display: inline-flex;
     color:#d88e2c;
     overflow: hidden;
-    font-size: 40px;
+    font-size: 30px;
 }
 h3:hover span {
     display: inline-flex;
@@ -290,19 +291,21 @@ h3:hover span:nth-child(6){
 }
 .header-text {
   /* border:1px #ccc solid; */
-  width: 400px;
+  width: 560px;
   height: 70px;
   margin:100px;
   margin-top:450px;
   margin-right: 50px;
   border:2px #e6b97e solid;
   border-radius: 20px;
+  box-shadow: 5px -2px 5px #aaaaaa;
   text-align: center;
   font-size: 30px;
   padding:15px;
   background-color: #e6b97e;
   color:#333;
   font-weight: bold;
+  z-index: 5000;
 }
 .header-text .teksti {
   text-shadow:#333;
@@ -310,7 +313,7 @@ h3:hover span:nth-child(6){
 /* .begin .karta {
       position:absolute;
 } */
-.custom-shape-divider-bottom-1609280952 {
+/* .custom-shape-divider-bottom-1609280952 {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -328,4 +331,70 @@ h3:hover span:nth-child(6){
 
 .custom-shape-divider-bottom-1609280952 .shape-fill {
   fill: #fff;
+} */
+.section2 {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-gap:1em;
+  margin-top:-50px;
+}
+.hyrja {
+  position: relative;
+  width:460px;
+  height:200px;
+  background: rgb(212, 211, 211);
+  color: #333;
+  font-size:18px;
+  padding:28px;
+  padding-top: 17px;
+  margin-left:720px;
+  margin-top:120px;
+  text-align: center;
+  border-radius: 2px;
+  z-index:3000;
+}
+.hyrja:hover{
+border:5px rgb(202, 173, 134) dotted;
+}
+.vertical-line {
+  
+  height:300px;
+  position:absolute;
+  margin-left:380px;
+  margin-top:15px;
+  border-radius: 0.5px;
+  /* top:0; */
+}
+
+.bpa-svg{
+  margin-top:10px;
+  margin-left:100px;
+}
+.b {
+  font-size:100px;
+  font-family: 'Rajdhani', sans-serif;
+  background: #333;
+  color:#d88e2c;
+  
+}
+.pa {
+  font-size:100px;
+  font-family: 'Rajdhani', sans-serif;
+  background: #333;
+  color:#fff;
+  border-bottom:20px solid #d88e2c;
+}
+.bpa {
+  margin-left:20px;
+  margin-top:130px;
+}
+.bpa-svg2 {
+  position: absolute;
+  margin-left:780px;
+  margin-top:100px;
+}
+.section3 {
+  height:1000px;
+  background:#ebebeb;
+  margin-top:5px;
 }
