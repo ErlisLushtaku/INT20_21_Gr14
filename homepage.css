@@ -395,7 +395,119 @@ border:5px rgb(202, 173, 134) dotted;
   margin-top:100px;
 }
 .section3 {
-  height:1000px;
+  /* height:1000px; */
   background:#ebebeb;
   margin-top:5px;
+}
+.card {
+  padding: 2rem;
+  color: #333;
+  text-align: left;
+  margin-top:-220px;
+  margin-left:210px;
+}
+
+.card__title {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.card__title::after {
+  content: "";
+  position: absolute;
+  top: -0.25rem;
+  left: -2rem;
+  bottom: -0.25rem;
+  width: calc(100% + 4rem);
+  background: #d88e2c;
+  z-index: -1;
+  -webkit-transform: scaleX(0.075);
+          transform: scaleX(0.075);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  transition: -webkit-transform 250ms ease-in;
+  transition: transform 250ms ease-in;
+  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+}
+
+.card:hover .card__title::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.card__body {
+  position: relative;
+  z-index: 1;
+  color: transparent;
+  margin: 0;
+  transition: color 150ms 350ms;
+}
+
+.card__body::after {
+  content: "";
+  position: absolute;
+  top: -0.75rem;
+  bottom: -0.75rem;
+  left: -0.75em;
+  right: -0.75em;
+  background: white;
+  z-index: -1;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  transition: -webkit-transform 250ms ease-in 250ms;
+  transition: transform 250ms ease-in 250ms;
+  transition: transform 250ms ease-in 250ms, -webkit-transform 250ms ease-in 250ms;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.card:hover .card__body {
+  color: #333;
+}
+
+.card:hover .card__body::after {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.content {
+  background: transparent;
+  width: 70vw;
+  padding: 3em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.title {
+  margin: 0 0 0.5em;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 3rem;
+  color: #d88e2c;
+  line-height: 0.8;
+}
+.space {
+  height:120px;
+}
+.title-line {
+  margin:100px auto;
+  margin-left:150px;
+  margin-top:50px;
+  font-size:40px;
+  /* text-align:left; */
+  position: relative;
+}
+.title-line:before {
+  content: "";
+  display: block;
+  width:170px;
+  height:4px;
+  background:#333;
+  position:absolute;
+  top:50%;
+  margin-left:-220px;
+ 
 }
