@@ -186,3 +186,30 @@ background:rgb(63, 61, 61);
   font-style:italic;
   
 }
+.container{
+  margin-top:0;
+  max-width:100%;
+margin:0 auto;
+background:rgb(196, 190, 190);
+font-size:24px;
+padding: 10px;
+}
+.parallax{
+  box-shadow:0 20px 30px rgb(0,0,0,.7);
+  background:url(images/galaxy.jpg);
+  background-repeat: no-repeat;
+  background-position:center ;
+  background-size:cover;
+  background-attachment: fixed;
+  height:150px;
+  width:100%;
+
+  
+
+}
+.image-container{
+  margin-top:100px;
+  align-items:center;
+  display:flex;
+  justify-content:center;
+}
