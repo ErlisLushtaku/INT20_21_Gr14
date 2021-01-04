@@ -38,7 +38,7 @@ header {
     z-index: 5000;
 }
 
-a {
+header a {
     padding: 20px;
     text-decoration: none;
     /* color:  #d88e2c; */
@@ -101,14 +101,15 @@ div ul li ul li {
     background-blend-mode: screen;
     background-repeat: no-repeat;
     background-size: 100%;
-    margin-top: -80px;
+    /* margin-top: -80px; */
 }
 .wave {
     position: absolute;
     bottom: 0;
     left: 0;
+    margin-bottom:-70px;
 }
-/* @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
 
 :root {
   --level-1:translateZ(3rem);
@@ -128,15 +129,15 @@ div ul li ul li {
 }
 body {
   height: 100vh;
-  display: flex;
-  place-items: center;
+  /* display: flex;
+  place-items: center; */
   /* font-family: 'Rajdhani', sans-serif; */
 }
 .karta {
   width: 400px;   
   z-index: 1000;
-  margin-left:210px;
-  margin-top: 140px;
+  margin-left:170px;
+  
 }
 .permbajtja_para {
   text-align: center;
@@ -224,7 +225,7 @@ align-content: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;  
+    /* min-height: 100vh;   */
 }
 .logo h3 {
     margin:0;
@@ -241,7 +242,7 @@ h3 span {
     display: inline-flex;
     color:#d88e2c;
     overflow: hidden;
-    font-size: 40px;
+    font-size: 30px;
 }
 h3:hover span {
     display: inline-flex;
@@ -251,6 +252,7 @@ h3:hover span {
     overflow: hidden;
     z-index: 4000;
     font-size: 20px;
+    transition-duration: 1s;
 }
 h3 span:nth-child(even){
     overflow: hidden;
@@ -264,18 +266,6 @@ h3:hover span:nth-child(even){
     letter-spacing: 0;
     background-color:  #333;
 }
-/* h3:hover span:nth-child(2){
-    
-    transition-delay:0s ;
-}
-h3:hover span:nth-child(4){
-    
-    transition-delay:0s ;
-}
-h3:hover span:nth-child(6){
-    
-    transition-delay:0s ;
-} */
 .begin {
   display: flex;
   justify-content: space-between;
@@ -290,42 +280,314 @@ h3:hover span:nth-child(6){
 }
 .header-text {
   /* border:1px #ccc solid; */
-  width: 400px;
+  width: 560px;
   height: 70px;
   margin:100px;
   margin-top:450px;
   margin-right: 50px;
   border:2px #e6b97e solid;
   border-radius: 20px;
+  box-shadow: 5px -2px 5px #aaaaaa;
   text-align: center;
   font-size: 30px;
   padding:15px;
   background-color: #e6b97e;
   color:#333;
   font-weight: bold;
+  z-index: 5000;
 }
 .header-text .teksti {
   text-shadow:#333;
 }
-/* .begin .karta {
-      position:absolute;
-} */
-.custom-shape-divider-bottom-1609280952 {
+.section2 {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-gap:1em;
+  margin-top:-50px;
+}
+.hyrja {
+  position: relative;
+  width:460px;
+  height:200px;
+  background: rgb(212, 211, 211);
+  color: #333;
+  font-size:18px;
+  padding:28px;
+  padding-top: 17px;
+  margin-left:720px;
+  margin-top:120px;
+  text-align: center;
+  border-radius: 2px;
+  z-index:3000;
+}
+.hyrja-scroll{
+  opacity: 0;
+  transform:translateY(5px);
+  transition:all 0.5s ease-out;
+}
+.hyrja-scroll.show {
+  opacity: 1;
+  transform:translateY(0);
+}
+
+.hyrja:hover{
+border:5px rgb(202, 173, 134) dotted;
+}
+.vertical-line {
+  
+  height:300px;
+  position:absolute;
+  margin-left:380px;
+  margin-top:15px;
+  border-radius: 0.5px;
+  /* top:0; */
+}
+
+.bpa-svg{
+  margin-top:10px;
+  margin-left:100px;
+}
+.b {
+  font-size:100px;
+  font-family: 'Rajdhani', sans-serif;
+  background: #333;
+  color:#d88e2c;
+  
+}
+.pa {
+  font-size:100px;
+  font-family: 'Rajdhani', sans-serif;
+  background: #333;
+  color:#fff;
+  border-bottom:20px solid #d88e2c;
+}
+.bpa {
+  margin-left:20px;
+  margin-top:130px;
+}
+.bpa-svg2 {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  margin-left:780px;
+  margin-top:100px;
+}
+.section3 {
+  height:700px;
+  background:#ebebeb;
+  margin-top:5px;
+}
+.card {
+  padding: 2rem;
+  color: #333;
+  text-align: left;
+  margin-top:-220px;
+  margin-left:210px;
+}
+
+.card__title {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.card__title::after {
+  content: "";
+  position: absolute;
+  top: -0.25rem;
+  left: -2rem;
+  bottom: -0.25rem;
+  width: calc(100% + 4rem);
+  background: #d88e2c;
+  z-index: -1;
+  -webkit-transform: scaleX(0.075);
+          transform: scaleX(0.075);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  transition: -webkit-transform 250ms ease-in;
+  transition: transform 250ms ease-in;
+  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+}
+
+.card:hover .card__title::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.card__body {
+  position: relative;
+  z-index: 1;
+  color: transparent;
+  margin: 0;
+  transition: color 150ms 350ms;
+}
+
+.card__body::after {
+  content: "";
+  position: absolute;
+  top: -0.75rem;
+  bottom: -0.75rem;
+  left: -0.75em;
+  right: -0.75em;
+  background: white;
+  z-index: -1;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  transition: -webkit-transform 250ms ease-in 250ms;
+  transition: transform 250ms ease-in 250ms;
+  transition: transform 250ms ease-in 250ms, -webkit-transform 250ms ease-in 250ms;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.card:hover .card__body {
+  color: #333;
+}
+
+.card:hover .card__body::after {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.content {
+  background: transparent;
+  width: 70vw;
+  padding: 3em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.title {
+  margin: 0 0 0.5em;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 3rem;
+  color: #d88e2c;
+  line-height: 0.8;
+}
+/* .space {
+  height:120px;
+}
+.title-line {
+  margin:100px auto;
+  margin-left:150px;
+  margin-top:50px;
+  font-size:40px; */
+  /* text-align:left; */
+  /* position: relative;
+}
+.title-line:before {
+  content: "";
+  display: block;
+  width:170px;
+  height:4px;
+  background:#333;
+  position:absolute;
+  top:50%;
+  margin-left:-220px;
+ 
+} */
+.space {
+  height:200px;
+}
+.title-line ul li {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 30px;
+}
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 1em;
+}
+.main-foto1{
+  width: 320px;
+  height: 350px;
+  margin-top:-38px;
+  /* margin-left: -70px; */
+  /* margin-right:0px; */
+}
+.main-space{
+  height: 130px;
+}
+.main-foto2 {
+  width: 300px;
+  height: 350px;
+}
+.table-space{
+  width:100px;
+}
+.prov {
+  width: 750px;
+  
+  background-color: #d88e2c;
+  color:#333;
+  margin-bottom:-50px;
+}
+.prov1{
+  width: 750px;
+  background-color: #333;
+  color:#e6b97e;
+  margin-left:-250px;
+  margin-bottom:-100px;
+}
+.b-title{
+  margin-left:30px;
+}
+.b-text {
+  margin-left:60px;
+  font-size: 15px;
+}
+.svg3 {
+  height:480px;
+}
+.custom-shape-divider-bottom-1609581463 {
+  position: relative;
+  margin-top:-350px;
+  margin-left:-300px;
+  width: 1529px;
   overflow: hidden;
   line-height: 0;
 }
 
-.custom-shape-divider-bottom-1609280952 svg {
+.custom-shape-divider-bottom-1609581463 svg {
   position: relative;
   display: block;
-  width: calc(300% + 1.3px);
-  height: 200px;
+  width: calc(300% + 1.3px); /* e largon at detajin */
+  height: 617px;
 }
 
-.custom-shape-divider-bottom-1609280952 .shape-fill {
-  fill: #fff;
+.custom-shape-divider-bottom-1609581463 .shape-fill {
+  fill: #ebebeb;
+}
+.video1{
+  margin-left:60px;
+  margin-top:-200px;
+  z-index: 4000;
+}
+.video-text {
+  height: 470px;
+  width: 400px;
+  font-size: 20px;
+  font-family: sans-serif;
+  margin-left:-30px;
+  margin-top:-70px;
+  z-index: 4000;
+}
+
+.middle-div {
+  margin:0 auto;
+  width: 1300px;
+  height:600px;
+  /* background: #aaaaaa; */
+  background-image: linear-gradient(rgb(185, 185, 185), rgb(231, 231, 231), #fff);
+  /* opacity: 0.9; */
+  margin-top:20px;
+  margin-left:130px;
+  border-left: 7px solid #d88e2c;
+}
+.middle-div1 h1{
+  padding-left: 30px;
+  padding-top:20px;
+  font-size: 30px;
+  color:rgba(14, 13, 13, 0.5)
 }

@@ -8,13 +8,22 @@ font-family: 'Poppins', sans-serif;
 body{
 background-color: #110F0F ;
 }
-div span{
-    margin:auto; display:table;
-    color:white;
-    margin-top:150px;
-    border:3px solid white;
-    padding:10px;
+header div span{
+    display:table;
+   color:white;
+   position:absolute;
+   margin-left:675px;
+   margin-top:150px;
+   border:3px solid white;
+   padding:10px;
 font-size:22px;
+}
+header{
+ height:400px;
+background-image: url('city.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
 }
 table{
     table-layout: fixed;
@@ -86,4 +95,8 @@ padding:10px;
 }
 .divalign{
 text-align:center;
+}
+table tr td adress{
+    color:white;
+    font-size:12px;
 }
