@@ -1,56 +1,86 @@
 <!DOCTYPE html>
 <html>
-    <head>
-<link rel="stylesheet" type="text/css" href="Products.css">
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
-    #fotoR
-            {
-                width: 280px;
-                height: 280px;
-            }
-</style>
-    </head>
-    <body>
-        
-<section class="section1 ">
-    <header>
-        <div class="div1"><div class="logo">
-            <h3 style="font-family: 'Rajdhani', sans-serif;">
-            <span>B</span><span>usiness</span>
-            <span>P</span><span>romotions</span>  
-            <span>A</span><span>gency</span>
-            </h3>
-        </div></div>
-        <div>
-            <img src="logo.png" alt="" class="perimg">
-        </div>
-        <div class="div2">  
-            <div>
-                <a href="">Home</a>
-            </div>
-            <div>
-                <a href="">Promotions</a>
-            </div>
-            <div>
-                <a href="">E-Shopping</a>
-            </div>
-            <div>
-                <a href="">Funding</a>
-            </div>
 
-            <ul>
-                <li>
-                    <a href="#">Contact Us</a>
-                    <!-- <ul>
+<head>
+    <link rel="stylesheet" type="text/css" href="Products.css">
+    <title>Products</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
+
+        #fotoR {
+            width: 280px;
+            height: 280px;
+        }
+    </style>
+
+    <script type="text/javascript" src="jquery-3.5.1.js"></script>
+</head>
+
+<body>
+
+    <section class="section1 ">
+        <header>
+            <div class="div1">
+                <div class="logo">
+                    <h3 style="font-family: 'Rajdhani', sans-serif;">
+                        <span>B</span><span>usiness</span>
+                        <span>P</span><span>romotions</span>
+                        <span>A</span><span>gency</span>
+                    </h3>
+                </div>
+            </div>
+            <div>
+                <img src="logo.png" alt="" class="perimg">
+            </div>
+            <div class="div2">
+                <div>
+                    <a href="">Home</a>
+                </div>
+                <div>
+                    <a href="">Promotions</a>
+                </div>
+                <div>
+                    <a href="">E-Shopping</a>
+                </div>
+                <div>
+                    <a href="">Funding</a>
+                </div>
+
+                <ul>
+                    <li>
+                        <a href="#">Contact Us</a>
+                        <!-- <ul>
                         <li><a href="#">Prishtine</a></li>
                         <li><a href="">Vushtrri</a></li>
                         <li><a href="">Mitrovice</a></li>
                     </ul> -->
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+    </section>
+
+    <section id="seksioni-produktet">
+        <div id="Art">
+            <div>
+                <h1 class="category">Art</h1>
+            </div>
+            <div class="container art" id="art-container"></div>
         </div>
-    </header>
-</section>
-    </body>
+        <div id="Food">
+            <div>
+                <h1 class="category">Food</h1>
+            </div>
+            <div class="container food" id="food-container"></div>
+        </div>
+        <div id="Textile">
+            <div>
+                <h1 class="category">Textile</h1>
+            </div>
+            <div class="container textile" id="textile-container"></div>
+        </div>
+    </section>
+    <script type="text/javascript" src="Products.js"></script>
+</body>
+
 </html>
