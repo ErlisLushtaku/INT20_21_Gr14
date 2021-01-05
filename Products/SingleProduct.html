@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="SingleProduct.css">
+    <title>SingleProduct</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
+
+        #fotoR {
+            width: 280px;
+            height: 280px;
+        }
+    </style>
+
+    <script type="text/javascript" src="jquery-3.5.1.js"></script>
+</head>
+
+<body>
+
+    <section class="section1 ">
+        <header>
+            <div class="div1">
+                <div class="logo">
+                    <h3 style="font-family: 'Rajdhani', sans-serif;">
+                        <span>B</span><span>usiness</span>
+                        <span>P</span><span>romotions</span>
+                        <span>A</span><span>gency</span>
+                    </h3>
+                </div>
+            </div>
+            <div>
+                <img src="logo.png" alt="" class="perimg">
+            </div>
+            <div class="div2">
+                <div>
+                    <a href="">Home</a>
+                </div>
+                <div>
+                    <a href="">Promotions</a>
+                </div>
+                <div>
+                    <a href="">E-Shopping</a>
+                </div>
+                <div>
+                    <a href="">Funding</a>
+                </div>
+
+                <ul>
+                    <li>
+                        <a href="#">Contact Us</a>
+                        <!-- <ul>
+                        <li><a href="#">Prishtine</a></li>
+                        <li><a href="">Vushtrri</a></li>
+                        <li><a href="">Mitrovice</a></li>
+                    </ul> -->
+                    </li>
+                </ul>
+            </div>
+        </header>
+    </section>
+    
+    <div class="flex-container">
+        <div id="img-containter">
+            <img src="ProductsImages/1.jpg" id="big-img">
+        </div>
+        <div class="right-div">
+            <h1 id="title">Title</h1>
+            <h1 id="price" class="red">Price: </h1>
+            <p id="producer" class="smaller">Producer: </p>
+            <p id="category" class="smaller">Category: </p>
+            <p id="city">City: </p>
+            <h2>Size: <span class="red">60cm x 70cm</span></h2>
+            <button id="to-cart" class="back-red">ADD TO CART</button>
+            <button id="buy-now" class="back-yellow">BUY NOW</button>
+        </div>
+    </div>
+    <a href="" onclick="localStorage.setItem('object', 'item')"></a>
+
+    <script>
+        var queryString = location.search.substring(1);
+        var data = queryString.split("|");
+
+        document.getElementById("title").innerHTML = data[0].replace(/%20/g, " ");
+        document.getElementById("price").innerHTML += data[1];
+        document.getElementById("big-img").src = data[2];
+        document.getElementById("producer").innerHTML += data[3].replace(/%20/g, " ");
+        document.getElementById("category").innerHTML += data[4];
+        document.getElementById("city").innerHTML += data[5];
+    </script>
+</body>
+
+</html>
