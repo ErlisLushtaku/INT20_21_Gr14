@@ -5,6 +5,7 @@
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 <script src="js/scroll.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="navigation.css">
         <link
       href="https://fonts.googleapis.com/css?family=Poppins:300,900&display=swap"
@@ -26,7 +27,6 @@
 
                 })
             });
-
     </script>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
@@ -136,7 +136,7 @@
             <table class="card__body" style="font-family: 'Rajdhani', sans-serif; font-size:20px;">
                 <tr class="main-table" class="card__body">
                     <td class="table-space"></td>
-                    <td><a href="#" class="card__body">Meet our solution for you</a></td>
+                    <td><a href="#d" class="card__body">Meet our solution for you</a></td>
                     <td class="table-space"></td>
                     <!-- <td><a href="#" class="card__body">E-Shopping</a></td>
                     <td class="table-space"></td>
@@ -174,11 +174,69 @@
         </div>
       </div>
     </div>
-</section>
-<div class="middle-div">
-    <div class="middle-div1">
-        <h1 style="font-family:'Rajdhani', sans-serif;">Why choose us<hr style="width: 180px; "></h1>
+    
+    <div class="w-complete">
+
+        <div class="w-karta" id="d">
+            <a href="#d"><div class="w1" id="w11"></div></a>
+            <a href="#d"><div class="w2"></div></a>
+            <a href="#d"><div class="w3"></div></a>
+        </div>
+
+        <div class="w-text1">
+        <h3>PROMOTION</h3>
+        <p>
+            <ol style="list-style-type: none;">
+                <li>Display Adverstising</li>
+                <li>Lead Generation</li>
+            </ol>
+        </p>
+        </div>
+        <div class="w-text2">
+            <h3>E-Shopping</h3>
+        <p>
+            <ol style="list-style-type: none;">
+                <li>Most reviewed businesses</li>
+                <li>Lead Generation</li>
+            </ol>
+        </p>
+        </div>
+        <div class="w-text3">
+            <h4 style="letter-spacing: 8px;">Funding Programs</h4>
+        <p>
+            <ol style="list-style-type: none;">
+                <li>Loans</li>
+                <li>Grant Writing</li>
+            </ol>
+        </p>
+        </div>
+        <div class="w-white">
+            
+        </div>
+
     </div>
-</div>
+</section>
+<script>
+    $(document).ready(function(){
+      $(".w1").click(function(){
+        $(".w-text1").show();
+        $(".w-text2").hide();
+        $(".w-text3").hide();
+        $(".w-white").hide();
+      });
+      $(".w2").click(function(){
+        $(".w-text2").show();
+        $(".w-text1").hide();
+        $(".w-text3").hide();
+        $(".w-white").hide();
+      });
+      $(".w3").click(function(){
+        $(".w-text3").show();
+        $(".w-text2").hide();
+        $(".w-text1").hide();
+        $(".w-white").hide();
+      });
+    });
+    </script>
     </body>
 </html>
