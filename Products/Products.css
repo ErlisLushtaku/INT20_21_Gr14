@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  /* font-family:'Rajdhani'; */
+  font-family:'Rajdhani';
   box-sizing: border-box;
   /* background-color: rgb(214, 214, 214); */
 }
@@ -467,19 +467,19 @@ div.product-footer {
 
 div.product:hover > div.product-footer {
   margin-top: -50px;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 div.product:hover > div > img {
   filter: brightness(50%);
-  transition: 1s;
+  transition: 0.5s;
 }
 
 div.product:hover {
   transform: scale(1.1);
   box-shadow: 0 25px 40px rgba(116, 114, 114, 0.5);
   /* background: linear-gradient(180deg,#f0be7c,rgb(34, 34, 34)); */
-  transition: 1s;
+  transition: 0.5s;
 }
 
 /* .product{
