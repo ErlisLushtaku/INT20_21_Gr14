@@ -35,6 +35,14 @@
                 width: 280px;
                 height: 280px;
             }
+    #mySVG 
+            {
+                margin-left: 800px;
+                margin-top:-550px;
+                z-index: 20;
+                
+
+            }             
 </style>
     </head>
     <body>
@@ -178,9 +186,9 @@
     <div class="w-complete">
 
         <div class="w-karta" id="d">
-            <a href="#d"><div class="w1" id="w11"></div></a>
-            <a href="#d"><div class="w2"></div></a>
-            <a href="#d"><div class="w3"></div></a>
+            <a href="#d"><div class="w1" id="w11"><span style="margin-top:-30px">1</span></div></a>
+            <a href="#d"><div class="w2">2</div></a>
+            <a href="#d"><div class="w3">3</div></a>
         </div>
 
         <div class="w-text1">
@@ -202,7 +210,7 @@
         </p>
         </div>
         <div class="w-text3">
-            <h4 style="letter-spacing: 8px;">Funding Programs</h4>
+            <h3>Funding Programs</h3>
         <p>
             <ol style="list-style-type: none;">
                 <li>Loans</li>
@@ -215,28 +223,34 @@
         </div>
 
     </div>
-</section>
-<script>
-    $(document).ready(function(){
-      $(".w1").click(function(){
-        $(".w-text1").show();
-        $(".w-text2").hide();
-        $(".w-text3").hide();
-        $(".w-white").hide();
-      });
-      $(".w2").click(function(){
-        $(".w-text2").show();
-        $(".w-text1").hide();
-        $(".w-text3").hide();
-        $(".w-white").hide();
-      });
-      $(".w3").click(function(){
-        $(".w-text3").show();
-        $(".w-text2").hide();
-        $(".w-text1").hide();
-        $(".w-white").hide();
-      });
-    });
+
+    <!-- <svg height="800" width="500" id="mySVG">
+        <line x1="0" y1="0" x2="0" y2="800" style="stroke: #d88e2c;stroke-width:7" />
+        Sorry, your browser does not support inline SVG.
+      </svg> -->
+    <script>
+        $(document).ready(function(){
+          $(".w1").click(function(){
+            $(".w-text1").show();
+            $(".w-text2").hide();
+            $(".w-text3").hide();
+            $(".w-white").hide();
+          });
+          $(".w2").click(function(){
+            $(".w-text2").show();
+            $(".w-text1").hide();
+            $(".w-text3").hide();
+            $(".w-white").hide();
+          });
+          $(".w3").click(function(){
+            $(".w-text3").show();
+            $(".w-text2").hide();
+            $(".w-text1").hide();
+            $(".w-white").hide();
+          });
+        });
     </script>
+</section>
+
     </body>
 </html>
