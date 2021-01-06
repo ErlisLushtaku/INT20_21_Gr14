@@ -1,213 +1,229 @@
-*{
-    margin:0;
-    padding:0;
-    /* font-family:'Rajdhani'; */
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family:'Rajdhani'; */
+  box-sizing: border-box;
 }
+
 header {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: transparent;
-    background-image: none;
-    z-index: 5000;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  background-image: none;
+  z-index: 5000;
 }
 
 .div1 {
-    text-transform: uppercase;
-    color: white;
-    text-shadow: 2px 2px 2px rgb(49, 49, 49);
-    width: 25%;
-    text-align: center;
-    font-size: 30px;
-    z-index: 5000;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 2px 2px 2px rgb(49, 49, 49);
+  width: 25%;
+  text-align: center;
+  font-size: 30px;
+  z-index: 5000;
 }
 
 .div2 {
-    display: flex;
-    justify-content: space-between;
-    margin: 50px;
-    text-decoration: none;
-    z-index: 5000;
+  display: flex;
+  justify-content: space-between;
+  margin: 50px;
+  text-decoration: none;
+  z-index: 5000;
 }
 
 a {
-    padding: 20px;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    background-image: none;
-    font-size: 20px;
-    text-shadow: 2px 2px 2px rgb(49, 49, 49);
-    z-index: 5000;
+  padding: 20px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  background-image: none;
+  font-size: 20px;
+  text-shadow: 2px 2px 2px rgb(49, 49, 49);
+  z-index: 5000;
 }
 
 .perimg {
-    height: 100px;
-    width: auto;
-    z-index: 5000;
+  height: 100px;
+  width: auto;
+  z-index: 5000;
 }
 
 div ul li {
-    list-style: none;
-    position: relative;
-    z-index: 5000;
+  list-style: none;
+  position: relative;
+  z-index: 5000;
 }
 
 div ul li ul {
-    display: none;
-    position: absolute;
-    background-color: transparent;
-    border-radius: 0px 0px 4px 4px;
-    /* border: 2px solid darkgray; */
-    z-index: 5000;
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  border-radius: 0px 0px 4px 4px;
+  /* border: 2px solid darkgray; */
+  z-index: 5000;
 }
 
 div ul li:hover ul {
-    display: block;
-    z-index: 5000;
+  display: block;
+  z-index: 5000;
 }
 
 div ul li ul li {
-    padding-top: 14px;
-    z-index: 5000;
+  padding-top: 14px;
+  z-index: 5000;
 }
-.section1
-{
-    position: relative;
-    width:100%;
-    height:100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 100px;
-    box-sizing: border-box;
-    background: linear-gradient(180deg,#3a3a3a,#BEBEBE,#e4e1e1), url(images/kosovo1.png);
-    background-blend-mode: screen;
-    background-repeat: no-repeat;
-    background-size: 100%;
+
+.section1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #3a3a3a, #BEBEBE, #e4e1e1), url(images/kosovo1.png);
+  background-blend-mode: screen;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
+
 .wave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
+
 /* @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap'); */
 
 :root {
-  --level-1:translateZ(3rem);
-  --level-2:translateZ(6rem);
-  --level-3:translateZ(9rem);
-
-  --fw-normal:400;
-  --fw-bold:700;
-
-  --clr:#e7d1b5;;
+  --level-1: translateZ(3rem);
+  --level-2: translateZ(6rem);
+  --level-3: translateZ(9rem);
+  --fw-normal: 400;
+  --fw-bold: 700;
+  --clr: #e7d1b5;
+  ;
 }
-
 
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
 }
+
 body {
   height: 100vh;
   display: grid;
   place-items: center;
   /* font-family: 'Rajdhani', sans-serif; */
 }
+
 .karta {
-  width: 400px;    
+  width: 400px;
   z-index: 1000;
 }
+
 .permbajtja_para {
   text-align: center;
   position: relative;
   padding: 15em 5em;
-  transition: transform 3s; /* tregon per sa sekonda bohet rotate */
-  transform-style:preserve-3d;
-  }
-.karta:hover .permbajtja_para {
-transform: rotateY(0.5turn);
-/* po bohet rotate ne boshtin y */
+  transition: transform 3s;
+  /* tregon per sa sekonda bohet rotate */
+  transform-style: preserve-3d;
 }
 
+.karta:hover .permbajtja_para {
+  transform: rotateY(0.5turn);
+  /* po bohet rotate ne boshtin y */
+}
 
 .fronti, .backi {
-position: absolute; /* they need to be on top of each other for this effect to work */
-top:0;
-bottom: 0;
-left: 0;
-right: 0;
-padding:5em 3em;
-backface-visibility: hidden; /* nuk e len tekstin para edhe mrapa mu overlap, edhe backgroundit vyn mja ndrru ngjyren */
-transform-style:preserve-3d;
-display: grid;
-align-content: center;
+  position: absolute;
+  /* they need to be on top of each other for this effect to work */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5em 3em;
+  backface-visibility: hidden;
+  /* nuk e len tekstin para edhe mrapa mu overlap, edhe backgroundit vyn mja ndrru ngjyren */
+  transform-style: preserve-3d;
+  display: grid;
+  align-content: center;
 }
+
 .fronti {
-  background-color:#e7d1b5;
+  background-color: #e7d1b5;
   background-image: url(images/card.jpg);
   background-size: cover;
   background-blend-mode: overlay;
-  color:#333;
+  color: #333;
 }
+
 .fronti::before {
-  content:'';
+  content: '';
   position: absolute;
-  top:1em;
+  top: 1em;
   bottom: 1em;
   left: 1em;
   right: 1em;
-  border:3px solid currentColor;
-  transform:var(--level-1);
+  border: 3px solid currentColor;
+  transform: var(--level-1);
 }
+
 .titulli {
- /* transform:translateX(100px); nboshtin X leviz per 100px */
- font-size: 3.5rem;
- transform:var(--level-3); /* z axis points it toward us ama when it 
+  /* transform:translateX(100px); nboshtin X leviz per 100px */
+  font-size: 3.5rem;
+  transform: var(--level-3);
+  /* z axis points it toward us ama when it 
                                  get closer is doesnt get bigger veq kur t'rotate ka dallim
                                  and the reason why this is working osht per shkak te preserve-3d qe e kem ma nalt*/
-  order:2; /* titullin e qet tdytin dmth mas tekstit */
+  order: 2;
+  /* titullin e qet tdytin dmth mas tekstit */
   text-transform: uppercase;
-  
 }
 
 .subtitle {
   /* transform:translateZ(2rem); */
-  transform:var(--level-2);
+  transform: var(--level-2);
   text-transform: uppercase;
-  letter-spacing:4px ;
-  font-size:0.75rem;
+  letter-spacing: 4px;
+  font-size: 0.75rem;
   font-weight: var(--fw-bold);
   opacity: 0.7;
 }
-.permbajtja_prapa{
+
+.permbajtja_prapa {
   /* transform:translateZ(2rem); */
-  transform:var(--level-2);
-  font-weight:var(fw--normal);
-  font-size:1.5rem;
+  transform: var(--level-2);
+  font-weight: var(fw--normal);
+  font-size: 1.5rem;
   line-height: 1.6;
 }
 
 .backi {
-  transform:rotateY(0.5turn); /* tash shkronjat dalin normal jo mrapsht */
+  transform: rotateY(0.5turn);
+  /* tash shkronjat dalin normal jo mrapsht */
   color: var(--clr);
-  background: #333; 
+  background: #333;
 }
+
 /* .section2 {
   margin-right:0;
   margin-bottom: 0;
   margin-left: 0;
   margin-top: -120px;
   padding:0; */
-  /* min-height:100vh ; */
-  /* background: white;
+
+/* min-height:100vh ; */
+
+/* background: white;
   display: flex;
   justify-content: center;
   align-items: top;
@@ -218,15 +234,18 @@ align-content: center;
   position: relative;
   display: flex;
   justify-content: space-between; i ban triat ren */
+
 /* }
 .cont .katrori {
   position: relative;
 } */
+
 /* .cont .katrori .pjesa {
   width: 300px;
   height: 200px;
   transition: 0.5s;
 } */
+
 /* .cont .katrori .pjesa.pjesa1 {
   position: relative;
   background: #333;
@@ -235,11 +254,15 @@ align-content: center;
   align-items: center;
   z-index: 5;
   transform: translateY(100px); vin poshte per 100px */
+
 /* }
 .cont .katrori:hover .pjesa.pjesa1{ */
-  /* background: #f7890c; */
-  /* background: #f5ac4d; */
-  /* background:#f0be7c ;
+
+/* background: #f7890c; */
+
+/* background: #f5ac4d; */
+
+/* background:#f0be7c ;
   transform: translateY(0);
 
 }
@@ -253,6 +276,7 @@ align-content: center;
 .cont .katrori .pjesa.pjesa1 .permbajtje img{
   max-width: 100px;
 } */
+
 /* .cont .katrori .pjesa.pjesa1 .permbajtje h3{
   margin: 10px 0 0;
   padding: 0;
@@ -278,6 +302,7 @@ align-content: center;
   margin:0;
   padding: 0;
 } */
+
 /* .cont .katrori .pjesa.pjesa2 .permbajtje a{
   margin:15px 0 0;
   display: inline-block;
@@ -305,13 +330,15 @@ margin-bottom: -300px;
   margin-top: -90px;
   margin-bottom: 50px;
 }
-.container1{
+
+.container1 {
   position: relative;
   width: 1100px;
   display: inline-flex;
   flex-wrap: wrap;
-  gap:50px;
+  gap: 50px;
 }
+
 .container1 .box1 {
   position: relative;
   width: 275px;
@@ -319,43 +346,49 @@ margin-bottom: -300px;
   overflow: hidden;
   transition: 0.5s;
 }
+
 .container1 .box1:hover {
   z-index: 1;
-  transform:scale(1.1);
-  box-shadow:0 25px 40px rgba(116, 114, 114, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0 25px 40px rgba(116, 114, 114, 0.5);
 }
+
 .container1 .box1 .img1 {
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
+
 .container1 .box1 .img1:before {
   content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    /* background: linear-gradient(180deg,#f0be7c,rgb(34, 34, 34)); */
-    background: rgb(82, 81, 81);
-    mix-blend-mode:multiply;
-    opacity: 0;
-    transition: 0.5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  /* background: linear-gradient(180deg,#f0be7c,rgb(34, 34, 34)); */
+  background: rgb(82, 81, 81);
+  mix-blend-mode: multiply;
+  opacity: 0;
+  transition: 0.5s;
 }
+
 .container1 .box1:hover .img1:before {
   opacity: 2;
 }
+
 .container1 .box1 .img1 img {
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .container1 .box1 .content1 {
   position: absolute;
   /* top: 0; */
@@ -367,18 +400,21 @@ margin-bottom: -300px;
   padding: 20px;
   align-items: flex-end;
 }
+
 .container1 .box1 .content1 h2 {
-  color:#c27211;
+  color: #c27211;
   transition: 0.5s;
   text-transform: uppercase;
   align-content: center;
   font-size: 20px;
-  transform:translateY(200px);
+  transform: translateY(200px);
 }
+
 .container1 .box1:hover .content1 h2 {
-  transform:translateY(0);
+  transform: translateY(0);
   /* transition-delay: 0.1s; */
 }
+
 /* .container1 .box1 .content1 p {
   color:#fff;
   transform: translateY(200px);
@@ -389,68 +425,73 @@ margin-bottom: -300px;
   transform:translateY(0);
   transition-delay: 0.3s;
 } */
+
 .footer {
-position: relative;
-margin-bottom: -300px;
+  position: relative;
+  margin-bottom: -300px;
 }
-.logo
-{
-    /* margin-right: 250px;
+
+.logo {
+  /* margin-right: 250px;
     margin-top:450px; */
-    margin:0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;  
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
+
 .logo h3 {
-    margin:0;
-    padding: 0;
-    font-size: 100px;
-    text-transform: uppercase;
-    font-size: 20px;
-    /* margin-right: 250px; */
-     margin-left:120px;
-    /* margin-top:550px; */
+  margin: 0;
+  padding: 0;
+  font-size: 100px;
+  text-transform: uppercase;
+  font-size: 20px;
+  /* margin-right: 250px; */
+  margin-left: 120px;
+  /* margin-top:550px; */
 }
 
 h3 span {
-    display: inline-flex;
-    color:#d88e2c;
-    overflow: hidden;
-    font-size: 40px;
+  display: inline-flex;
+  color: #d88e2c;
+  overflow: hidden;
+  font-size: 40px;
 }
+
 h3:hover span {
-    display: inline-flex;
-    color:#d88e2c;
-    background-color:#333;
-    transition-delay: 0.1s;
-    overflow: hidden;
-    z-index: 4000;
-    font-size: 20px;
+  display: inline-flex;
+  color: #d88e2c;
+  background-color: #333;
+  transition-delay: 0.1s;
+  overflow: hidden;
+  z-index: 4000;
+  font-size: 20px;
 }
-h3 span:nth-child(even){
-    overflow: hidden;
-    transition: ease-in-out 0.5s;
-    color:#fff;
-    border-bottom: 8px solid #d88e2c;
-    letter-spacing: -1em; /* qekjo i hek ato shkronjat mas B P A */
+
+h3 span:nth-child(even) {
+  overflow: hidden;
+  transition: ease-in-out 0.5s;
+  color: #fff;
+  border-bottom: 8px solid #d88e2c;
+  letter-spacing: -1em;
+  /* qekjo i hek ato shkronjat mas B P A */
 }
-h3:hover span:nth-child(even){
-    
-    letter-spacing: 0;
-    background-color:  #333;
+
+h3:hover span:nth-child(even) {
+  letter-spacing: 0;
+  background-color: #333;
 }
-h3:hover span:nth-child(2){
-    
-    transition-delay:0s ;
+
+h3:hover span:nth-child(2) {
+  transition-delay: 0s;
 }
-h3:hover span:nth-child(4){
-    
-    transition-delay:0s ;
+
+h3:hover span:nth-child(4) {
+  transition-delay: 0s;
 }
-h3:hover span:nth-child(6){
-    
-    transition-delay:0s ;
+
+h3:hover span:nth-child(6) {
+  transition-delay: 0s;
 }

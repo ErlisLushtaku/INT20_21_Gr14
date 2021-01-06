@@ -430,14 +430,9 @@ h3:hover span:nth-child(6){
 }
 
 .container div div img {
-  max-width: 100%;
-  max-height: 100%;
   height: 350px;
   width: 300px;
   object-fit: cover;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   border-radius: 10px;
 }
 
@@ -457,6 +452,34 @@ h3:hover span:nth-child(6){
 #Art {
   margin-top: 100px;
   /* border:1px red dashed; */
+}
+
+.product {
+  position: relative;
+}
+
+div.product-footer {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+}
+
+div.product:hover > div.product-footer {
+  margin-top: -50px;
+  transition: 1s;
+}
+
+div.product:hover > div > img {
+  filter: brightness(50%);
+  transition: 1s;
+}
+
+div.product:hover {
+  transform: scale(1.1);
+  box-shadow: 0 25px 40px rgba(116, 114, 114, 0.5);
+  /* background: linear-gradient(180deg,#f0be7c,rgb(34, 34, 34)); */
+  transition: 1s;
 }
 
 /* .product{
