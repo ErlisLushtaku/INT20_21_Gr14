@@ -444,9 +444,13 @@ h3:hover span:nth-child(6){
 
 .category {
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 80px;
+  margin-bottom: 20px;
   background-color: #f4f4f4;
+}
+
+#art-h1 {
+  margin-top: 30px;
 }
 
 #Art {
@@ -465,9 +469,23 @@ div.product-footer {
   border-radius: 0px 0px 10px 10px;
 }
 
+div.product-footer > h3 {
+  color: black;
+  text-shadow: none;
+}
+
+div.product-footer > h4 {
+  color: rgb(206, 23, 69);
+  text-shadow: none;
+}
+
 div.product:hover > div.product-footer {
   margin-top: -50px;
   transition: 0.5s;
+}
+
+div.product {
+  box-shadow: 0 50px 40px rgba(116, 114, 114, 0.5);
 }
 
 div.product:hover > div > img {
