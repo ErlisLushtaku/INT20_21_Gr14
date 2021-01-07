@@ -5,6 +5,29 @@
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 <script src="js/scroll.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="navigation.css">
+        <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        /* this makes sure that the code we write won't execute
+        till full html css is loaded ? */
+            $(function() {
+                $(".tre").on("click", function(){
+
+                    if($(".nav-l-i").hasClass("active")){
+                        $(".nav-l-i").removeClass("active");
+                    }
+                    else{
+                        $(".nav-l-i").addClass("active");
+                    }
+
+                })
+            });
+    </script>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
     #fotoR
@@ -12,48 +35,67 @@
                 width: 280px;
                 height: 280px;
             }
+    #mySVG 
+            {
+                margin-left: 800px;
+                margin-top:-550px;
+                z-index: 20;
+                
+
+            }             
 </style>
     </head>
     <body>
         
 <section class="section1">
     <header>
-        <div class="div1"><div class="logo">
-            <h3 style="font-family: 'Rajdhani', sans-serif;">
-            <span>B</span><span>usiness</span>
-            <span>P</span><span>romotions</span>  
-            <span>A</span><span>gency</span>
-            </h3>
-        </div></div>
-        <div>
-            <img src="logo.png" alt="" class="perimg">
-        </div>
-        <div class="div2">
-            <div>
-                <a href="">Home</a>
-            </div>
-            <div>
-                <a href="">Promotions</a>
-            </div>
-            <div>
-                <a href="">E-Shopping</a>
-            </div>
-            <div>
-                <a href="">Funding</a>
-            </div>
-
-            <ul>
-                <li>
-                    <a href="#">Contact Us</a>
-                    <!-- <ul>
-                        <li><a href="#">Prishtine</a></li>
-                        <li><a href="">Vushtrri</a></li>
-                        <li><a href="">Mitrovice</a></li>
-                    </ul> -->
-                </li>
-            </ul>
-        </div>
-    </header>
+        <div class="containeer">
+            <div class="div1"></div><div class="logo">
+                <h4 style="font-family: 'Rajdhani', sans-serif;">
+                <span>B</span><span>usiness</span>
+                <span>P</span><span>romotions</span>  
+                <span>A</span><span>gency</span>
+                </h4>
+            </div></div>
+            <nav class="m-nav">
+                <div class="nav-bar">
+                <ul class="nav-l">
+                    <li class="nav-l-i">
+                        <a href="Home" class="link" style="margin-left:140px;">Home</a>
+                    </li>
+                    <li class="nav-l-i">
+                        <a href="Home" class="link">Promotions</a>
+                    </li>
+                    <li class="nav-l-i">
+                        <a href="Home" class="link">E-Shopping</a>
+                    </li>
+                    <li class="nav-l-i">
+                        <a href="Home" class="link">Funding</a>
+                    </li>
+                    <li class="nav-l-i">
+                        <a href="Home" class="link">Contact Us</a>
+                    </li>
+                    <li class="tre"><span class="tre3"></span></li>
+                </ul>
+            </nav>
+        </nav>
+        <nav class="account">
+          <ul class="nav-l">
+            <li class="nav-l-i">
+              <a class="link link_button" href="#">Join Us</a>
+            </li>
+          </ul>
+        </nav>
+    </div>
+</div>
+<script>
+    window.addEventListener('scroll', function () {
+        let header = document.querySelector('header');
+        let windowPosition = window.scrollY > 0;
+        header.classList.toggle('scrolling-active', windowPosition);
+    })
+</script>
+        </header>
 <div class="begin">
     <div class="karta">
         <div class="permbajtja_para">
@@ -70,7 +112,7 @@
         </div>
     </div>
     <div class="header-text">
-        <div class="teksti" >Let us enhance your sales</div>
+        <div class="teksti" style="font-family:'Poppins', sans-serif; font-size: 25px; font-weight: normal;">Let us enhance your sales</div>
     </div>
 </div>
 <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,96L120,85.3C240,75,480,53,720,53.3C960,53,1200,75,1320,85.3L1440,96L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
@@ -85,12 +127,9 @@
           </svg>
          <span class="b">B</span><span class="pa">PA</span> </div>
     </div>
-<div class="hyrja"> <div class="hyrja-scroll">
-    Is your local business not getting the support it deserves?
-Have the big companies commercialized the market as much as to throw you out of it?
-We want to help you stop that, one step at a time.
-Our team guarantees a sufficient support to all the mini entities out there.
-We ensure you that your products will be displayed and promoted to an admirable number of customers.
+<div class="hyrja"> <div class="hyrja-scroll" style="font-size: 16px;">
+   <br>As we merge imagination and technology to help brands grow in an age of digital transformation, we'll help you realise your 
+                        potential, reimagine your costumer experience and reinvent your future - fast.
 </div></div>
 <div class="bpa"></div><svg width="415px" height="240px" class="bpa-svg2">
     <rect width="415px" height="240px" style="fill:transparent;stroke-width:10;stroke:#d88e2c;" />
@@ -102,11 +141,10 @@ We ensure you that your products will be displayed and promoted to an admirable 
     <div style="margin-bottom: 100vh;" class="content content--card">
         <div class="card">
           <h3 class="card__title" style="font-family: 'Rajdhani', sans-serif; font-size:30px;">What we offer</h3>
-          <!-- <p class="card__body" style="font-family: 'Rajdhani', sans-serif; font-size:20px;"> -->
             <table class="card__body" style="font-family: 'Rajdhani', sans-serif; font-size:20px;">
                 <tr class="main-table" class="card__body">
                     <td class="table-space"></td>
-                    <td><a href="#" class="card__body">Meet our solution for you</a></td>
+                    <td><a href="#d" class="card__body">Meet our solution for you</a></td>
                     <td class="table-space"></td>
                     <!-- <td><a href="#" class="card__body">E-Shopping</a></td>
                     <td class="table-space"></td>
@@ -123,8 +161,12 @@ We ensure you that your products will be displayed and promoted to an admirable 
                 
                 <div class="main-grid">
                     <div class="video-text">
-                        As we merge imagination and technology to help brands grow in an age of digital transformation, we'll help you realise your 
-                        potential, reimagine your costumer experience and reinvent your future - fast.
+            
+                        Is your local business not getting the support it deserves?
+                        Have the big companies commercialized the market as much as to throw you out of it?
+                        We want to help you stop that, one step at a time.
+                        Our team guarantees a sufficient support to all the mini entities out there.
+                        We ensure you that your products will be displayed and promoted to an admirable number of customers.
                     </div>
                         <video class="video1" width="640" height="360" controls>
                             <source src="images/video.mp4" type="video/mp4">
@@ -140,11 +182,75 @@ We ensure you that your products will be displayed and promoted to an admirable 
         </div>
       </div>
     </div>
-</section>
-<div class="middle-div">
-    <div class="middle-div1">
-        <h1 style="font-family:'Rajdhani', sans-serif;">Why choose us<hr style="width: 180px; "></h1>
+    
+    <div class="w-complete">
+
+        <div class="w-karta" id="d">
+            <a href="#d"><div class="w1" id="w11"><span style="margin-top:-30px">1</span></div></a>
+            <a href="#d"><div class="w2">2</div></a>
+            <a href="#d"><div class="w3">3</div></a>
+        </div>
+
+        <div class="w-text1">
+        <h3>PROMOTION</h3>
+        <p>
+            <ol style="list-style-type: none;">
+                <li>Display Adverstising</li>
+                <li>Lead Generation</li>
+            </ol>
+        </p>
+        </div>
+        <div class="w-text2">
+            <h3>E-Shopping</h3>
+        <p>
+            <ol style="list-style-type: none;">
+                <li>Most reviewed businesses</li>
+                <li>Lead Generation</li>
+            </ol>
+        </p>
+        </div>
+        <div class="w-text3">
+            <h3>Funding Programs</h3>
+        <p>
+            <ol style="list-style-type: none;">
+                <li>Loans</li>
+                <li>Grant Writing</li>
+            </ol>
+        </p>
+        </div>
+        <div class="w-white">
+            
+        </div>
+
     </div>
-</div>
+
+    <!-- <svg height="800" width="500" id="mySVG">
+        <line x1="0" y1="0" x2="0" y2="800" style="stroke: #d88e2c;stroke-width:7" />
+        Sorry, your browser does not support inline SVG.
+      </svg> -->
+    <script>
+        $(document).ready(function(){
+          $(".w1").click(function(){
+            $(".w-text1").show();
+            $(".w-text2").hide();
+            $(".w-text3").hide();
+            $(".w-white").hide();
+          });
+          $(".w2").click(function(){
+            $(".w-text2").show();
+            $(".w-text1").hide();
+            $(".w-text3").hide();
+            $(".w-white").hide();
+          });
+          $(".w3").click(function(){
+            $(".w-text3").show();
+            $(".w-text2").hide();
+            $(".w-text1").hide();
+            $(".w-white").hide();
+          });
+        });
+    </script>
+</section>
+
     </body>
 </html>

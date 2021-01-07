@@ -1,91 +1,7 @@
 *{
     margin:0;
     padding:0;
-    /* font-family:'Rajdhani'; */
     box-sizing: border-box;
-}
-header {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* background-color: rgba(225,225,225,0.7); */
-    background-color: transparent;
-    background-image: none;
-    z-index: 5000;
-}
-
-.div1 {
-    text-transform: uppercase;
-    color: white;
-    text-shadow: 0px 0px 2px rgb(49, 49, 49);
-    width: 25%;
-    text-align: center;
-    font-size: 120px;
-    z-index: 5000;
-}
-
-
-.div2 {
-    display: flex;
-    justify-content: space-between;
-    margin: 50px;
-    text-decoration: none;
-    z-index: 5000;
-}
-
-header a {
-    padding: 20px;
-    text-decoration: none;
-    /* color:  #d88e2c; */
-    color:white;
-    font-weight: bold;
-    background-image: none;
-    font-size: 20px;
-    text-shadow: 0px 0px 2px rgb(10, 10, 10);
-    z-index: 5000;
-    text-transform: uppercase;
-    
-}
-
-.perimg {
-    height: 100px;
-    width: auto;
-    z-index: 5000;
-
-}
-
-div ul li {
-    list-style: none;
-    position: relative;
-    z-index: 5000;
-}
-
-div ul li ul {
-    display: none;
-    position: absolute;
-    background-color: transparent;
-    border-radius: 0px 0px 4px 4px;
-    /* border: 2px solid darkgray; */
-    z-index: 5000;
-    text-transform: uppercase;
-    color:  #d88e2c;
-}
-
-
-div ul li:hover ul {
-    display: block;
-    z-index: 5000;
-}
-
-
-div ul li ul li {
-    padding-top: 14px;
-    z-index: 5000;
 }
 .section1
 {
@@ -101,7 +17,6 @@ div ul li ul li {
     background-blend-mode: screen;
     background-repeat: no-repeat;
     background-size: 100%;
-    /* margin-top: -80px; */
 }
 .wave {
     position: absolute;
@@ -127,12 +42,7 @@ div ul li ul li {
   box-sizing: border-box;
   margin: 0;
 }
-body {
-  height: 100vh;
-  /* display: flex;
-  place-items: center; */
-  /* font-family: 'Rajdhani', sans-serif; */
-}
+
 .karta {
   width: 400px;   
   z-index: 1000;
@@ -194,7 +104,6 @@ align-content: center;
 }
 
 .subtitle {
-  /* transform:translateZ(2rem); */
   transform:var(--level-2);
   text-transform: uppercase;
   letter-spacing:4px ;
@@ -203,7 +112,6 @@ align-content: center;
   opacity: 0.7;
 }
 .permbajtja_prapa{
-  /* transform:translateZ(2rem); */
   transform:var(--level-2);
   font-weight:var(fw--normal);
   font-size:1.5rem;
@@ -218,29 +126,23 @@ align-content: center;
 
 .logo
 {
-    /* margin-right: 250px;
-    margin-top:450px; */
     margin:0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* min-height: 100vh;   */
 }
 .logo h3 {
     margin:0;
     padding: 0;
-    /* font-size: 120px; */
     text-transform: uppercase;
-    font-size: 20px;
-    /* margin-right: 250px; */
-     margin-left:120px;
-    /* margin-top:550px; */
+    font-size: 18px;
+    margin-left:120px;
 }
 
 h3 span {
     display: inline-flex;
-    color:#d88e2c;
+    color:#333;
     overflow: hidden;
     font-size: 30px;
 }
@@ -256,7 +158,6 @@ h3:hover span {
 }
 h3 span:nth-child(even){
     overflow: hidden;
-    /* transition: ease-in-out 0.1s; */
     color:#fff;
     border-bottom: 8px solid #d88e2c;
     letter-spacing: -1em; /* qekjo i hek ato shkronjat mas B P A */
@@ -269,17 +170,14 @@ h3:hover span:nth-child(even){
 .begin {
   display: flex;
   justify-content: space-between;
-  /* flex:2; */
   order:3;
   z-index: 3000;
 }
 .karta {
   flex-basis:60%;
-  margin-top:100px;
- 
+  margin-top:100px; 
 }
 .header-text {
-  /* border:1px #ccc solid; */
   width: 560px;
   height: 70px;
   margin:100px;
@@ -311,9 +209,9 @@ h3:hover span:nth-child(even){
   height:200px;
   background: rgb(212, 211, 211);
   color: #333;
-  font-size:18px;
+  font-size:20px;
   padding:28px;
-  padding-top: 17px;
+  padding-top: 20px;
   margin-left:720px;
   margin-top:120px;
   text-align: center;
@@ -340,7 +238,6 @@ border:5px rgb(202, 173, 134) dotted;
   margin-left:380px;
   margin-top:15px;
   border-radius: 0.5px;
-  /* top:0; */
 }
 
 .bpa-svg{
@@ -465,28 +362,6 @@ border:5px rgb(202, 173, 134) dotted;
   color: #d88e2c;
   line-height: 0.8;
 }
-/* .space {
-  height:120px;
-}
-.title-line {
-  margin:100px auto;
-  margin-left:150px;
-  margin-top:50px;
-  font-size:40px; */
-  /* text-align:left; */
-  /* position: relative;
-}
-.title-line:before {
-  content: "";
-  display: block;
-  width:170px;
-  height:4px;
-  background:#333;
-  position:absolute;
-  top:50%;
-  margin-left:-220px;
- 
-} */
 .space {
   height:200px;
 }
@@ -503,8 +378,6 @@ border:5px rgb(202, 173, 134) dotted;
   width: 320px;
   height: 350px;
   margin-top:-38px;
-  /* margin-left: -70px; */
-  /* margin-right:0px; */
 }
 .main-space{
   height: 130px;
@@ -570,24 +443,76 @@ border:5px rgb(202, 173, 134) dotted;
   font-size: 20px;
   font-family: sans-serif;
   margin-left:-30px;
-  margin-top:-70px;
-  z-index: 4000;
+  margin-top:-115px;
+  z-index: 5000;
 }
 
-.middle-div {
-  margin:0 auto;
-  width: 1300px;
-  height:600px;
-  /* background: #aaaaaa; */
-  background-image: linear-gradient(rgb(185, 185, 185), rgb(231, 231, 231), #fff);
-  /* opacity: 0.9; */
-  margin-top:20px;
-  margin-left:130px;
-  border-left: 7px solid #d88e2c;
+.w-complete{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1em;
+  margin-top:-1220px;
+  height: 800px;
+  margin-right: 100px;
 }
-.middle-div1 h1{
-  padding-left: 30px;
-  padding-top:20px;
-  font-size: 30px;
-  color:rgba(14, 13, 13, 0.5)
+.w-karta{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  text-align: center;
+  font-size:120px;
+  font-weight: 600;
+  padding-top:-10px;
 }
+.w-karta a{
+  color:#fff;
+  opacity:0.8;
+  text-decoration: none;
+}
+.w1{
+  width: 200px;
+  height: 180px;
+  background-color: #e6b97e;
+  margin-left: 320px;
+  margin-top:190px;
+  z-index: 50;
+}
+.w2 {
+  width: 200px;
+  height: 180px;
+  background-color:#aaaaaa;
+  margin-left: -10px;
+  margin-top:290px;
+  z-index: 60;
+  border-top:4px white solid;
+  border-left:4px white solid;
+  
+}
+
+.w3{
+  width: 200px;
+  height: 180px;
+  background-color: #646464;
+  margin-top:340px;
+  margin-left:-460px;
+  z-index: 70;
+  border-top:4px white solid;
+  border-right:4px white solid;
+}
+.w3:hover{
+  z-index: 1;
+}
+.w-text1, .w-text2, .w-text3, .w-white{
+  background: white;
+  width: 600px;
+  height: 300px;
+  margin-top:235px;
+  margin-left: 810px;
+  position: absolute;
+  text-align: center;
+  padding-top:70px;
+  display: apsolute;
+  z-index:10;
+  /* border-top:4px solid #d88e2c; */
+}
+
+

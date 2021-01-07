@@ -1,40 +1,83 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-*{
-margin:0;
-padding:0;
-font-family: 'Poppins', sans-serif;
+* {
+    margin: 0;
+    padding: 0;
 }
-body{
-background-color: #110F0F ;
+.lgr1{
+width:100%;
+height:400px;
+background-image:linear-gradient(#246DAF    ,#231855   );
 }
-header div span{
+.lgr1 span{
     display:table;
-   color:white;
-   position:absolute;
-   margin-left:675px;
-   margin-top:150px;
-   border:3px solid white;
-   padding:10px;
-font-size:22px;
+    color:white;
+    position:absolute;
+    margin-top:150px;
+    margin-left:80px;
+ font-size:40px;
+ -webkit-box-reflect:below -12px linear-gradient(transparent,rgba(0,0,0,0.2));
 }
-header{
- height:400px;
-background-image: url('city.jpg');
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
+.lgr1 p{
+    position:absolute;
+margin-top:250px;
+margin-left:80px;
+color:white;
+font-size:20px;
+}
+.midpart{
+width:100%;
+background-color: #E9E9E9;
+height:700px;
+}
+.pericon i{
+color:white;
+font-size:20px;
+position:absolute;
+margin-top:300px;
+margin-left:80px;
+}
+.paragraph{
+color:#3C24AF;
+
+margin-left:20px;
+font-size: 35px;
+}
+.paragraph2{
+    margin-top:110px;
+    margin-left:20px;
+color:black;
+}
+.perform{
+width:600px;
+height:600px;
+border:1px solid black;
+background-color:white;
+position:absolute;
+margin-top:300px;
+margin-left:700px;
+}
+
+.lastpart{
+height:400px;
+width:100%;
+background-image:linear-gradient(#246DAF    ,#231855   );
+}
+.plastpart{
+color:white;
+font:20px;
+position:relative;
+margin-top:0;
+margin-left:30px;
+
 }
 table{
     table-layout: fixed;
     width:600px;
 margin-left: auto;
 margin-right: auto;
-margin-top:150px;
-
 }
 table td{
 color:#C56F5D;
+margin-top:60px;
 }
 table tr td{
     text-align: center;
@@ -44,59 +87,97 @@ table tr td{
 table tr td p{
 color:white;
 font-size:12px;
-}
- h3{
-     margin-top:100px;
-text-align:center;
-color:white;
-}
-.text-box{
-    background:#423937;
-border:none;
-height:20px;
-padding:12px;
-opacity:0.9;
-}
-form{
-margin-top:50px;
-margin-bottom:50px;
-}
-input{
-width:50%;
-margin-left:350px;
-opacity:0.9;
-margin-bottom:20px;
-}
-form textarea{
-    width:50%;
-    margin-left:350px;
-height:150px;
-background:#423937;
-border:none;
-padding:12px;
-opacity:0.9;
-}
-input[type=submit]{
-width:10%;
-margin-left:685px;
-background-color:#BE5E4A  ;
-}
-#perconnect{
-    font-family:'Lobster',cursive;
-    font-size:22px;
-    color:#C56F5D;
-    text-align: center;
-}
-div i{
-    margin-top:20px;
-font-size:30px;
-color:#C56F5D;
-padding:10px;
-}
-.divalign{
-text-align:center;
+text-align: center;
 }
 table tr td adress{
     color:white;
     font-size:12px;
 }
+.perh2{
+color:white;
+padding:60px;
+}
+
+ .box{
+    background-color: #231855 ;
+    border-radius: 10px;
+    position:relative;
+    height:150px;
+    width:200px;
+    padding:15px;
+    
+    margin-top:15px;
+    margin-left:15px;
+}
+.box .box1{
+    position:absolute;
+    top:0;
+    left:0;
+background-color:#C56F5D;
+width:100%;
+height:100%;
+transition:0.5s;
+z-index: 1;
+}
+
+
+.box:hover .box1{
+top:20px;
+left:calc(50%-80px);
+width:40px;
+height:40px;
+border-radius:50%;
+}
+.box .box1 .fas{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:40px;
+transition:0.5s;
+}
+
+.box:hover .box1 .fas{
+    font-size:20px;
+}
+.inside{
+color:white;
+margin-top:50px;
+}
+.perform table{
+height:80px;
+background-color: #E9E9E9;
+}
+.perform table tr td i{
+color:blue;
+text-align: left;
+font-size:22px;
+}
+.lefti{
+    text-align: left;
+}
+ input{
+opacity:0.9;
+background-color: #E9E9E9;
+border:none;
+border-radius: 5px;
+width:40%;
+height:30px;
+padding:20px;
+margin-top:30px;
+margin-left:10px;
+}
+label{
+   
+margin-top:30px;
+margin-left:20px;
+font-size:22px;
+}
+form textarea{
+background-color: #E9E9E9;
+width:80%;
+height:100px;
+opacity:0.9;
+}
+
+
