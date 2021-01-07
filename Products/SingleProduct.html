@@ -14,9 +14,20 @@
     </style>
 
     <script type="text/javascript" src="jquery-3.5.1.js"></script>
+    <script>
+    function changeBackground(){ 
+        var currentTime = new Date().getHours();
+        if (7 <= currentTime && currentTime < 20) {
+            document.body.style.backgroundColor = "#FFF";
+        }
+        else {
+            document.body.style.backgroundColor = "#FAFAFA";
+        }
+    }
+    </script>
 </head>
 
-<body>
+<body onload="changeBackground()">
 
     <section class="section1 ">
         <header>
