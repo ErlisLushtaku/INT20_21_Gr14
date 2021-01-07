@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    /* font-family:'Rajdhani'; */
+    font-family:'Rajdhani';
     box-sizing: border-box;
     /* background-color: rgb(214, 214, 214); */
 }
@@ -418,19 +418,19 @@ h3:hover span:nth-child(even) {
 
 .flex-container {
     display: flex;
-    margin: auto;
     width: 70%;
+    margin: auto;
 }
 
-.right-div > * {
-    margin-bottom: 15px;
-}
-
-.smaller {
-    margin-bottom: 5px;
+#right-div {
+    position: relative;
+    box-shadow: 0 25px 40px rgba(116, 114, 114, 0.5);
+    border-radius: 15px;
+    padding: 30px;
 }
 
 #big-img {
+    box-shadow: 0 25px 40px rgba(116, 114, 114, 0.5);
     height: 600px;
     width: 450px;
     object-fit: cover;
@@ -438,13 +438,34 @@ h3:hover span:nth-child(even) {
     margin-right: 20px;
 }
 
+#right-div > * {
+    
+    margin-bottom: 15px;
+}
+
+#title {
+    margin-top: 30px;
+    border-radius: 5px;
+    padding: 15px 15px 15px 0px;
+    /* box-shadow: inset 0 25px 40px rgba(116, 114, 114, 0.5); */
+}
+
+.smaller {
+    margin-bottom: 5px !important;
+}
+
 #title {}
 
 button {
+    display: block;
+    width: 100%;
     border: 0px;
     border-radius: 5px;
-    padding: 10px;
+    padding: 15px;
     color: white;
+    font-size: 17px;
+    width: 300px;
+    /* font-weight: 100; */
 }
 
 .red {
@@ -461,8 +482,23 @@ button {
 
 #price {}
 
+#size {
+    margin-bottom: auto;
+}
+
+#to-cart {
+    position:absolute;
+    bottom: 80px;
+
+}
+
+#buy-now {
+    position: absolute;
+    bottom:15px;
+}
+
 #to-cart:hover {
-    background-color: rgb(163, 19, 55);
+    background-color: rgb(148, 16, 49);
     transition: 1s;
 }
 
@@ -470,4 +506,3 @@ button {
     background-color: rgb(170, 156, 33);
     transition: 1s;
 }
-

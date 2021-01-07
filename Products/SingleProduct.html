@@ -14,9 +14,20 @@
     </style>
 
     <script type="text/javascript" src="jquery-3.5.1.js"></script>
+    <script>
+    function changeBackground(){ 
+        var currentTime = new Date().getHours();
+        if (7 <= currentTime && currentTime < 20) {
+            document.body.style.backgroundColor = "#FFF";
+        }
+        else {
+            document.body.style.backgroundColor = "#FAFAFA";
+        }
+    }
+    </script>
 </head>
 
-<body>
+<body onload="changeBackground()">
 
     <section class="section1 ">
         <header>
@@ -64,18 +75,17 @@
         <div id="img-containter">
             <img src="ProductsImages/1.jpg" id="big-img">
         </div>
-        <div class="right-div">
+        <div id="right-div">
             <h1 id="title">Title</h1>
             <h1 id="price" class="red">Price: </h1>
             <p id="producer" class="smaller">Producer: </p>
             <p id="category" class="smaller">Category: </p>
             <p id="city">City: </p>
-            <h2>Size: <span class="red">60cm x 70cm</span></h2>
+            <h2 id="size">Size: <span class="red">60cm x 70cm</span></h2>
             <button id="to-cart" class="back-red">ADD TO CART</button>
             <button id="buy-now" class="back-yellow">BUY NOW</button>
         </div>
     </div>
-    <a href="" onclick="localStorage.setItem('object', 'item')"></a>
 
     <script>
         var queryString = location.search.substring(1);
@@ -87,7 +97,8 @@
         document.getElementById("producer").innerHTML += data[3].replace(/%20/g, " ");
         document.getElementById("category").innerHTML += data[4];
         document.getElementById("city").innerHTML += data[5];
+
+        $('#right-div').width($('#buy-now').width() + 30)
     </script>
 </body>
-
 </html>
