@@ -1,42 +1,60 @@
 <!DOCTYPE html>
 <html>
   <head>
+      <title>Loans</title>
+      <link rel="stylesheet" href="navigation.css">
     <link rel="stylesheet" href="loans.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
   </head>
   <body>
-                <header>
-                    <div class="div1">BPAK</div>
-                    <div>
-                        <img src="logo.png" alt="" class="perimg">
-                    </div>
-                    <div class="div2">
-                        <div>
-                            <a href="">Home</a>
-                        </div>
-                        <div>
-                            <a href="">Sign up</a>
-                        </div>
-                        <div>
-                            <a href="">Contacts</a>
-                        </div>
-                        <div>
-                            <a href="">Gallery</a>
-                        </div>
-            
-                        <ul>
-                            <li>
-                                <a href="#">Qytetet</a>
-                                <ul>
-                                    <li><a href="#">Prishtine</a></li>
-                                    <li><a href="">Vushtrri</a></li>
-                                    <li><a href="">Mitrovice</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </header>
-         
+    <header>
+        <div class="containeer">
+            <div class="div1"></div><div class="logo">
+                <h4 style="font-family: 'Rajdhani', sans-serif;">
+                <span>B</span><span>usiness</span>
+                <span>P</span><span>romotions</span>  
+                <span>A</span><span>gency</span>
+                </h4>
+            </div></div>
+            <nav class="m-nav">
+                <div class="nav-bar">
+                <ul class="nav-l">
+                    <li class="nav-l-i">
+                        <a href="Home" class="link" style="margin-left:140px;">Home</a>
+                    </li>
+                    <li class="nav-l-i">
+                        <a href="Home" class="link">Promotions</a>
+                    </li>
+                    <li class="nav-l-i">
+                        <a href="Home" class="link">E-Shopping</a>
+                    </li>
+                    <li class="nav-l-i">
+                        <a href="Home" class="link">Funding</a>
+                    </li>
+                    <li class="nav-l-i">
+                        <a href="Home" class="link">Contact Us</a>
+                    </li>
+                    <li class="tre"><span class="tre3"></span></li>
+                </ul>
+            </nav>
+        </nav>
+        <nav class="account">
+          <ul class="nav-l">
+            <li class="nav-l-i">
+              <a class="link link_button" href="#">Join Us</a>
+            </li>
+          </ul>
+        </nav>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('scroll', function () {
+        let header = document.querySelector('header');
+        let windowPosition = window.scrollY > 0;
+        header.classList.toggle('scrolling-active', windowPosition);
+    })
+  </script>
+        </header>
            <main>
             <div class="box1">
               <div class="content">
@@ -51,7 +69,7 @@
               </div>
         </div>
         <div class="box4">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff" fill-opacity="0.8" d="M0,96L60,117.3C120,139,240,181,360,197.3C480,213,600,203,720,165.3C840,128,960,64,1080,58.7C1200,53,1320,107,1380,133.3L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgb(196, 190, 190)" fill-opacity="1" d="M0,96L60,117.3C120,139,240,181,360,197.3C480,213,600,203,720,165.3C840,128,960,64,1080,58.7C1200,53,1320,107,1380,133.3L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
           </div>
             <div class="box2">
                 <div class="content1">
