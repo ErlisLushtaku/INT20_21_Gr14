@@ -1,41 +1,59 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Funding Programs</title>
+    <link rel="stylesheet" href="navigation.css">
     <link rel="stylesheet" href="fundingprograms.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
   </head>
   <body>
-    <section>
-      <header>
-          <div class="div1">BPAK</div>
-          <div>
-              <img src="logo.png" alt="" class="perimg">
-          </div>
-          <div class="div2">
-              <div>
-                  <a href="">Home</a>
-              </div>
-              <div>
-                  <a href="">Sign up</a>
-              </div>
-              <div>
-                  <a href="">Contacts</a>
-              </div>
-              <div>
-                  <a href="">Gallery</a>
-              </div>
-  
-              <ul>
-                  <li>
-                      <a href="#">Qytetet</a>
-                      <ul>
-                          <li><a href="#">Prishtine</a></li>
-                          <li><a href="">Vushtrri</a></li>
-                          <li><a href="">Mitrovice</a></li>
-                      </ul>
+    <header>
+      <div class="containeer">
+          <div class="div1"></div><div class="logo">
+              <h4 style="font-family: 'Rajdhani', sans-serif;">
+              <span>B</span><span>usiness</span>
+              <span>P</span><span>romotions</span>  
+              <span>A</span><span>gency</span>
+              </h4>
+          </div></div>
+          <nav class="m-nav">
+              <div class="nav-bar">
+              <ul class="nav-l">
+                  <li class="nav-l-i">
+                      <a href="Home" class="link" style="margin-left:140px;">Home</a>
                   </li>
+                  <li class="nav-l-i">
+                      <a href="Home" class="link">Promotions</a>
+                  </li>
+                  <li class="nav-l-i">
+                      <a href="Home" class="link">E-Shopping</a>
+                  </li>
+                  <li class="nav-l-i">
+                      <a href="Home" class="link">Funding</a>
+                  </li>
+                  <li class="nav-l-i">
+                      <a href="Home" class="link">Contact Us</a>
+                  </li>
+                  <li class="tre"><span class="tre3"></span></li>
               </ul>
-          </div>
+          </nav>
+      </nav>
+      <nav class="account">
+        <ul class="nav-l">
+          <li class="nav-l-i">
+            <a class="link link_button" href="#">Join Us</a>
+          </li>
+        </ul>
+      </nav>
+  </div>
+</div>
+<script>
+  window.addEventListener('scroll', function () {
+      let header = document.querySelector('header');
+      let windowPosition = window.scrollY > 0;
+      header.classList.toggle('scrolling-active', windowPosition);
+  })
+</script>
       </header>
       <div class="conteiner">
         <div class="box" >
