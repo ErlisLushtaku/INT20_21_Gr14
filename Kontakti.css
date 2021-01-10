@@ -256,6 +256,7 @@ h4:hover span:nth-child(even){
     margin-top:150px;
     margin-left:80px;
   font-size:40px;
+  font-family: 'Roboto Condensed', sans-serif;
   -webkit-box-reflect:below -12px linear-gradient(transparent,rgba(0,0,0,0.2));
   }
   .lgr1 p{
@@ -332,6 +333,7 @@ background-size: cover;
   }
   .perh2{
   color:white;
+  font-family: 'Barlow Condensed', sans-serif;
   padding:60px;
   }
   
@@ -394,7 +396,7 @@ background-size: cover;
       
       .perform{
       position:absolute;
-      height:700px;
+      height:620px;
       width:600px;
       border:black solid 1px;
       border-radius: 4px;
@@ -407,7 +409,7 @@ background-size: cover;
       }
       .inside i{
       align-items: left;
-      color:blue;
+      color:#23212A;
       font-size: 18px;
       }
       .lefti{
@@ -420,20 +422,20 @@ background-size: cover;
         background-color: #E9E9E9;
         }
         .perform table tr td i{
-        color:blue;
+        color:#23212A;
         text-align: left;
         }
       input{
         opacity:0.9;
         background-color: #E9E9E9;
-      height:30px;
+      height:20px;
       border:none;
       padding:20px;
       border-radius: 5px;
-      width:45%;
+      width:35%;
       margin-top:20px;
       padding:20px;
-      margin-left:18px;
+      margin-left:30px;
       }
       form textarea{
       width:560px;
@@ -446,9 +448,10 @@ background-size: cover;
       height:200px;
       }  
       .content{
+        height:30px;
+        margin-top:20px;
+    align-items:center ;
       display:flex;
-      align-items:center;
-      
       }
       .content .btn{
       height:50px;
@@ -500,8 +503,6 @@ padding:5px;
 #persubmit:hover{
 background-color:black;
 }
-
-
 
   /* ----------------------------------- */
   
