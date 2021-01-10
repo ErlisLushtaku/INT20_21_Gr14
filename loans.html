@@ -59,10 +59,36 @@
             <div class="box1">
               <div class="content">
                 <h1 data-text="Loans">Loans</h1>
+                <p>
                 Start or expand your business with loans. Find the perfect loan for your small business, today. Use Lender Match to find lenders.
-              </br>
-              <a  href="=">Find Lenders</a>
+              </p>
               </div>
+          
+              <button class="open-button" onclick="openForm()">Find Lenders</button>
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+  </script>
               <div class="photo">
     <img src="images/loanss.jpg" >
    
@@ -91,11 +117,19 @@
                 </div>
                   </div>
                   <div class="box7">
-                      <br><br>
-                      <i><b>BPAK</b></i><br><br><hr><br>
-                      we provide low rate loans <br>
-                      personalized to yours and yours only <br>
                       
+                    <h3>Why choose a loan with us?</h3>
+                   
+                    <ul style="list-style-type:circle">
+                      <li> We provide low rate loans personalized to yours and yours only</li>
+                      <li>Get an instant decision
+                         when you apply online</li>
+                      <li>You can pay more to pay off your 
+                        loan quicker – early settlement</li>
+                      <li>Good and quick services</li>
+                        <li>Meeting all customer needs for any type of loan
+                        </li>
+                    </ul>
                 </div>
             <div class="box8">
                     <h1>Types of Small Business Loans</h1>
