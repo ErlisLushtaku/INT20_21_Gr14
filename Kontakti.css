@@ -455,6 +455,52 @@ background-size: cover;
       width:120px;
       
       }
+.content .btn button{
+width:100%;
+height:100%;
+border:none;
+outline:none;
+border-radius:5px;
+color:white;
+background-color: #C56F5D;
+font-size:12px;
+font-weight:500;
+letter-spacing: 1px;
+transition:all 0.3s ease;
+}
+
+.btn button:hover{
+background-color:#23212A  ;
+
+}
+.content .filname{
+  position:relative;
+  color:white;
+  background-color: #C56F5D;
+  padding:8px 12px;
+  font-size:12px;
+  border-radius:5px;
+  margin-left:10px;
+}
+
+.btn{
+
+margin-left:200px;
+}
+
+#persubmit{
+border-radius:5px;
+background-color:#C56F5D ;
+transition:all 0.3s ease;
+color:white;
+font-size:15px;
+height:30px;
+padding:5px;
+}
+#persubmit:hover{
+background-color:black;
+}
+
 
 
   /* ----------------------------------- */
