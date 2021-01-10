@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <script src="Kontakti.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Roboto+Condensed:ital,wght@1,700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="Kontakti.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
 crossorigin="anonymous" />
@@ -75,7 +80,7 @@ window.addEventListener('scroll', function () {
   <table>
     <tr colspan="2">
     <td class="lefti"><i class="fas fa-mail-bulk"></i></td>
-    <td colspan="3" style="color:blue;">Write us a few words about your ideas and we will come up with a plan within 24 hours!</td>
+    <td colspan="3" style="color:#23212A;">Write us a few words about your ideas and we will come up with a plan within 24 hours!</td>
     </tr>
     </table>
     <form>
@@ -84,19 +89,36 @@ window.addEventListener('scroll', function () {
       <input type="text" name="company" class="text-box"  placeholder="Company" required>
       <input type="text" name="number" class="text-box" placeholder="Budget" required><br/>
 <textarea name="details" placeholder="Project details(optional)"></textarea>
+<input type="submit" id="persubmit" value="Send" style="margin-bottom:20px;margin-left:210px;opacity:1;">
     </form>
 <div class="content">
-  <input type="file" hidden>
+  <input type="file"  id="def" hidden>
   <div class="btn">
-<button id="perbtn">Drop it like it's hot</button>
+<button id="perbtn" onclick="active()">Choose a file</button>
   </div>
   <div class="filname">No file chosen</div>
-
 </div>
 </div>
 </div>
 </div>
-
+<script>
+  const defbtn=document.querySelector("#def");
+const custombtn=document.querySelector("#perbtn");
+const fileName=document.querySelector(".filname");
+let regularexpression=/[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
+function active(){
+defbtn.click();
+}
+defbtn.addEventListener("change",function(){
+  if(this.value){
+    let nameval=this.value.match(regularexpression);
+    fileName.textContent=nameval;
+  }
+  else{
+    fileName.textContent="No file chosen";
+  }
+});
+</script>
 
 <div class="midpart">
   <p class="paragraph">
@@ -106,7 +128,7 @@ window.addEventListener('scroll', function () {
 
 <div class="box"><div class="box1"><i class="fas fa-search"></i></div>
 <div id="inside">
-  <p>One of the biggest sites!</p>
+  <p>planning on doing investmens on your businesses, you searched the right place!</p>
 </div>
 </div>
 <div class="box"><div class="box1"> <i class="fas fa-map-marker-alt"></i></div>
@@ -116,7 +138,7 @@ window.addEventListener('scroll', function () {
 </div>
 <div class="box">
 <div class="box1"><i class="fas fa-euro-sign"></i></div>
-<div id="inside">Average income calculated from our promotions is estimated 600$ per week!</div>
+<div id="inside">Get a promotion if you want to see positive results further on with your business!</div>
 </div>
 </div>
 <div class="lastpart">
