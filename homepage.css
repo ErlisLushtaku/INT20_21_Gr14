@@ -516,6 +516,7 @@ border:5px rgb(202, 173, 134) dotted;
 .d-section4{
   display: grid;
   grid-template-columns: 55% 45%;
+  background-color: white;
 }
 .trusted-by{
   height: 450px;
@@ -523,10 +524,13 @@ border:5px rgb(202, 173, 134) dotted;
   margin-right:-20px;
   border:4px solid #d69949;
   margin-top:40px;
+  position: relative;
+  z-index: 300;
+  background-color: white;
 }
 .area {
   height:200px;
-  background-color: #333;
+  background-color: rgb(48, 48, 48);
   margin-top:-20px;
   margin-left:-50px;
   margin-right:50px;
@@ -539,12 +543,11 @@ border:5px rgb(202, 173, 134) dotted;
 }
 .ta2 td{
 color:#C56F5D;
-margin-top:60px;
+/* margin-top:60px; */
 }
 .ta2 tr td{
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  padding:10px;
 }
 .ta2 tr td p{
 color:white;
@@ -659,10 +662,26 @@ text-align: center;
   opacity:1;
   z-index: 4000;
 }
-.before-footer{
-  height: 500px;
-  background: #ebebeb;
-  margin-top:-10px;
+.before-footer1{
+  height: 100px;
+  background-color: white;
+  opacity: 0.5;
+  margin-top:-100px;
+  position:relative;
+  z-index:300;
 }
-
-
+.svg-before-footer{
+  margin-top:-250px;
+  position: relative;
+  z-index: 200;
+}
+.before-footer2{
+  height: 300px;
+  background: #ebebeb;
+  margin-top: -50px;
+}
+.mark1{
+  font-size: 20px;
+  font-family: monospace;
+  color: black;
+}
