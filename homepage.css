@@ -555,11 +555,7 @@ text-align: center;
   color:white;
   font-size:12px;
 }
-/* .our-svg {
-  z-index:50;
-  margin-left:-20px;
 
-} */
 .svg-div1{
   width:400;
   background-color: white;
@@ -662,6 +658,11 @@ text-align: center;
 .testimonials .s-slider img.active{
   opacity:1;
   z-index: 4000;
+}
+.before-footer{
+  height: 500px;
+  background: #ebebeb;
+  margin-top:-10px;
 }
 
 
