@@ -7,10 +7,8 @@
 <script src="js/scroll.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="navigation.css">
-        <link
-      href="https://fonts.googleapis.com/css?family=Poppins:300,900&display=swap"
-      rel="stylesheet"
-    />
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,900&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <script>
 
             $(function() {
@@ -25,6 +23,13 @@
 
                 })
             });
+            
+            $(document).ready(function(){
+            $("#meet").click(function(){
+                $("#team").slideToggle("slow");
+            });
+            });
+
     </script>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
@@ -188,7 +193,7 @@
         <p>
             <ol style="list-style-type: none;">
                 <li style="font-size:20px;">As a Kosovo's business promotion agency,
-                    BPA works together as one firm to serve our clients
+                    <abbr title="Business Promotion Agency">BPA</abbr> works together as one firm to serve our clients
                     and expand their businesses through
                     digital promotion such as display advertising and lead generation.</li>
             </ol>
@@ -260,15 +265,15 @@
                     <br>
                 </tr>
                 <tr>
-                <td style="border-right:3px solid black"><img src="images/portfolio.png" style="width: 30px; height: 30px;"><br/>
+                <td style="border-right:3px solid black"><img src="images/portfolio.png" alt="Bag Pic" style="width: 30px; height: 30px;"><br/>
                 <p style="color:black; font-size:20px;">Projects</p>
                 <p style="font-size: 60px; color:black; font-weight: bold; font-family: 'Rajdhani', sans-serif;">56</p>
                 </td>
-                <td style="border-right:3px solid black; padding-right: 20px; padding-left:20px;"><img src="images/mouse.png" style="width: 40px; height:40px;"><br/>
+                <td style="border-right:3px solid black; padding-right: 20px; padding-left:20px;"><img src="images/mouse.png" alt="Mouse Pic" style="width: 40px; height:40px;"><br/>
                 <p style="color:black; font-size:20px;">Working Days</p>
                 <p  style="font-size: 60px; color:black; font-weight: bold; font-family: 'Rajdhani', sans-serif;">312</p>
                 </td>
-                <td><img src="images/customer.png" style="width: 40px; height:40px;"><br/>
+                <td><img src="images/customer.png" alt="Costumer Pic" style="width: 40px; height:40px;"><br/>
                     <p style="color:black; font-size:20px;">Costumers</p>
                     <p style="font-size: 60px; color:black; font-weight: bold; font-family: 'Rajdhani', sans-serif;">68</p>
                 </td>
@@ -276,7 +281,7 @@
                 </table>
         </div>
     </div>
-    <section class="testimonials" style="z-index: 300;position: relative">
+    <div class="testimonials" style="z-index: 300;position: relative">
         <div class="review">
             <div class="slider">
                 <div class="slide active">
@@ -305,39 +310,41 @@
                 </div>
             </div>
             <div class="s-slider">
-                <img src="images/test1.jfif" class="active" alt="img" data-id="0">
-                <img src="images/test2.jfif" alt="img" data-id="1">
-                <img src="images/test3.jfif" alt="img" data-id="2">
+                <img src="images/test1.jfif" class="active" alt="Costumer 1" data-id="0">
+                <img src="images/test2.jfif" alt="Costumer 2" data-id="1">
+                <img src="images/test3.jfif" alt="Costumer 3" data-id="2">
             </div>
         </div>
         <script src="js/testimonials.js"></script>
-    </section>
+    </div>
     <div class="custom-shape-divider-bottom-1610404607">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z" class="shape-fill"></path>
         </svg>
     </div>
-    <div class="meet-our-team"></div>
-    <div class="btn-mot"><a href="#team" onclick="document.getElementById('team').style.display='block'">MEET OUR TEAM</a></div>
+    <div class="meet-our-team">
+        
+    </div>
+    <div class="btn-mot"><a href="#team1" id="meet">MEET OUR TEAM</a></div>
       <div class="team-section" style="display:none;" id="team">
         <div class="inner-team">
     
     
             <div class="member">
-              <img src="img1.jpg" alt="">
+              <img src="images/img1.jpg" alt="Team Member">
               <div class="m-name">Full Name</div>
-              <div class="m-positon">Designer</div>
+              <div class="m-position"><i>Designer</i></div>
               <div class="m-social">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#" id="team1"><i class="fab fa-instagram"></i></a>
               </div>
             </div>
     
             <div class="member">
-                <img src="img1.jpg" alt="">
+                <img src="images/img1.jpg" alt="Team Member">
                 <div class="m-name">Full Name</div>
-                <div class="m-positon">Designer</div>
+                <div class="m-position"><i>Designer</i></div>
                 <div class="m-social">
                   <a href="#"><i class="fab fa-facebook-f"></i></a>
                   <a href="#"><i class="fab fa-twitter"></i></a>
@@ -345,9 +352,9 @@
                 </div>
               </div>
               <div class="member">
-                <img src="img1.jpg" alt="">
+                <img src="images/img1.jpg" alt="Team Member">
                 <div class="m-name">Full Name</div>
-                <div class="m-positon">Designer</div>
+                <div class="m-position"><i>Designer</i></div>
                 <div class="m-social">
                   <a href="#"><i class="fab fa-facebook-f"></i></a>
                   <a href="#"><i class="fab fa-twitter"></i></a>
@@ -355,9 +362,9 @@
                 </div>
               </div>
               <div class="member">
-                <img src="img1.jpg" alt="">
+                <img src="images/img1.jpg" alt="Team Member">
                 <div class="m-name">Full Name</div>
-                <div class="m-positon">Designer</div>
+                <div class="m-position"><i>Designer</i></div>
                 <div class="m-social">
                   <a href="#"><i class="fab fa-facebook-f"></i></a>
                   <a href="#"><i class="fab fa-twitter"></i></a>
@@ -365,9 +372,9 @@
                 </div>
               </div>
               <div class="member">
-                <img src="img1.jpg" alt="">
+                <img src="images/img1.jpg" alt="Team Member">
                 <div class="m-name">Full Name</div>
-                <div class="m-positon">Designer</div>
+                <div class="m-position"><i>Designer</i></div>
                 <div class="m-social">
                   <a href="#"><i class="fab fa-facebook-f"></i></a>
                   <a href="#"><i class="fab fa-twitter"></i></a>
@@ -375,9 +382,9 @@
                 </div>
               </div>
               <div class="member">
-                <img src="img1.jpg" alt="">
+                <img src="images/img1.jpg" alt="Team Member">
                 <div class="m-name">Full Name</div>
-                <div class="m-positon">Designer</div>
+                <div class="m-position"><i>Designer</i></div>
                 <div class="m-social">
                   <a href="#"><i class="fab fa-facebook-f"></i></a>
                   <a href="#"><i class="fab fa-twitter"></i></a>
@@ -389,7 +396,7 @@
     
         </div>
       </div>
-    
 </section>
+
     </body>
 </html>
