@@ -575,7 +575,7 @@ text-align: center;
   margin-top:-130px;
   margin-bottom: 50px;
   position: absolute;
-  background: linear-gradient(to right, rgb(182, 182, 182) 50%, #ffca58 50%, #cc752e);
+  background: linear-gradient( to right,rgb(182, 182, 182) 50%, #ffca58 50%, #cc752e);
   background-size: 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -732,7 +732,6 @@ text-align: center;
   text-transform: uppercase;
 }
 .m-position{
-  font-style: italic;
   color: #11bead;
 }
 .m-social a{
@@ -750,7 +749,13 @@ text-align: center;
   line-height: 30px;
 }
 @media screen and (max-width:600px) {
-  .pe{
+  .member{
     width: 100%;
   }
+}
+@font-face{
+  font-family: 'Personal-font';
+  src:url(Satisfy-Regular.ttf);
+  font-style: normal;
+  font-weight: 200;
 }
