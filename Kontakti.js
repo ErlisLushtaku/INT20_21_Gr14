@@ -11,3 +11,10 @@ function showPosition(position) {
   "<br>Longitude: " + position.coords.longitude;
   
 }
+function validatebudget(){
+var x=document.getElementById("a").value;
+if(isNaN(x)||x<0){
+alert("you must put a number in budget part, or you have a negative value!")
+return false;
+}
+}
