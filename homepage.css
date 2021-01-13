@@ -759,3 +759,56 @@ text-align: center;
   font-style: normal;
   font-weight: 200;
 }
+.footer-class{
+  height: 400px;
+  background: linear-gradient(180deg,rgb(134, 134, 134), rgb(77, 77, 77), #363636);
+  margin-top:1600px;
+  border-bottom: 50px solid #333;
+  border-image: url(images/mapi.jpg);
+}
+.big-text{
+  font-size:180px;
+  /* font-weight: 600; */
+  letter-spacing:0.01em;
+  /* padding-top:20px; */
+  position: relative;
+  color:rgba(158, 158, 158, 0.3);
+  font-family: 'Rajdhani', sans-serif;
+  z-index: 10;
+  margin-left: 50px;
+}
+.high-lighted {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 30px;
+  letter-spacing: 0.2em;
+  margin-left: 230px;
+  margin-top:-90px;
+  position: relative;
+  z-index: 20;
+  font-weight: bolder;
+}
+.high-lighted span{
+  background-color: rgb(216, 142, 44);
+  color:white;
+  font-family: 'Rajdhani', sans-serif;
+  padding: 5px;
+  font-weight: bolder;
+}
+.high-lighted2{
+  font-family: 'Rajdhani',sans-serif;
+  position: relative;
+  font-size: 20px;
+  margin-left: 330px;
+}
+/* .datas{
+  margin:0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.data-box1{
+  margin:0 auto;
+  display: flex;
+  justify-content: center;
+} */
