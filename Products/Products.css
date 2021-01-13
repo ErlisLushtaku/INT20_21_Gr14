@@ -522,12 +522,17 @@ div.product .product-footer button {
 
 div.product:hover .product-footer button {
   display: block;
-  transition: 1s ease-in-out;
+  animation: fadeIn ease-in 0.7s;
 }
 
 div.product .product-footer button:hover {
   background-color: rgb(148, 16, 49);
   transition: 1s ease-in-out;
+}
+
+div.product .product-footer a h3:hover{
+  color: rgb(177, 163, 39);
+  transition: 0.7s;
 }
 
 body {
@@ -565,6 +570,37 @@ body {
 #checkout:hover {
   background-color: rgb(170, 156, 33);
   transition: 1s;
+}
+
+.fas {
+  font-size: 17px;
+}
+
+.fa-list {
+  color: rgba(218, 206, 206, 0.788);
+}
+
+.fa-th {
+  color: rgba(161, 148, 148, 0.644);
+}
+
+.fa-list:hover {
+  color:  rgb(59, 59, 59);
+  transition: 0.5s;
+}
+
+#icons {
+  float:right;
+  margin-top:70px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* .product{

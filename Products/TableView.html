@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="Products.css">
+    <link rel="stylesheet" type="text/css" href="TableView.css">
     <title>Products</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
@@ -64,26 +64,53 @@
     <section id="seksioni-produktet">
         <section>
             <div id="icons">
-                <i class="fas fa-th"></i>
-                <a href="TableView.html" title="Table View" style="text-shadow: none;"><i class="fas fa-list"></i></a>
+                <a href="Products.html" title="Gallery View" style="text-shadow: none;"><i class="fas fa-th"></i></a>
+                <i class="fas fa-list"></i>
             </div>
             <div id="Art">
                 <div>
                     <h1 class="category" id="art-h1">Art</h1>
                 </div>
-                <div class="container" id="art-container"></div>
+                <table id="art-container" class="container">
+                    <tr>
+                        <th>Title</th>
+                        <th>Price</th>
+                        <th>Producer</th>
+                        <th>Category</th>
+                        <th>City</th>
+                        <th></th>
+                    </tr>
+                </table>
             </div>
             <div id="Food">
                 <div>
                     <h1 class="category">Food</h1>
                 </div>
-                <div class="container" id="food-container"></div>
+                <table id="food-container" class="container">
+                    <tr>
+                        <th>Title</th>
+                        <th>Price</th>
+                        <th>Producer</th>
+                        <th>Category</th>
+                        <th>City</th>
+                        <th></th>
+                    </tr>
+                </table>
             </div>
             <div id="Textile">
                 <div>
                     <h1 class="category">Textile</h1>
                 </div>
-                <div class="container" id="textile-container"></div>
+                <table id="textile-container" class="container">
+                    <tr>
+                        <th>Title</th>
+                        <th>Price</th>
+                        <th>Producer</th>
+                        <th>Category</th>
+                        <th>City</th>
+                        <th></th>
+                    </tr>
+                </table>
             </div>
         </section>
 
@@ -92,11 +119,11 @@
             <ul id="cartList">
 
             </ul>
-            <h2 id="totalPrice">0</h2>
+            <h2 id="totalPrice">Total: </h2>
             <button id="checkout">CHECKOUT</button>
         </div>
     </section>
-    <script type="text/javascript" src="Products.js"></script>
+    <script type="text/javascript" src="TableView.js"></script>
 </body>
 
 </html>

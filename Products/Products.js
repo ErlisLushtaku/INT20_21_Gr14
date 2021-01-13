@@ -202,8 +202,17 @@ $.each(art.products, function (index, item) {
             .append($("<h3>").text(item.title))
           )
           .append($("<h4>").text(item.price))
-          .append($("<button>").text("ADD TO CART")
-            .attr("onclick", addItem(item.title, item.price))
+          .append(
+            $("<button>", {
+              attr: "btn",
+              text: "ADD TO CART",
+              click: function () {
+                $("#cartList").append(
+                  $("<li>").text(item.title + " - " + item.price)
+                )
+                calcTotal()
+              }
+            })
           )
       )
   );
@@ -230,8 +239,17 @@ $.each(food.products, function (index, item) {
             .append($("<h3>").text(item.title))
           )
           .append($("<h4>").text(item.price))
-          .append($("<button>").text("ADD TO CART")
-            .attr("onclick", addItem(item.title, item.price))
+          .append(
+            $("<button>", {
+              attr: "btn",
+              text: "ADD TO CART",
+              click: function () {
+                $("#cartList").append(
+                  $("<li>").text(item.title + " - " + item.price)
+                )
+                calcTotal()
+              }
+            })
           )
       )
   );
@@ -259,28 +277,45 @@ $.each(textile.products, function (index, item) {
           )
           .append($("<h4>").text(item.price))
           .append(
-            $("<button>").text("ADD TO CART")
-              .attr("onclick", addItem(item.title, item.price))
+            $("<button>", {
+              attr: "btn",
+              text: "ADD TO CART",
+              click: function () {
+                $("#cartList").append(
+                  $("<li>").text(item.title + " - " + item.price)                  
+                )
+                calcTotal()
+              }
+            })
           )
       )
   );
 });
 
+/* var buttons = document.querySelectorAll(".btn").length;
 
-function addItem(title, price) {
+for (var i = 0; i < buttons ; i++) {
+    document.querySelectorAll(".btn")[i].addEventListener("click", function() {
+        calcTotal();
+    });
+} */
+
+function calcTotal() {
+  var cartList = document.getElementById("cartList").getElementsByTagName("li");
+  var total = 0;
+
+  for (let i = 0; i < cartList.length; i++) {
+    total += parseFloat(cartList[i].innerHTML.split(" - ")[1])
+  }
+
+  document.getElementById("totalPrice").innerHTML = total + "$"
+};
+
+/* function addItem(title, price) {
   $("#cartList").append(
     $("<li>").text(title + " - " + price)
   )
-}
-
-var cartList = document.getElementById("cartList").getElementsByTagName("li");
-var total = 0;
-
-for(let i = 0; i < cartList.length; i++) {
-  total += parseFloat(cartList[i].innerHTML.split(" - ")[1])
-}
-
-document.getElementById("totalPrice").innerHTML += total + "$"
+}; */
 
 {/* 
   <div id="art-container">
