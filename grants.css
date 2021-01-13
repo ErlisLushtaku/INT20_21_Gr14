@@ -283,25 +283,54 @@ animation:animate 6s linear infinite;
   z-index:6;
 
 }
+.warpper{
 
-.box7{
-  grid-area:box7;
-  background:rgba(48, 46, 46, 0.979);
-  align-items: center;
-  position:relative;
-  text-align:center;
-  padding:100px;
-  font-family: 'Poppins', sans-serif;
-  font-size:25px;
-  color:#fff;
-  margin-top:0;
-}
-.box7 h3{
-  margin-bottom:30px;
-  font-size:35px;
-}
-
-
+  margin-left:50px;
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+ }
+ .box7{
+   grid-area:box7;
+   background:rgba(48, 46, 46, 0.979);
+   align-items: center;
+   position:relative;
+   text-align:center;
+   padding:100px;
+   font-family: 'Poppins', sans-serif;
+   font-size:25px;
+   color:rgba(48, 46, 46, 0.979);
+ 
+ }
+ .box7 h3{
+   margin-top:-100px;
+   margin-bottom:30px;
+   font-size:35px;
+   color:#fff;
+ }
+ .box7 h2{
+   padding:10px;
+ }
+ .box7 button{
+   width:200px;
+   height:50px;
+   background:#F79B44;
+   color:#FFF;
+   font-size:18px;
+   outline-style:outset;
+   outline-width:2px;
+   outline-color:#F79B44;
+ }
+ .box7 button:hover{
+   background:#f08e32;
+ }
+ .box7 p{
+   color:#fff;
+   display:block;
+   white-space: space normal;
+   padding:30px;
+ }
 .box8{
   grid-area:box8;
   background:rgba(48, 46, 46, 0.979);
