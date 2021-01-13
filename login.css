@@ -87,17 +87,17 @@ body{
   box-shadow: 0 0 10px rgba(63, 63, 63, 0.8);
 }
 
-.form .log-in{
+.form .log-in1{
   margin-bottom: 50px;
 }
 
-.form .log-in input{
+.form .log-in1 input{
   width: 15px;
   height: 15px;
   margin-right: 5px;
 }
 
-.form .log-in .remember-me{
+.form .log-in1 .remember-me{
   color: #bbb;
   font-size: 14px;
   display: flex;
@@ -106,7 +106,7 @@ body{
   cursor: pointer;
 }
 
-.form .log-in a{
+.form .log-in1 a{
   color: #888;
   font-size: 14px;
   font-style: italic;
