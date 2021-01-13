@@ -753,12 +753,7 @@ text-align: center;
     width: 100%;
   }
 }
-@font-face{
-  font-family: 'Personal-font';
-  src:url(Satisfy-Regular.ttf);
-  font-style: normal;
-  font-weight: 200;
-}
+
 .footer-class{
   height: 400px;
   background: linear-gradient(180deg,rgb(134, 134, 134), rgb(77, 77, 77), #363636);
