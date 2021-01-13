@@ -1,0 +1,336 @@
+*{
+  margin:0;
+  padding:0;
+  font-family:'Poppins',sans-serif;
+  box-sizing:border-box;
+
+}
+
+
+main{
+  display:grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 800px 20px 700px 170px 600px 500px;
+ grid-template-areas:
+  "box1 box1 box1"
+  "box4 box4 box4"
+  "box2 box2 box3"
+  "box5 box5 box5"
+  "box7 box7 box7"
+  "box8 box8 box8" ;
+  
+  max-width:2000px;
+
+}
+
+
+
+
+
+.box1{
+grid-area:box1;
+position:relative;
+align-items:center;
+background:rgb(196, 190, 190);
+ }
+ .box1 .content{
+   width:400px;
+   height:550px;
+   position:absolute;
+   top:0;
+   left:0;
+   bottom: 0;
+   right: 1470px;
+   margin:auto;
+   z-index:7;
+   padding:40px;
+background:rgb(196, 190, 190);
+box-shadow:0 20px 30px rgb(0,0,0,.3);
+overflow: hidden;
+text-align:left;
+font-family: 'Poppins', sans-serif;
+border-top:9px solid rgb(92, 90, 90);
+animation-name:moveboxright;
+animation-duration: 2s;
+animation-timing-function: linear;
+font-size:25px;
+
+   
+ }
+ .open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: relative;
+  bottom: 23px;
+  top:500px;
+  left:27px;
+  width: 220px;
+  font-size:27px;
+  z-index:12;
+  animation-name:moveboxright;
+animation-duration: 2s;
+animation-timing-function: linear;
+
+ 
+}
+.open-button:hover{
+  background:rgba(48, 46, 46, 0.979);
+  box-shadow:0 20px 30px rgb(0,0,0,.7);
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position:relative;
+  top:2%;
+  left:530px;
+  border: 5px solid #f1f1f1;
+  z-index: 12;
+  max-width: 600px;
+
+}
+.form-popup h1{
+  font-size:29px;
+  font-weight:600;
+color:#F79B44;
+padding-bottom:20px;
+padding-left:70px;
+}
+/* Add styles to the form container */
+.form-container {
+  max-width: 600px;
+  height:630px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] ,.form-container input[type=tel],textarea{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #F79B44;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  float:right;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: rgba(170, 165, 165, 0.973);
+  
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+ 
+
+
+ 
+#myBtn{
+  height:35px;
+  width:130px;
+  font-size:20px;
+  color:rgba(48, 46, 46, 0.979);
+  margin-top:10px;
+  background:#ffff;
+}
+#myBtn:hover{
+  background:rgba(170, 165, 165, 0.973);
+}
+ 
+ .box1 .photo{
+  box-shadow:0 20px 30px rgb(0,0,0,.7);
+   background-size:cover;
+   background-position:center;
+   width:90%;
+   height:600px;
+   position:absolute;
+   top:0;
+   left:0;
+   bottom: 0;
+   right: 0;
+   margin:auto;
+   z-index:6;
+   
+ }
+ .box1 .photo img{
+   width:100%;
+   height:100%;
+   opacity:0.8;
+  
+ }
+ 
+ .box1 .content h1{
+   font-size:70px;
+   color:#F79B44;
+   font-family:'Poppins', sans-serif; 
+   position:relative;
+   color:rgb(196, 190, 190);
+   -webkit-text-stroke:0.1vw rgba(170, 165, 165, 0.973);
+   text-transform: uppercase;
+   margin-bottom: 30px;
+  
+ }
+
+.box1 .content h1::before{
+  content:attr(data-text);
+  position:absolute;
+top:0;
+left:0;
+height:100%;
+width: 0;
+color:#F79B44;
+-webkit-text-stroke:0.1vw #F79B44;
+border-right:2px solid #F79B44;
+overflow:hidden;
+animation:animate 6s linear infinite;
+}
+@keyframes animate
+{
+0%,10%,100%
+{
+  width:0;
+}
+70%,90%
+{
+  width:100%;
+}
+}
+
+
+@keyframes moveboxright{
+0%{ top:0;left:-2800px;bottom: 0;right:0;}
+50%{top:0;left:-2000px;bottom: 0;right:0;}
+ 100%{ top:0;left:0;bottom: 0;right: 1470px;}
+
+}
+.box2{
+  grid-area:box2;
+  align-items: center;
+  position:relative;
+  display:flex;
+  background:#fff;
+  text-align:center;
+  padding:100px;
+  font-family: 'Poppins', sans-serif;
+
+}
+.box2 .content1{
+  font-size:25px;
+}
+.box2 h2{
+  font-size:50px;
+  border-bottom:5px dotted rgb(92, 90, 90);
+  margin-bottom: 60px;
+ 
+}
+
+.box3{
+  margin:0;
+  padding:0;
+ z-index:7;
+
+}
+.box3 img{
+  display:none;
+  
+}
+
+ canvas{
+  margin-right:10px;
+  margin-top:-8px;
+  }
+  
+.box4{
+  grid-area: box4;
+  margin-top:-100px;
+  width:100%;
+  z-index:5;
+  height:100px;
+  margin-bottom: 0;
+  background:#fff;
+
+}
+.box5{
+  grid-area: box5;
+  margin-top:-178px;
+  z-index:6;
+
+}
+
+.box7{
+  grid-area:box7;
+  background:rgba(48, 46, 46, 0.979);
+  align-items: center;
+  position:relative;
+  text-align:center;
+  padding:100px;
+  font-family: 'Poppins', sans-serif;
+  font-size:25px;
+  color:#fff;
+  margin-top:0;
+}
+.box7 h3{
+  margin-bottom:30px;
+  font-size:35px;
+}
+
+
+.box8{
+  grid-area:box8;
+  background:rgba(48, 46, 46, 0.979);
+  align-items: center;
+  position:relative;
+  text-align:center;
+  padding:20px;
+  font-family: 'Poppins', sans-serif;
+  font-size:25px;
+  color:#fff;
+  display:block;
+  
+}
+.box8 h1{
+  font-size:30px;
+  margin-top:10px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  flex-direction:row;
+justify-content: space-around;
+flex-flow:wrap
+}
+.box8 .container{
+  width:90%;
+  display:flex;
+justify-content: space-between;
+flex-wrap: wrap;
+background: rgba(170, 165, 165, 0.973);
+border-radius: 50px;
+margin-left:70px;
+
+}

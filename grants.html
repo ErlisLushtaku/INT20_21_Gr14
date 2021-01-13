@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Grants</title>
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="grants.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  </head>
+  <body>
+    <header>
+        <div class="containeer">
+            <div class="div1"></div><div class="logo">
+                <h4 style="font-family: 'Rajdhani', sans-serif;">
+                <span>B</span><span>usiness</span>
+                <span>P</span><span>romotions</span>  
+                <span>A</span><span>gency</span>
+                </h4>
+            </div></div>
+            <nav class="m-nav">
+                <div class="nav-bar">
+                <ul class="nav-l">
+                    <li class="nav-l-i">
+                        <a href="Home" class="link" style="margin-left:140px;">Home</a>
+                    </li>
+                    <li class="nav-l-i">
+                        <a href="Home" class="link">Promotions</a>
+                    </li>
+                    <li class="nav-l-i">
+                        <a href="Home" class="link">E-Shopping</a>
+                    </li>
+                    <li class="nav-l-i">
+                        <a href="Home" class="link">Funding</a>
+                    </li>
+                    <li class="nav-l-i">
+                        <a href="Home" class="link">Contact Us</a>
+                    </li>
+                    <li class="tre"><span class="tre3"></span></li>
+                </ul>
+            </nav>
+        </nav>
+        <nav class="account">
+          <ul class="nav-l">
+            <li class="nav-l-i">
+              <a class="link link_button" href="#">Join Us</a>
+            </li>
+          </ul>
+        </nav>
+    </div>
+</div>
+<script>
+    window.addEventListener('scroll', function () {
+        let header = document.querySelector('header');
+        let windowPosition = window.scrollY > 0;
+        header.classList.toggle('scrolling-active', windowPosition);
+    })
+</script>
+        </header>
+         
+           <main>
+            <div class="box1">
+              <div class="content">
+                <h1 data-text="Grants">Grants</h1>
+                <p>
+                  The BPA works with different organizations to provide grants for small businesses. Find out if you meet the requirements to apply.
+              </p></div>
+              <button class="open-button" onclick="openForm()">Find Grants</button>
+
+              <div class="form-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                  <h1>Please complete the form below </h1>
+                  <label for="name"><b>Name</b></label>
+                  <input type="text" placeholder="Enter Name" name="name" required>
+                  <label for="surname"><b>Surname</b></label>
+                  <input type="text" placeholder="Enter Surname" name="surname" required>
+                  <label for="email"><b>Email</b></label>
+                  <input type="text" placeholder="Enter Email" name="email" required>
+                  <label for="phone"><b>Number</b></label>
+                <input type="tel" id="phone" name="phone" placeholder="123-45-678-234" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{3}" required>
+                </br>
+                  <label for="subject"><b>What Are Your Future Goals?</b></label>
+                  <textarea id="subject" name="subject" placeholder="Enter text here.." style="width:100%;height:80px"></textarea>
+                 
+              
+              
+                  <button type="submit" class="btn">Summbit</button>
+                  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                
+                </form>
+              </div>
+              <script>
+                function openForm() {
+                  document.getElementById("myForm").style.display = "block";
+                }
+                
+                function closeForm() {
+                  document.getElementById("myForm").style.display = "none";
+                }
+                </script>
+              <div class="photo">
+    <img src="two.jpg" >
+   
+              </div>
+        </div>
+        <div class="box4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgb(196, 190, 190)" fill-opacity="1" d="M0,96L60,117.3C120,139,240,181,360,197.3C480,213,600,203,720,165.3C840,128,960,64,1080,58.7C1200,53,1320,107,1380,133.3L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+          </div>
+            <div class="box2">
+                <div class="content1">
+                    <h2></h2>
+                    <p>Some text.
+                    </p>
+                </div>
+                </div>
+                <div class="box3">
+                    <img src="images/girls.jpg"  id="scream" alt="scream">
+                    <canvas id="myCanvas" width="600" height="690"
+style="border:5px solid #f3ba85;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+window.onload = function() {
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var img = document.getElementById("scream");
+   ctx.drawImage(img,20, 30);
+ 
+};
+</script>
+                </div>
+                <div class="box5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 317"><path fill="rgba(48, 46, 46, 0.979)" fill-opacity="1" d="M0,96L60,117.3C120,139,240,181,360,197.3C480,213,600,203,720,165.3C840,128,960,64,1080,58.7C1200,53,1320,107,1380,133.3L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+                  </div>
+                  <div class="box6">
+        
+                  </div>
+                  <div class="box7">
+                   
+                      <h3>Who get grants?</h3>
+                    </div> 
+                    
+           <div class="box8">
+             <p>Some text</p>
+           </div> 
+            </main>
+            
+     
+  </body>
+</html>
