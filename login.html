@@ -19,12 +19,12 @@
         
         <input class="user-datas" type="text" name="" placeholder="Username" required>
         <input class="user-datas" type="password" name="" placeholder="Password" required>
-        <div class="log-in">
+        <div class="log-in1">
           <label class="remember-me"><input type="checkbox" name="">Remember me</label>
           <a href="#">Forgot your password?</a>
         </div>
         <input class="btn" type="submit" name="" value="LOGIN">
-        <div class="log-in">
+        <div class="sign-up">
           <p>Not Registered? <a href="#">Create an Account</a></p>
         </div>
       </form>
@@ -33,14 +33,14 @@
         <input class="user-datas" type="email" name="" placeholder="Email Address" required>
         <input class="user-datas" type="password" name="" placeholder="Password" required>
         <input class="btn" type="submit" name="" value="SIGN UP">
-        <div class="log-in">
+        <div class="sign-up">
           <p>Already Registered? <a href="#">Sign In</a></p>
         </div>
       </form>
     </div>
 
     <script type="text/javascript">
-    $('.log-in a').click(function(){
+    $('.sign-up a').click(function(){
       $('form').animate({
         height: "toggle", opacity:"toggle",
       }, "slow");
