@@ -1,7 +1,7 @@
 *{
   margin:0;
   padding:0;
-  font-family:'Rajdhani';
+  font-family: 'Poppins', sans-serif;
   box-sizing:border-box;
 }
 
@@ -269,7 +269,7 @@ background:rgb(63, 61, 61);
 }
 .box5{
   grid-area: box5;
-  margin-top:-178px;
+  margin-top:-164px;
   z-index:6;
 
 }
