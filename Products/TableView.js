@@ -195,12 +195,23 @@ $.each(art.products, function (index, item) {
             $("<button>", {
                 text: "+",
                 click: function () {
-                  $("#cartList").append(
-                    $("<li>").text(item.title + " - " + item.price),
+                    if (!exists(item.title)) {
+                        $("#cartList").append(
+                            $("<button>")
+                                .attr("id", "btn" + index)
+                                .click(function () { removeItem("btn" + index) })
+                                .append($("<i>").attr("class", "fas fa-times")),
+                            $("<dt>").text(item.title),
+                            $("<dd>").text('x1').attr('class', 'inline'),
+                            $("<dd>").text(item.price)
+                        )
+                    }
+                    else {
+                        calcQuantity(item.title, item.price)
+                    }
                     calcTotal()
-                  )
                 }
-              })
+            })
         )
     )
 });
@@ -219,12 +230,23 @@ $.each(food.products, function (index, item) {
             $("<button>", {
                 text: "+",
                 click: function () {
-                  $("#cartList").append(
-                    $("<li>").text(item.title + " - " + item.price),
+                    if (!exists(item.title)) {
+                        $("#cartList").append(
+                            $("<button>")
+                                .attr("id", "btn" + index)
+                                .click(function () { removeItem("btn" + index) })
+                                .append($("<i>").attr("class", "fas fa-times")),
+                            $("<dt>").text(item.title),
+                            $("<dd>").text('x1').attr('class', 'inline'),
+                            $("<dd>").text(item.price)
+                        )
+                    }
+                    else {
+                        calcQuantity(item.title, item.price)
+                    }
                     calcTotal()
-                  )
                 }
-              })
+            })
         )
     )
 });
@@ -243,25 +265,76 @@ $.each(textile.products, function (index, item) {
             $("<button>", {
                 text: "+",
                 click: function () {
-                  $("#cartList").append(
-                    $("<li>").text(item.title + " - " + item.price),
+                    if (!exists(item.title)) {
+                        $("#cartList").append(
+                            $("<button>")
+                                .attr("id", "btn" + index)
+                                .click(function () { removeItem("btn" + index) })
+                                .append($("<i>").attr("class", "fas fa-times")),
+                            $("<dt>").text(item.title),
+                            $("<dd>").text('x1').attr('class', 'inline'),
+                            $("<dd>").text(item.price)
+                        )
+                    }
+                    else {
+                        calcQuantity(item.title, item.price)
+                    }
                     calcTotal()
-                  )
                 }
-              })
+            })
         )
     )
 });
 
-function calcTotal() {
-    var cartList = document.getElementById("cartList").getElementsByTagName("li");
+function removeItem(elementId) {
+    var element = document.getElementById(elementId);
+    element.nextElementSibling.remove();
+    element.nextElementSibling.remove();
+    element.nextElementSibling.remove();
+    element.remove();
+    calcTotal();
+  }
+  
+  function calcQuantity(title, price) {
+    var cartList = document.getElementById("cartList").getElementsByTagName("dt");
+  
+    for (let i = 0; i < cartList.length; i++) {
+      if (cartList[i].innerHTML == title) {
+  
+        let quantity = cartList[i].nextElementSibling;
+        quantity.innerHTML = 'x' + (parseInt(cartList[i].nextElementSibling.innerHTML.substring(1)) + 1).toString();
+  
+        let newPrice = quantity.nextElementSibling;
+        newPrice.innerHTML = (parseFloat(price) * parseInt(quantity.innerHTML.substring(1))).toFixed(2);
+  
+        break;
+      }
+    }
+  };
+  
+  function exists(title) {
+    var cartList = document.getElementById("cartList").getElementsByTagName("dt");
+  
+    for (let i = 0; i < cartList.length; i++) {
+      if (cartList[i].innerHTML == title) {
+        return true;
+      }
+    }
+  
+    return false;
+  };
+  
+  function calcTotal() {
+    var cartList = document.getElementById("cartList").getElementsByTagName("dd");
     var total = 0;
   
     for (let i = 0; i < cartList.length; i++) {
-      total += parseFloat(cartList[i].innerHTML.split(" - ")[1])
+      if (i % 2 == 1) {
+        total += parseFloat(cartList[i].innerHTML)
+      }
     }
   
-    document.getElementById("totalPrice").innerHTML = total + "$"
+    document.getElementById("totalPrice").innerHTML = total.toFixed(2).toString() + "$"
   };
 
 {/* <table>
@@ -276,21 +349,6 @@ function calcTotal() {
           <td></td>
       </tr>
   </table> */}
-
-function addItem(title, price) {
-    $("#cartList").append(
-        $("<li>").text(title + " - " + price)
-    )
-}
-
-var cartList = document.getElementById("cartList").getElementsByTagName("li");
-var total = 0;
-
-for (let i = 0; i < cartList.length; i++) {
-    total += parseFloat(cartList[i].innerHTML.split(" - ")[1])
-}
-
-document.getElementById("totalPrice").innerHTML += total + "$"
 
 {/* 
     <div id="art-container">

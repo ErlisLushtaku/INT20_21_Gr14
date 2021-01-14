@@ -25,7 +25,7 @@ var art = {
       "city": "Prishtina"
     },
     {
-      "title": "Men Casual Shoe",
+      "title": "Vizatimi 4",
       "price": "2000.99",
       "image": "ProductsImages/1.jpg",
       "producer": "Ngjyra",
@@ -33,7 +33,7 @@ var art = {
       "city": "Prishtina"
     },
     {
-      "title": "Men Casual Shoe",
+      "title": "Vizatimi 5",
       "price": "2000.99",
       "image": "ProductsImages/1.jpg",
       "producer": "Ngjyra",
@@ -41,7 +41,7 @@ var art = {
       "city": "Prishtina"
     },
     {
-      "title": "Men Casual Shoe",
+      "title": "Vizatimi 6",
       "price": "2000.99",
       "image": "ProductsImages/1.jpg",
       "producer": "Ngjyra",
@@ -171,7 +171,7 @@ var textile = {
       "city": "Prishtina"
     },
     {
-      "title": "Men Casual Shoe",
+      "title": "Shoe",
       "price": "2000.99",
       "image": "ProductsImages/3.jpg",
       "producer": "Ngjyra",
@@ -190,7 +190,8 @@ $.each(art.products, function (index, item) {
         $("<div>")
           .attr("class", "product-header")
           .append($("<a>")
-            .attr("href", "SingleProduct.html?" + item.title + "|" + item.price + "|" + item.image + "|" + item.producer + "|" + item.category + "|" + item.city)
+            .click(function () { localStorage.setItem('prod', JSON.stringify(item)) })
+            .attr("href", "SingleProduct.html?")
             .append($("<img>")
               .attr("src", item.image)
             )
@@ -198,7 +199,8 @@ $.each(art.products, function (index, item) {
         $("<div>")
           .attr("class", "product-footer")
           .append($("<a>")
-            .attr("href", "SingleProduct.html?" + item.title + "|" + item.price + "|" + item.image + "|" + item.producer + "|" + item.category + "|" + item.city)
+            .click(function () { localStorage.setItem('prod', JSON.stringify(item)) })
+            .attr("href", "SingleProduct.html?")
             .append($("<h3>").text(item.title))
           )
           .append($("<h4>").text(item.price))
@@ -207,9 +209,20 @@ $.each(art.products, function (index, item) {
               attr: "btn",
               text: "ADD TO CART",
               click: function () {
-                $("#cartList").append(
-                  $("<li>").text(item.title + " - " + item.price)
-                )
+                if (!exists(item.title)) {
+                  $("#cartList").append(
+                    $("<button>")
+                      .attr("id", "btn" + index)
+                      .click(function () { removeItem("btn" + index) })
+                      .append($("<i>").attr("class", "fas fa-times")),
+                    $("<dt>").text(item.title),
+                    $("<dd>").text('x1').attr('class', 'inline'),
+                    $("<dd>").text(item.price)
+                  )
+                }
+                else {
+                  calcQuantity(item.title, item.price)
+                }
                 calcTotal()
               }
             })
@@ -227,7 +240,8 @@ $.each(food.products, function (index, item) {
         $("<div>")
           .attr("class", "product-header")
           .append($("<a>")
-            .attr("href", "SingleProduct.html?" + item.title + "|" + item.price + "|" + item.image + "|" + item.producer + "|" + item.category + "|" + item.city)
+            .click(function () { localStorage.setItem('prod', JSON.stringify(item)) })
+            .attr("href", "SingleProduct.html?")
             .append($("<img>")
               .attr("src", item.image)
             )
@@ -235,7 +249,8 @@ $.each(food.products, function (index, item) {
         $("<div>")
           .attr("class", "product-footer")
           .append($("<a>")
-            .attr("href", "SingleProduct.html?" + item.title + "|" + item.price + "|" + item.image + "|" + item.producer + "|" + item.category + "|" + item.city)
+            .click(function () { localStorage.setItem('prod', JSON.stringify(item)) })
+            .attr("href", "SingleProduct.html?")
             .append($("<h3>").text(item.title))
           )
           .append($("<h4>").text(item.price))
@@ -244,9 +259,20 @@ $.each(food.products, function (index, item) {
               attr: "btn",
               text: "ADD TO CART",
               click: function () {
-                $("#cartList").append(
-                  $("<li>").text(item.title + " - " + item.price)
-                )
+                if (!exists(item.title)) {
+                  $("#cartList").append(
+                    $("<button>")
+                      .attr("id", "btn" + index)
+                      .click(function () { removeItem("btn" + index) })
+                      .append($("<i>").attr("class", "fas fa-times")),
+                    $("<dt>").text(item.title),
+                    $("<dd>").text('x1').attr('class', 'inline'),
+                    $("<dd>").text(item.price)
+                  )
+                }
+                else {
+                  calcQuantity(item.title, item.price)
+                }
                 calcTotal()
               }
             })
@@ -264,7 +290,8 @@ $.each(textile.products, function (index, item) {
         $("<div>")
           .attr("class", "product-header")
           .append($("<a>")
-            .attr("href", "SingleProduct.html?" + item.title + "|" + item.price + "|" + item.image + "|" + item.producer + "|" + item.category + "|" + item.city)
+            .click(function () { localStorage.setItem('prod', JSON.stringify(item)) })
+            .attr("href", "SingleProduct.html?")
             .append($("<img>")
               .attr("src", item.image)
             )
@@ -272,7 +299,8 @@ $.each(textile.products, function (index, item) {
         $("<div>")
           .attr("class", "product-footer")
           .append($("<a>")
-            .attr("href", "SingleProduct.html?" + item.title + "|" + item.price + "|" + item.image + "|" + item.producer + "|" + item.category + "|" + item.city)
+            .click(function () { localStorage.setItem('prod', JSON.stringify(item)) })
+            .attr("href", "SingleProduct.html?")
             .append($("<h3>").text(item.title))
           )
           .append($("<h4>").text(item.price))
@@ -281,9 +309,20 @@ $.each(textile.products, function (index, item) {
               attr: "btn",
               text: "ADD TO CART",
               click: function () {
-                $("#cartList").append(
-                  $("<li>").text(item.title + " - " + item.price)                  
-                )
+                if (!exists(item.title)) {
+                  $("#cartList").append(
+                    $("<button>")
+                      .attr("id", "btn" + index)
+                      .click(function () { removeItem("btn" + index) })
+                      .append($("<i>").attr("class", "fas fa-times")),
+                    $("<dt>").text(item.title),
+                    $("<dd>").text('x1').attr('class', 'inline'),
+                    $("<dd>").text(item.price)
+                  )
+                }
+                else {
+                  calcQuantity(item.title, parseFloat(item.price));
+                }
                 calcTotal()
               }
             })
@@ -292,24 +331,58 @@ $.each(textile.products, function (index, item) {
   );
 });
 
-/* var buttons = document.querySelectorAll(".btn").length;
+function removeItem(elementId) {
+  var element = document.getElementById(elementId);
+  element.nextElementSibling.remove();
+  element.nextElementSibling.remove();
+  element.nextElementSibling.remove();
+  element.remove();
+  calcTotal();
+}
 
-for (var i = 0; i < buttons ; i++) {
-    document.querySelectorAll(".btn")[i].addEventListener("click", function() {
-        calcTotal();
-    });
-} */
+function calcQuantity(title, price) {
+  var cartList = document.getElementById("cartList").getElementsByTagName("dt");
+
+  for (let i = 0; i < cartList.length; i++) {
+    if (cartList[i].innerHTML == title) {
+
+      let quantity = cartList[i].nextElementSibling;
+      quantity.innerHTML = 'x' + (parseInt(cartList[i].nextElementSibling.innerHTML.substring(1)) + 1).toString();
+
+      let newPrice = quantity.nextElementSibling;
+      newPrice.innerHTML = (parseFloat(price) * parseInt(quantity.innerHTML.substring(1))).toFixed(2);
+
+      break;
+    }
+  }
+};
+
+function exists(title) {
+  var cartList = document.getElementById("cartList").getElementsByTagName("dt");
+
+  for (let i = 0; i < cartList.length; i++) {
+    if (cartList[i].innerHTML == title) {
+      return true;
+    }
+  }
+
+  return false;
+};
 
 function calcTotal() {
-  var cartList = document.getElementById("cartList").getElementsByTagName("li");
+  var cartList = document.getElementById("cartList").getElementsByTagName("dd");
   var total = 0;
 
   for (let i = 0; i < cartList.length; i++) {
-    total += parseFloat(cartList[i].innerHTML.split(" - ")[1])
+    if (i % 2 == 1) {
+      total += parseFloat(cartList[i].innerHTML)
+    }
   }
 
-  document.getElementById("totalPrice").innerHTML = total + "$"
+  document.getElementById("totalPrice").innerHTML = total.toFixed(2).toString() + "$"
 };
+
+
 
 /* function addItem(title, price) {
   $("#cartList").append(

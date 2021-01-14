@@ -530,7 +530,7 @@ div.product .product-footer button:hover {
   transition: 1s ease-in-out;
 }
 
-div.product .product-footer a h3:hover{
+div.product .product-footer a h3:hover {
   color: rgb(177, 163, 39);
   transition: 0.7s;
 }
@@ -544,16 +544,24 @@ body {
   right: 75px;
   top: 100px;
   width: 250px;
-  min-height: 500px;
-  max-height: 600px;
+  height: 550px;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(116, 114, 114, 0.5);
 }
 
+#bottom {
+  position: absolute;
+  bottom: 20px;
+}
+
+#scrollable {
+  overflow-y: auto;
+  max-height: 380px;
+}
+
 #yourCart h2 {
   padding: 8px;
-  border-radius: 5px;
   color: rgb(206, 23, 69);
 }
 
@@ -572,6 +580,11 @@ body {
   transition: 1s;
 }
 
+#icons {
+  float: right;
+  margin-top: 70px;
+}
+
 .fas {
   font-size: 17px;
 }
@@ -585,13 +598,34 @@ body {
 }
 
 .fa-list:hover {
-  color:  rgb(59, 59, 59);
+  color: rgb(59, 59, 59);
   transition: 0.5s;
 }
 
-#icons {
-  float:right;
-  margin-top:70px;
+#cartList button {
+  color: rgb(194, 194, 194);
+  border: 0px;
+  padding: 5px;
+  padding-left: 0px;
+  margin-right: 5px;
+  background-color: transparent;
+}
+
+#cartList button:hover {
+  color: rgb(185, 31, 31);
+  transition: 0.5s;
+}
+
+dl dd {
+  text-align: right;
+}
+
+dl dt {
+  display: inline;
+}
+
+dl dd.inline {
+  float: right;
 }
 
 @keyframes fadeIn {
