@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 header {
@@ -159,7 +160,7 @@ header {
   margin-left: 100px;
   font-size: 50px;
   letter-spacing: 5px;
-  background-color: #333;
+  background-color: transparent;
   color: white;
   /* border-bottom: 10px solid #c27211; */
 }
@@ -168,7 +169,7 @@ header {
 }
 span:nth-child(even){
   overflow: hidden;
-  color:white;
+  color:#333;
   border-bottom: 10px solid #d88e2c;
 }
 
