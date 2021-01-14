@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  /* font-family:'Rajdhani'; */
   box-sizing: border-box;
 }
 
@@ -19,307 +18,22 @@ header {
   z-index: 5000;
 }
 
-.div1 {
-  text-transform: uppercase;
-  color: white;
-  text-shadow: 2px 2px 2px rgb(49, 49, 49);
-  width: 25%;
-  text-align: center;
-  font-size: 30px;
-  z-index: 5000;
-}
-
-.div2 {
-  display: flex;
-  justify-content: space-between;
-  margin: 50px;
-  text-decoration: none;
-  z-index: 5000;
-}
-
-a {
-  padding: 20px;
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  background-image: none;
-  font-size: 20px;
-  text-shadow: 2px 2px 2px rgb(49, 49, 49);
-  z-index: 5000;
-}
-
-.perimg {
-  height: 100px;
-  width: auto;
-  z-index: 5000;
-}
-
-div ul li {
-  list-style: none;
-  position: relative;
-  z-index: 5000;
-}
-
-div ul li ul {
-  display: none;
-  position: absolute;
-  background-color: transparent;
-  border-radius: 0px 0px 4px 4px;
-  /* border: 2px solid darkgray; */
-  z-index: 5000;
-}
-
-div ul li:hover ul {
-  display: block;
-  z-index: 5000;
-}
-
-div ul li ul li {
-  padding-top: 14px;
-  z-index: 5000;
-}
 
 .section1 {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 55vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 100px;
-  box-sizing: border-box;
   background: linear-gradient(180deg, #3a3a3a, #BEBEBE, #e4e1e1), url(images/kosovo1.png);
   background-blend-mode: screen;
   background-repeat: no-repeat;
   background-size: 100%;
-}
-
-.wave {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-/* @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap'); */
-
-:root {
-  --level-1: translateZ(3rem);
-  --level-2: translateZ(6rem);
-  --level-3: translateZ(9rem);
-  --fw-normal: 400;
-  --fw-bold: 700;
-  --clr: #e7d1b5;
-  ;
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-body {
-  height: 100vh;
-  display: grid;
-  place-items: center;
-  /* font-family: 'Rajdhani', sans-serif; */
-}
-
-.karta {
-  width: 400px;
   z-index: 1000;
 }
 
-.permbajtja_para {
-  text-align: center;
-  position: relative;
-  padding: 15em 5em;
-  transition: transform 3s;
-  /* tregon per sa sekonda bohet rotate */
-  transform-style: preserve-3d;
-}
-
-.karta:hover .permbajtja_para {
-  transform: rotateY(0.5turn);
-  /* po bohet rotate ne boshtin y */
-}
-
-.fronti, .backi {
-  position: absolute;
-  /* they need to be on top of each other for this effect to work */
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 5em 3em;
-  backface-visibility: hidden;
-  /* nuk e len tekstin para edhe mrapa mu overlap, edhe backgroundit vyn mja ndrru ngjyren */
-  transform-style: preserve-3d;
-  display: grid;
-  align-content: center;
-}
-
-.fronti {
-  background-color: #e7d1b5;
-  background-image: url(images/card.jpg);
-  background-size: cover;
-  background-blend-mode: overlay;
-  color: #333;
-}
-
-.fronti::before {
-  content: '';
-  position: absolute;
-  top: 1em;
-  bottom: 1em;
-  left: 1em;
-  right: 1em;
-  border: 3px solid currentColor;
-  transform: var(--level-1);
-}
-
-.titulli {
-  /* transform:translateX(100px); nboshtin X leviz per 100px */
-  font-size: 3.5rem;
-  transform: var(--level-3);
-  /* z axis points it toward us ama when it 
-                                 get closer is doesnt get bigger veq kur t'rotate ka dallim
-                                 and the reason why this is working osht per shkak te preserve-3d qe e kem ma nalt*/
-  order: 2;
-  /* titullin e qet tdytin dmth mas tekstit */
-  text-transform: uppercase;
-}
-
-.subtitle {
-  /* transform:translateZ(2rem); */
-  transform: var(--level-2);
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: 0.75rem;
-  font-weight: var(--fw-bold);
-  opacity: 0.7;
-}
-
-.permbajtja_prapa {
-  /* transform:translateZ(2rem); */
-  transform: var(--level-2);
-  font-weight: var(fw--normal);
-  font-size: 1.5rem;
-  line-height: 1.6;
-}
-
-.backi {
-  transform: rotateY(0.5turn);
-  /* tash shkronjat dalin normal jo mrapsht */
-  color: var(--clr);
-  background: #333;
-}
-
-/* .section2 {
-  margin-right:0;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-top: -120px;
-  padding:0; */
-
-/* min-height:100vh ; */
-
-/* background: white;
-  display: flex;
-  justify-content: center;
-  align-items: top;
-  font-family:'Rajdhani',sans-serif;
-}
-.cont {
-  width: 1000px;
-  position: relative;
-  display: flex;
-  justify-content: space-between; i ban triat ren */
-
-/* }
-.cont .katrori {
-  position: relative;
-} */
-
-/* .cont .katrori .pjesa {
-  width: 300px;
-  height: 200px;
-  transition: 0.5s;
-} */
-
-/* .cont .katrori .pjesa.pjesa1 {
-  position: relative;
-  background: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 5;
-  transform: translateY(100px); vin poshte per 100px */
-
-/* }
-.cont .katrori:hover .pjesa.pjesa1{ */
-
-/* background: #f7890c; */
-
-/* background: #f5ac4d; */
-
-/* background:#f0be7c ;
-  transform: translateY(0);
-
-}
-.cont .katrori .pjesa.pjesa1 .permbajtje{
-  opacity: 0.2;
-  transition: 0.5s;
-}
-.cont .katrori:hover .pjesa.pjesa1 .permbajtje{
-  opacity: 1;
-}
-.cont .katrori .pjesa.pjesa1 .permbajtje img{
-  max-width: 100px;
-} */
-
-/* .cont .katrori .pjesa.pjesa1 .permbajtje h3{
-  margin: 10px 0 0;
-  padding: 0;
-  color: #fff;
-  text-align: center;
-  font-size: 1.5em;
-}
-.cont .katrori .pjesa.pjesa2{
-  position: relative;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
-  box-shadow: 0 20px 50px rgba(116, 114, 114, 0.8);;
-  transform: translateY(-100px);
-}
-.cont .katrori:hover .pjesa.pjesa2{
-  transform: translateY(0);
-}
-.cont .katrori .pjesa.pjesa2 .permbajtje p{
-  margin:0;
-  padding: 0;
-} */
-
-/* .cont .katrori .pjesa.pjesa2 .permbajtje a{
-  margin:15px 0 0;
-  display: inline-block;
-  text-decoration: none;
-  font-weight: 900;
-  color:#333;
-  padding: 5px;
-  border:1px solid #333;
-}
-.cont .katrori .pjesa.pjesa2 .permbajtje a:hover {
-  background: #333;
-  color:#fff;
-}
-.footer {
-position: relative;
-margin-bottom: -300px;
-} */
 
 .section2 {
   display: flex;
@@ -333,10 +47,13 @@ margin-bottom: -300px;
 
 .container1 {
   position: relative;
-  width: 1100px;
+  width: 100%;
   display: inline-flex;
   flex-wrap: wrap;
   gap: 50px;
+  margin-top:100px;
+  z-index: 3000;
+  margin-left: -400px;
 }
 
 .container1 .box1 {
@@ -414,84 +131,44 @@ margin-bottom: -300px;
   transform: translateY(0);
   /* transition-delay: 0.1s; */
 }
-
-/* .container1 .box1 .content1 p {
-  color:#fff;
-  transform: translateY(200px);
-  transform: 0.5s;
-  font-size:14px;
+.custom-shape-divider-bottom-1610632061 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin-bottom: 300px;
+  z-index: 2000;
 }
-.container1 .box1:hover .content1 p {
-  transform:translateY(0);
-  transition-delay: 0.3s;
-} */
 
-.footer {
+.custom-shape-divider-bottom-1610632061 svg {
   position: relative;
-  margin-bottom: -300px;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 229px;
+  transform: rotateY(180deg);
 }
 
-.logo {
-  /* margin-right: 250px;
-    margin-top:450px; */
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+.custom-shape-divider-bottom-1610632061 .shape-fill {
+  fill: #FFFFFF;
 }
-
-.logo h3 {
-  margin: 0;
-  padding: 0;
-  font-size: 100px;
-  text-transform: uppercase;
-  font-size: 20px;
-  /* margin-right: 250px; */
-  margin-left: 120px;
-  /* margin-top:550px; */
-}
-
-h3 span {
-  display: inline-flex;
-  color: #d88e2c;
-  overflow: hidden;
-  font-size: 40px;
-}
-
-h3:hover span {
-  display: inline-flex;
-  color: #d88e2c;
-  background-color: #333;
-  transition-delay: 0.1s;
-  overflow: hidden;
+.teksti1{
+  margin-bottom: 300px; 
   z-index: 4000;
-  font-size: 20px;
-}
-
-h3 span:nth-child(even) {
-  overflow: hidden;
-  transition: ease-in-out 0.5s;
-  color: #fff;
-  border-bottom: 8px solid #d88e2c;
-  letter-spacing: -1em;
-  /* qekjo i hek ato shkronjat mas B P A */
-}
-
-h3:hover span:nth-child(even) {
-  letter-spacing: 0;
+  margin-left: 100px;
+  font-size: 50px;
+  letter-spacing: 5px;
   background-color: #333;
+  color: white;
+  /* border-bottom: 10px solid #c27211; */
+}
+.teksti1 span{
+  color: #d88e2c;
+}
+span:nth-child(even){
+  overflow: hidden;
+  color:white;
+  border-bottom: 10px solid #d88e2c;
 }
 
-h3:hover span:nth-child(2) {
-  transition-delay: 0s;
-}
-
-h3:hover span:nth-child(4) {
-  transition-delay: 0s;
-}
-
-h3:hover span:nth-child(6) {
-  transition-delay: 0s;
-}
