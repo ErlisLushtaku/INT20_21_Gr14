@@ -69,7 +69,7 @@ font-size:25px;
   z-index:12;
   animation-name:moveboxright;
 animation-duration: 2s;
-animation-timing-function: linear;
+animation-timing-function: step-end;
 
  
 }
@@ -254,13 +254,18 @@ animation:animate 6s linear infinite;
   align-items: center;
 width:600px;
 height:500px;
-display:flex;
+display:block;
 margin-left:50px;
 }
 .box6 .photo1 img{
   width:100%;
   height:100%;
  
+}
+figcaption{
+  color:#fff;
+  font-size:20px;
+  text-align:center;
 }
 
 
@@ -321,7 +326,7 @@ border-radius: 50px;
   box-sizing:border-box;
   overflow: hidden;
   text-align:center;
-border-radius:100%;
+border-radius:30px;
 border:5px dashed rgba(48, 46, 46, 0.979);
 position:relative;
  }
@@ -334,8 +339,8 @@ transition: 0.4s linear;
  .box8 .container .llojet::before,.box8 .container .llojet::after{
    content:"";
    position:absolute;
-   width:10px;
-   height:100%;
+   width:100%;
+   height:10px;
    background:#fff;
    transition:.4s linear;
  }
