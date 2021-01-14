@@ -456,17 +456,25 @@ body {
     right: 75px;
     top: 100px;
     width: 250px;
-    min-height: 500px;
-    max-height: 600px;
+    height: 550px;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(116, 114, 114, 0.5);
 }
 
+#bottom {
+  position: absolute;
+  bottom: 20px;
+}
+
+#scrollable {
+  overflow-y: auto;
+  max-height: 380px;
+}
+
 #yourCart h2 {
-    padding: 8px;
-    border-radius: 5px;
-    color: rgb(206, 23, 69);
+  padding: 8px;
+  color: rgb(206, 23, 69);
 }
 
 #checkout {
@@ -540,16 +548,20 @@ body {
     transition: 0.5s ease-in-out;
 }
 
-html { 
-    background: url(wood.jpg) no-repeat center center fixed; 
+html {
+    background-image: url(wood.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left top;
+    background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
 }
 
-ul li {
-    color: rgba(255, 255, 255, 0.8);
+#icons {
+    float: right;
+    margin-top: 70px;
 }
 
 .fas {
@@ -565,13 +577,34 @@ ul li {
 }
 
 .fa-th:hover {
-    color:  rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
     transition: 0.5s;
 }
 
-#icons {
-    float:right;
-    margin-top:70px;
+#cartList button {
+    color: rgb(194, 194, 194);
+    border: 0px;
+    padding: 5px;
+    padding-left: 0px;
+    margin-right: 5px;
+    background-color: transparent;
+}
+
+#cartList button:hover {
+    color: rgb(185, 31, 31);
+    transition: 0.5s;
+}
+
+dl dd {
+  text-align: right;
+}
+
+dl dt {
+  display: inline;
+}
+
+dl dd.inline {
+  float: right;
 }
 
 @keyframes fadeIn {
