@@ -38,6 +38,32 @@ body{
     opacity: 0.3;
     margin-left: 50px;
 }
+.fill {
+  background-image: url(images/black.jpg);
+  position: relative;
+  height: 10px;
+  width: 10px;
+  cursor: pointer;
+}
+.empty1{
+  display: inline-block;
+  background-color: transparent;
+  height: 10px;
+  width: 300px;
+  margin: 10px;
+}
+.empty {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  margin: 10px;
+  border: solid 3px rgba(128, 128, 128,0.3);
+  background: transparent;
+}
+.hovered {
+  background: #f4f4f4;
+  border-style: dashed;
+}
 .form{
   z-index: 2;
   font-family: "Poppins", sans-serif;
@@ -52,8 +78,8 @@ body{
   background-color:rgba(228, 228, 228,0.01);
   margin-left: 400px;
   color:#333;
-  border-right:2px solid #333;
-  border-bottom:2px solid #333;
+  /* border-right:2px solid #333;
+  border-bottom:2px solid #333; */
 }
 
 .form i{
