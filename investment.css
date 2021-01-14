@@ -17,7 +17,6 @@ main{
   "box5 box5 box5"
   "box6 box7 box7"
   "box8 box8 box8" ;
-  margin-bottom:30px;
 
 
 }
@@ -79,7 +78,7 @@ font-size:25px;
   z-index:12;
   animation-name:moveboxright;
 animation-duration: 2s;
-animation-timing-function: linear;
+animation-timing-function: step-end;
 
  
 }
@@ -180,9 +179,9 @@ top:0;
 left:0;
 height:100%;
 width: 0;
-color:rgb(236, 113, 30);
--webkit-text-stroke:0.1vw rgb(236, 113, 30);
-border-right:2px solid rgb(236, 113, 30);
+color:#F79B44;
+-webkit-text-stroke:0.1vw #F79B44;
+border-right:2px solid #F79B44;
 overflow:hidden;
 animation:animate 6s linear infinite;
 }
