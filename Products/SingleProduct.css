@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family:'Rajdhani';
+    font-family: 'Rajdhani';
     box-sizing: border-box;
     /* background-color: rgb(214, 214, 214); */
 }
@@ -438,7 +438,7 @@ h3:hover span:nth-child(even) {
     margin-right: 20px;
 }
 
-#right-div > * {
+#right-div>* {
     margin-bottom: 15px;
 }
 
@@ -453,7 +453,7 @@ h3:hover span:nth-child(even) {
     margin-bottom: 5px !important;
 }
 
-button {
+#right-div>button {
     display: block;
     border: 0px;
     border-radius: 5px;
@@ -481,13 +481,13 @@ button {
 }
 
 #to-cart {
-    position:absolute;
+    position: absolute;
     bottom: 80px;
 }
 
 #buy-now {
     position: absolute;
-    bottom:15px;
+    bottom: 15px;
 }
 
 #to-cart:hover {
@@ -498,4 +498,71 @@ button {
 #buy-now:hover {
     background-color: rgb(170, 156, 33);
     transition: 1s;
+}
+
+#yourCart {
+    position: fixed;
+    right: 75px;
+    top: 100px;
+    width: 250px;
+    height: 550px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(116, 114, 114, 0.5);
+}
+
+#bottom {
+    position: absolute;
+    bottom: 20px;
+}
+
+#scrollable {
+    overflow-y: auto;
+    max-height: 380px;
+}
+
+#yourCart h2 {
+    padding: 8px;
+    color: rgb(206, 23, 69);
+}
+
+#checkout {
+    width: 100px;
+    border: 0px;
+    border-radius: 5px;
+    padding: 8px;
+    color: white;
+    font-size: 17px;
+    background-color: rgb(218, 201, 50);
+}
+
+#checkout:hover {
+    background-color: rgb(170, 156, 33);
+    transition: 1s;
+}
+
+#cartList button {
+    color: rgb(194, 194, 194);
+    border: 0px;
+    padding: 5px;
+    padding-left: 0px;
+    margin-right: 5px;
+    background-color: transparent;
+}
+
+#cartList button:hover {
+    color: rgb(185, 31, 31);
+    transition: 0.5s;
+}
+
+dl dd {
+    text-align: right;
+}
+
+dl dt {
+    display: inline;
+}
+
+dl dd.inline {
+    float: right;
 }

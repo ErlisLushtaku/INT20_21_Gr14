@@ -14,21 +14,11 @@
     </style>
 
     <script type="text/javascript" src="jquery-3.5.1.js"></script>
-    <script>
-    function changeBackground(){ 
-        var currentTime = new Date().getHours();
-        if (7 <= currentTime && currentTime < 20) {
-            document.body.style.backgroundColor = "#FFF";
-        }
-        else {
-            document.body.style.backgroundColor = "#FAFAFA";
-        }
-    }
-    </script>
+    <script type="text/javascript" src="form_validation.js"></script>
+    <script src="https://kit.fontawesome.com/096e4d997b.js" crossorigin="anonymous"></script>
 </head>
 
 <body onload="changeBackground()">
-
     <section class="section1 ">
         <header>
             <div class="div1">
@@ -70,7 +60,7 @@
             </div>
         </header>
     </section>
-    
+
     <div class="flex-container">
         <div id="img-containter">
             <img src="ProductsImages/1.jpg" id="big-img">
@@ -83,13 +73,53 @@
             <p id="city">City: </p>
             <h2 id="size">Size: <span class="red">60cm x 70cm</span></h2>
             <button id="to-cart" class="back-red">ADD TO CART</button>
-            <button id="buy-now" class="back-yellow">BUY NOW</button>
+            <button id="buy-now" class="back-yellow" onclick="openForm()">BUY NOW</button>
+        </div>
+    </div>
+
+    <div id="bigDiv">
+        <div class="form-popup" id="myForm" style="border-radius: 15px;">
+            <form action="/action_page.php" class="form-container">
+                <h4>Contact information</h4>
+                <input type="email" id="email" placeholder="Email" name="email">
+                <h4>Shipping address</h4>
+                <input type="text" id="name" placeholder="Name" name="name">
+                <input type="text" id="surname" placeholder="Surname" name="surname">
+                <input type="text" id="adress" placeholder="Adress" name="Adress">
+                <input type="text" id="pcode" placeholder="Postal Code" name="Postal Code">
+                <input type="text" id="_city" placeholder="City" name="city">
+                <select id="mySelect" onchange="change_placeholder(this)">
+                    <option value="Albania">Albania</option>
+                    <option value="Kosovo">Kosovo</option>
+                    <option value="Montenegro">Montenegro</option>
+                    <option value="North Macedonia">North Macedonia</option>
+                    <option value="Serbia">Serbia</option>
+                </select>
+                <input type="tel" id="phone" name="phone" placeholder="Phone number">
+                <input type="checkbox">
+                <p style="color:#201c1c">Save this information for next time</p>
+                </br>
+                <button type="submit" class="btn" onclick="return validation() ">Submit</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="yourCart">
+        <h2 style="text-decoration: underline;">Your Cart</h2>
+        <div id="scrollable">
+            <dl id="cartList">
+
+            </dl>
+        </div>
+        <div id="bottom">
+            <h2>Total: <span id="totalPrice">0$</span></h2>
+            <button id="checkout">CHECKOUT</button>
         </div>
     </div>
 
     <script>
         var product = JSON.parse(localStorage.getItem('prod'));
-        console.log(product);
 
         document.getElementById("title").innerHTML = product.title;
         document.getElementById("price").innerHTML += product.price;
@@ -97,6 +127,121 @@
         document.getElementById("producer").innerHTML += product.producer;
         document.getElementById("category").innerHTML += product.category;
         document.getElementById("city").innerHTML += product.city;
+
+        $('#right-div').width($('#buy-now').width() + 30);
+
+        function CartProd(title, quantity, price) {
+            this.title = title;
+            this.quantity = quantity;
+            this.price = price;
+        }
+        
+        var cart = JSON.parse(sessionStorage.getItem('cart'));
+
+        $.each(cart, function (index, item) {
+            $("#cartList").append(
+                $("<button>")
+                    .attr("id", "btn" + index)
+                    .click(function () { removeItem("btn" + index) })
+                    .append($("<i>").attr("class", "fas fa-times")),
+                $("<dt>").text(item.title),
+                $("<dd>").text(item.quantity).attr('class', 'inline'),
+                $("<dd>").text(item.price)
+            )
+        });
+        calcTotal();
+
+        $("#to-cart")
+            .click(function () {
+                if (!exists(product.title)) {
+                    let index = cart.length;
+                    $("#cartList").append(
+                        $("<button>")
+                            .attr("id", "btn" + index)
+                            .click(function () { removeItem("btn" + index) })
+                            .append($("<i>").attr("class", "fas fa-times")),
+                        $("<dt>").text(product.title),
+                        $("<dd>").text('x1').attr('class', 'inline'),
+                        $("<dd>").text(product.price)
+                    )
+                }
+                else {
+                    calcQuantity(product.title, product.price);
+                }
+                calcTotal();
+            })
+
+        function passCart() {
+            const cart = []
+
+            var cartList = document.getElementById("cartList");
+            var titles = cartList.getElementsByTagName("dt");
+            var quantities_prices = cartList.getElementsByTagName("dd");
+
+            var ddIndex = 0;
+            for (let i = 0; i < titles.length; i++) {
+                var product = new CartProd(titles[i].innerHTML, quantities_prices[ddIndex].innerHTML, quantities_prices[ddIndex + 1].innerHTML);
+                cart.push(product);
+                ddIndex += 2;
+            }
+
+            sessionStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        function removeItem(elementId) {
+            var element = document.getElementById(elementId);
+            element.nextElementSibling.remove();
+            element.nextElementSibling.remove();
+            element.nextElementSibling.remove();
+            element.remove();
+            calcTotal();
+        }
+
+        function calcQuantity(title, price) {
+            var cartList = document.getElementById("cartList").getElementsByTagName("dt");
+
+            for (let i = 0; i < cartList.length; i++) {
+                if (cartList[i].innerHTML == title) {
+
+                    let quantity = cartList[i].nextElementSibling;
+                    quantity.innerHTML = 'x' + (parseInt(quantity.innerHTML.substring(1)) + 1).toString();
+
+                    let newPrice = quantity.nextElementSibling;
+                    newPrice.innerHTML = (parseFloat(price) * parseInt(quantity.innerHTML.substring(1))).toFixed(2);
+
+                    break;
+                }
+            }
+        };
+
+        function exists(title) {
+            var cartList = document.getElementById("cartList").getElementsByTagName("dt");
+
+            for (let i = 0; i < cartList.length; i++) {
+                if (cartList[i].innerHTML == title) {
+                    return true;
+                }
+            }
+
+            return false;
+        };
+
+        function calcTotal() {
+            var cartList = document.getElementById("cartList").getElementsByTagName("dd");
+            var total = 0;
+
+            for (let i = 0; i < cartList.length; i++) {
+                if (i % 2 == 1) {
+                    total += parseFloat(cartList[i].innerHTML)
+                }
+            }
+
+            document.getElementById("totalPrice").innerHTML = total.toFixed(2).toString() + "$"
+        };
+
+        window.onbeforeunload = function () {
+            passCart();
+        };
 
         /* var queryString = location.search.substring(1);
         var data = queryString.split("|");
@@ -108,7 +253,7 @@
         document.getElementById("category").innerHTML += data[4];
         document.getElementById("city").innerHTML += data[5]; */
 
-        $('#right-div').width($('#buy-now').width() + 30)
     </script>
 </body>
+
 </html>
