@@ -172,4 +172,7 @@ span:nth-child(even){
   color:#333;
   border-bottom: 10px solid #d88e2c;
 }
+.teksti1 a {
+  text-decoration: none;
+}
 
