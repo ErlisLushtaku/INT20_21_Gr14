@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+   <link rel="stylesheet" href="rateus.css">
+  <script src="rateus.js"></script>
   <script src="Kontakti.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&display=swap" rel="stylesheet">
@@ -94,13 +96,13 @@ window.addEventListener('scroll', function () {
     <td colspan="3" style="color:#333; ">Write us a few words about your ideas and we will come up with a plan within 24 hours!</td>
     </tr>
     </table>
-    <form>
-      <input type="text" name="name" class="text-box"  placeholder="Your Name" required>
-      <input type="email" name="email" class="text-box" placeholder="Email" required><br/>
-      <input type="text" name="company" class="text-box"  placeholder="Company" required>
-      <input type="text" name="number" class="text-box" placeholder="Budget" required><br/>
+    <form action="homepage.html">
+      <input type="text" id="name" name="name" class="text-box"  placeholder="Your Name" required>
+      <input type="email" id="email" name="email" class="text-box" placeholder="Email" required><br/>
+      <input type="text" id="company" name="company" class="text-box"  placeholder="Company" required>
+      <input type="text" id="budget" name="number" class="text-box" placeholder="Budget" required><br/>
 <textarea name="details" placeholder="Project details (optional)"></textarea>
-<input type="submit" id="persubmit" formtarget="_blank" value="Send" style="margin-bottom:20px;margin-left:210px;opacity:1;" onclick="validatebudget()">
+<input type="submit" id="persubmit" formtarget="_blank" value="Send" style="margin-bottom:20px;margin-left:210px;opacity:1;" onclick="return validation()">
     </form>
 <div class="content">
   <input type="file"  id="def" hidden>
@@ -132,6 +134,7 @@ defbtn.addEventListener("change",function(){
 </script>
 
 <div class="midpart">
+   <div class="perimg"></div>
   <p class="paragraph">
     <b> <br/>
     </b>
@@ -173,7 +176,11 @@ defbtn.addEventListener("change",function(){
   </td>
   </tr>
   </table> 
+ <div id="perfund">
+    <a href="rateus.html" id="perrate"><b>RATE US</b></a>
 <p class="rights">2021 @ ALL RIGHTS RESERVED</p>
+
+</div>
 
 </div>
 

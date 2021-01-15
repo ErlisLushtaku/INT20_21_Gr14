@@ -101,6 +101,10 @@ function pnumber_validation(){
 const select = document.getElementById("mySelect").value;
 
 switch(select){
+    case "" : 
+        document.getElementById("phone").setAttribute("style","border:1px red solid "); 
+        submit_form[3] = false;
+        break;
     case "Albania" : 
         var phonenumber = document.getElementById("phone").value;
         var alb_pattern = /^\+?\(?355\)?[-.\s]?\d{2}[-.\s]?\d{3}[-.\s]?\d{3}?/;
@@ -165,6 +169,9 @@ switch(select){
 }
 function change_placeholder(e){
     switch(e.value){
+        case "" : 
+            document.getElementById("phone").placeholder = "Phone number" ;
+            break;
         case "Albania": 
             document.getElementById("phone").placeholder = "+355-XX-XXX-XXX" ;
             break;
