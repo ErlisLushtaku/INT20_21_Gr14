@@ -9,7 +9,7 @@
   </head>
   <body>
       <div class="gray-div">
-        <p id="datee" style="font-size:10px; margin-top:610px;"></p>
+        <p id="datee" style="font-size:10px; margin-top:610px; text-shadow: 1px 0.1px 2px black;"></p>
         <div class="p1">JOIN</div>
         <div class="p2">US</div>
         <div class="empty1">
@@ -26,22 +26,22 @@
     <div class="form">
       <form class="login-form" action="" method="post">
         
-        <input class="user-datas" type="text" name="" placeholder="Username" required>
-        <input class="user-datas" type="password" name="" placeholder="Password" required>
+        <input class="user-datas" type="text" name="username" placeholder="Username" required autofocus>
+        <input class="user-datas" type="password" name="username" placeholder="Password" required>
         <div class="log-in1">
           <label class="remember-me"><input type="checkbox" name="">Remember me</label>
           <a href="#">Forgot your password?</a>
         </div>
-        <input class="btn" type="submit" name="" value="LOGIN">
+        <input class="btn" type="submit" name="login" value="LOGIN">
         <div class="sign-up">
           <p>Not Registered? <a href="#">Create an Account</a></p>
         </div>
       </form>
       <form class="signup-form" action="" method="post">
-        <input class="user-datas" type="text" name="" placeholder="Username" required>
-        <input class="user-datas" type="email" name="" placeholder="Email Address" required>
-        <input class="user-datas" type="password" name="" placeholder="Password" required>
-        <input class="btn" type="submit" name="" value="SIGN UP">
+        <input class="user-datas" type="text" name="username" placeholder="Username" value="text" required>
+        <input class="user-datas" type="email" name="email" placeholder="Email Address" required autocomplete="on">
+        <input class="user-datas" type="password" name="password" placeholder="Password" required>
+        <input class="btn" type="submit" name="signup" value="SIGN UP">
         <div class="sign-up">
           <p>Already Registered? <a href="#">Sign In</a></p>
         </div>
