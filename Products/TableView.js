@@ -1,183 +1,42 @@
+function Product(title, price, image, producer, category, city) {
+    this.title = title;
+    this.price = price;
+    this.image = image;
+    this.producer = producer;
+    this.category = category;
+    this.city = city;
+}
+
 var art = {
     "products": [
-        {
-            "title": "Vizatimi 1",
-            "price": "2000.99",
-            "image": "ProductsImages/1.jpg",
-            "producer": "Erlis Lushtaku",
-            "category": "featured",
-            "city": "Prishtina"
-        },
-        {
-            "title": "Vizatimi 2",
-            "price": "2000.99",
-            "image": "ProductsImages/1.jpg",
-            "producer": "Ngjyra",
-            "category": "trend",
-            "city": "Prishtina"
-        },
-        {
-            "title": "Vizatimi 3",
-            "price": "2000.99",
-            "image": "ProductsImages/1.jpg",
-            "producer": "Ngjyra",
-            "category": "trend",
-            "city": "Prishtina"
-        },
-        {
-            "title": "Men Casual Shoe",
-            "price": "2000.99",
-            "image": "ProductsImages/1.jpg",
-            "producer": "Ngjyra",
-            "category": "trend",
-            "city": "Prishtina"
-        },
-        {
-            "title": "Men Casual Shoe",
-            "price": "2000.99",
-            "image": "ProductsImages/1.jpg",
-            "producer": "Ngjyra",
-            "category": "trend",
-            "city": "Prishtina"
-        },
-        {
-            "title": "Men Casual Shoe",
-            "price": "2000.99",
-            "image": "ProductsImages/1.jpg",
-            "producer": "Ngjyra",
-            "category": "trend",
-            "city": "Prishtina"
-        }
+        new Product("Vizatimi 1", "50$", "ProductsImages/1.jpg", "Ngjyra", "trend", "Prishtina"),
+        new Product("Vizatimi 2", "50$", "ProductsImages/1.jpg", "Ngjyra", "trend", "Prishtina"),
+        new Product("Vizatimi 3", "50$", "ProductsImages/1.jpg", "Ngjyra", "trend", "Prishtina"),
+        new Product("Vizatimi 4", "50$", "ProductsImages/1.jpg", "Ngjyra", "trend", "Prishtina"),
+        new Product("Vizatimi 5", "50$", "ProductsImages/1.jpg", "Ngjyra", "trend", "Prishtina"),
+        new Product("Vizatimi 6", "50$", "ProductsImages/1.jpg", "Ngjyra", "trend", "Prishtina")
     ]
 }
 
 var food = {
     "products": [
-        {
-            "title": "Pite",
-            "price": "2000.99",
-            "image": "ProductsImages/2.jfif",
-            "producer": "Ngjyra",
-            "category": "featured",
-            "city": "Prishtina"
-        },
-        {
-            "title": "Fli",
-            "price": "2000.99",
-            "image": "ProductsImages/2.jfif",
-            "producer": "Ngjyra",
-            "category": "featured",
-            "city": "Prishtina"
-        },
-        {
-            "title": "Makarona",
-            "price": "2000.99",
-            "image": "ProductsImages/2.jfif",
-            "producer": "Ngjyra",
-            "category": "featured",
-            "city": "Prishtina"
-        },
-        {
-            "title": "Men Casual Shoe",
-            "price": "2000.99",
-            "image": "ProductsImages/2.jfif",
-            "producer": "Ngjyra",
-            "category": "featured",
-            "city": "Prishtina"
-        },
-        {
-            "title": "Men Casual Shoe",
-            "price": "2000.99",
-            "image": "ProductsImages/2.jfif",
-            "producer": "Ngjyra",
-            "category": "featured",
-            "city": "Prishtina"
-        },
-        {
-            "title": "Men Casual Shoe",
-            "price": "2000.99",
-            "image": "ProductsImages/2.jfif",
-            "producer": "Ngjyra",
-            "category": "featured",
-            "city": "Prishtina"
-        }
+        new Product("Vizatimi 1", "50$", "ProductsImages/2.jfif", "Ngjyra", "trend", "Prishtina"),
+        new Product("Vizatimi 1", "50$", "ProductsImages/2.jfif", "Ngjyra", "trend", "Prishtina"),
+        new Product("Vizatimi 1", "50$", "ProductsImages/2.jfif", "Ngjyra", "trend", "Prishtina"),
+        new Product("Vizatimi 1", "50$", "ProductsImages/2.jfif", "Ngjyra", "trend", "Prishtina"),
+        new Product("Vizatimi 1", "50$", "ProductsImages/2.jfif", "Ngjyra", "trend", "Prishtina"),
+        new Product("Vizatimi 1", "50$", "ProductsImages/2.jfif", "Ngjyra", "trend", "Prishtina")
     ]
 }
 
 var textile = {
     "products": [
-        {
-            "title": "Men Casual Shoe",
-            "price": "2000.99",
-            "image": "ProductsImages/3.jpg",
-            "producer": "Ngjyra",
-            "category": "featured",
-            "city": "Prishtina"
-        },
-        {
-            "title": "Men Casual Shoe",
-            "price": "2000.99",
-            "image": "ProductsImages/3.jpg",
-            "producer": "Ngjyra",
-            "category": "trend",
-            "city": "Prishtina"
-        },
-        {
-            "title": "Men Casual Shoe",
-            "price": "2000.99",
-            "image": "ProductsImages/3.jpg",
-            "producer": "Ngjyra",
-            "category": "trend",
-            "city": "Prishtina"
-        },
-        {
-            "title": "Men Casual Shoe",
-            "price": "2000.99",
-            "image": "ProductsImages/3.jpg",
-            "producer": "Ngjyra",
-            "category": "trend",
-            "city": "Prishtina"
-        },
-        {
-            "title": "Men Casual Shoe",
-            "price": "2000.99",
-            "image": "ProductsImages/3.jpg",
-            "producer": "Ngjyra",
-            "category": "trend",
-            "city": "Prishtina"
-        },
-        {
-            "title": "Men Casual Shoe",
-            "price": "2000.99",
-            "image": "ProductsImages/3.jpg",
-            "producer": "Ngjyra",
-            "category": "trend",
-            "city": "Prishtina"
-        },
-        {
-            "title": "Men Casual Shoe",
-            "price": "2000.99",
-            "image": "ProductsImages/3.jpg",
-            "producer": "Ngjyra",
-            "category": "trend",
-            "city": "Prishtina"
-        },
-        {
-            "title": "Men Casual Shoe",
-            "price": "2000.99",
-            "image": "ProductsImages/3.jpg",
-            "producer": "Ngjyra",
-            "category": "trend",
-            "city": "Prishtina"
-        },
-        {
-            "title": "Men Casual Shoe",
-            "price": "2000.99",
-            "image": "ProductsImages/3.jpg",
-            "producer": "Ngjyra",
-            "category": "trend",
-            "city": "Prishtina"
-        }
+        new Product("Vizatimi 1", "50$", "ProductsImages/3.jpg", "Ngjyra", "trend", "Prishtina"),
+        new Product("Vizatimi 1", "50$", "ProductsImages/3.jpg", "Ngjyra", "trend", "Prishtina"),
+        new Product("Vizatimi 1", "50$", "ProductsImages/3.jpg", "Ngjyra", "trend", "Prishtina"),
+        new Product("Vizatimi 1", "50$", "ProductsImages/3.jpg", "Ngjyra", "trend", "Prishtina"),
+        new Product("Vizatimi 1", "50$", "ProductsImages/3.jpg", "Ngjyra", "trend", "Prishtina"),
+        new Product("Vizatimi 1", "50$", "ProductsImages/3.jpg", "Ngjyra", "trend", "Prishtina")
     ]
 }
 
@@ -206,7 +65,7 @@ $.each(art.products, function (index, item) {
                                 .append($("<i>").attr("class", "fas fa-times")),
                             $("<dt>").text(item.title),
                             $("<dd>").text('x1').attr('class', 'inline'),
-                            $("<dd>").text(item.price)
+                            $("<dd>").text(parseFloat(item.price.slice(0, -1)).toFixed(2) + '$')
                         )
                     }
                     else {
@@ -244,7 +103,7 @@ $.each(food.products, function (index, item) {
                                 .append($("<i>").attr("class", "fas fa-times")),
                             $("<dt>").text(item.title),
                             $("<dd>").text('x1').attr('class', 'inline'),
-                            $("<dd>").text(item.price)
+                            $("<dd>").text(parseFloat(item.price.slice(0, -1)).toFixed(2) + '$')
                         )
                     }
                     else {
@@ -282,7 +141,7 @@ $.each(textile.products, function (index, item) {
                                 .append($("<i>").attr("class", "fas fa-times")),
                             $("<dt>").text(item.title),
                             $("<dd>").text('x1').attr('class', 'inline'),
-                            $("<dd>").text(item.price)
+                            $("<dd>").text(parseFloat(item.price.slice(0, -1)).toFixed(2) + '$')
                         )
                     }
                     else {
@@ -351,7 +210,7 @@ function calcQuantity(title, price) {
             quantity.innerHTML = 'x' + (parseInt(quantity.innerHTML.substring(1)) + 1).toString();
 
             let newPrice = quantity.nextElementSibling;
-            newPrice.innerHTML = (parseFloat(price) * parseInt(quantity.innerHTML.substring(1))).toFixed(2);
+            newPrice.innerHTML = (parseFloat(price.slice(0, -1)) * parseInt(quantity.innerHTML.substring(1))).toFixed(2) + '$';
 
             break;
         }
@@ -376,7 +235,7 @@ function calcTotal() {
 
     for (let i = 0; i < cartList.length; i++) {
         if (i % 2 == 1) {
-            total += parseFloat(cartList[i].innerHTML)
+            total += parseFloat(cartList[i].innerHTML.slice(0, -1))
         }
     }
 
