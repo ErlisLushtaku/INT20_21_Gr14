@@ -3,6 +3,8 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="TableView.css">
+    <script src="form_validation.js"></script>
+    <link rel="stylesheet" href="SingleProduct.css">
     <title>Products</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
@@ -123,11 +125,40 @@
             </div>
             <div id="bottom">
                 <h2>Total: <span id="totalPrice">0$</span></h2>
-                <button id="checkout">CHECKOUT</button>
+                <button id="checkout" onclick="openForm()">CHECKOUT</button>
             </div>
         </div>
     </section>
     <script type="text/javascript" src="TableView.js"></script>
+
+    <div id="bigDiv">
+        <div class="form-popup" id="myForm" style="border-radius: 15px;">
+            <form action="/action_page.php" class="form-container">
+                <h4>Contact information</h4>
+                <input type="email" id="email" placeholder="Email" name="email">
+                <h4>Shipping address</h4>
+                <input type="text" id="name" placeholder="Name" name="name">
+                <input type="text" id="surname" placeholder="Surname" name="surname">
+                <input type="text" id="adress" placeholder="Adress" name="Adress">
+                <input type="text" id="pcode" placeholder="Postal Code" name="Postal Code">
+                <input type="text" id="_city" placeholder="City" name="city">
+                <select id="mySelect" onchange="change_placeholder(this)">
+                    <option value="">Select your country...</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Kosovo">Kosovo</option>
+                    <option value="Montenegro">Montenegro</option>
+                    <option value="North Macedonia">North Macedonia</option>
+                    <option value="Serbia">Serbia</option>
+                </select>
+                <input type="tel" id="phone" name="phone" placeholder="Phone number">
+                <input type="checkbox">
+                <p style="color:#201c1c">Save this information for next time</p>
+                </br>
+                <button type="submit" class="btn" onclick="return validation() ">Submit</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
