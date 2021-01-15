@@ -17,7 +17,7 @@ function username1_validation(){
     var username = document.getElementById("username1").value;
   
     if(username.match(username_pattern)){
-        document.getElementById("username1").setAttribute("style","border:1px green solid ");
+        $("#username1").css("border", "1px solid green")
         submit_form[0] = true;
       }
     else {
