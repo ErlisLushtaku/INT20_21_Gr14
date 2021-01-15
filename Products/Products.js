@@ -382,11 +382,10 @@ function passCart() {
 }
 
 function removeItem(elementId) {
-  var element = document.getElementById(elementId);
-  element.nextElementSibling.remove();
-  element.nextElementSibling.remove();
-  element.nextElementSibling.remove();
-  element.remove();
+  $("#" + elementId).next().remove();
+  $("#" + elementId).next().remove();
+  $("#" + elementId).next().remove();
+  $("#" + elementId).remove();
   calcTotal();
 }
 
