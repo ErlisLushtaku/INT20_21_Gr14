@@ -220,7 +220,7 @@ h3:hover span:nth-child(even){
   border-radius: 2px;
   z-index:3000;
 }
-.hyrja-scroll{
+/* .hyrja-scroll{
   opacity: 0;
   transform:translateY(5px);
   transition:all 0.5s ease-out;
@@ -228,7 +228,7 @@ h3:hover span:nth-child(even){
 .hyrja-scroll.show {
   opacity: 1;
   transform:translateY(0);
-}
+} */
 
 .hyrja:hover{
 border:5px rgb(202, 173, 134) dotted;
@@ -758,7 +758,7 @@ text-align: center;
 
 .footer-class{
   height: 400px;
-  background: linear-gradient(180deg,rgb(134, 134, 134), rgb(77, 77, 77), #363636);
+  background: linear-gradient(180deg,rgb(255, 255, 255), rgb(216, 216, 216), #818181);
   margin-top:1600px;
   border-bottom: 50px solid #333;
   border-image: url(images/mapi.jpg);
@@ -799,4 +799,32 @@ text-align: center;
 }
 .permultiplec{
 column-count:2;
+}
+.datas {
+  margin:0 auto;
+  display: flex;
+  width: 700px;
+  justify-content: space-between;
+}
+.datas .data-box {
+  text-align: center;
+}
+.datas .data-box .ikone .fa {
+  font-size: 30px; /* madhsia veq e ikonav */
+  cursor: pointer;
+  color: #333;
+  margin-top:40px;
+}
+.datas .data-box .ikone h5,
+.datas .data-box .ikone h4 {
+  position:relative;
+  font-weight: 600;
+  margin:0;
+  padding:2px 5px;
+  font-size: 15px;
+  transition-delay: 0.3333s;
+  }
+.datas .data-box .ikone h4 {
+  font-weight: 400;
+  color:black;
 }

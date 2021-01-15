@@ -88,7 +88,17 @@
     </div>
 
     <script>
-        var queryString = location.search.substring(1);
+        var product = JSON.parse(localStorage.getItem('prod'));
+        console.log(product);
+
+        document.getElementById("title").innerHTML = product.title;
+        document.getElementById("price").innerHTML += product.price;
+        document.getElementById("big-img").src = product.image;
+        document.getElementById("producer").innerHTML += product.producer;
+        document.getElementById("category").innerHTML += product.category;
+        document.getElementById("city").innerHTML += product.city;
+
+        /* var queryString = location.search.substring(1);
         var data = queryString.split("|");
 
         document.getElementById("title").innerHTML = data[0].replace(/%20/g, " ");
@@ -96,7 +106,7 @@
         document.getElementById("big-img").src = data[2];
         document.getElementById("producer").innerHTML += data[3].replace(/%20/g, " ");
         document.getElementById("category").innerHTML += data[4];
-        document.getElementById("city").innerHTML += data[5];
+        document.getElementById("city").innerHTML += data[5]; */
 
         $('#right-div').width($('#buy-now').width() + 30)
     </script>

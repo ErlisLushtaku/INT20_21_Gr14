@@ -1,234 +1,11 @@
 *{
 margin:0;
 padding:0;
+font-family: 'Poppins', sans-serif;
 }
 body {
   margin:0;
   font-family: "Poppins", sans-serif ;
-}
-:root {
---text: #333;
---text-inverse: #f4f4f4;
---background: transparent;
---spacing: 1em;
-}
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 6000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top:10px;
-  padding-bottom:10px;
-  padding-right:50px;
-  padding-left:50px;
-  transition: 250ms ease-in;
-  background: var(--background);
-  color: var(--text);
-}
-.logo
-{
-  color: white;
-  z-index: 5000;
-  display: flex;
-  align-items: center;
-}
-.logo h4 {
-  margin:0;
-  padding: 0;
-  text-transform: uppercase;
-  margin-left: 10px;
-}
-
-h4 span {
-  display: inline-flex;
-  color:#333;
-  overflow: hidden;
-  font-size: 30px;
-}
-h4:hover span {
-  display: inline-flex;
-  color:#d88e2c;
-  background-color:#333;
-  transition-delay: 0.1s;
-  overflow: hidden;
-  z-index: 5000;
-  font-size: 20px;
-  transition-duration: 1s;
-}
-h4 span:nth-child(even){
-  overflow: hidden;
-  color:#fff;
-  border-bottom: 8px solid #d88e2c;
-  letter-spacing: -1em; /* qekjo i hek ato shkronjat mas B P A */
-}
-h4:hover span:nth-child(even){
-  
-  letter-spacing: 0;
-  background-color:  #333;
-}
-.nav-l {
-  list-style-type: none;
-  margin:0;
-  padding: 0;
-  display: flex;
-}
-.link{
-  text-decoration: none;
-  color: inherit;
-  display: inline-block;
-  /* padding: calc(var(--spacing) / 2) var(--spacing); */
-  padding-right: 3em;
-  position: relative;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.9rem;
-}
-.link:hover{
-  text-decoration: underline;
-  font-size: 15px;
-  font-weight: 600;
-}
-.link_button:hover{
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: normal;
-}
-.link:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: var(--spacing);
-  right: var(--spacing);
-  height: 2px;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
-}
-.link_button {
-  border: 1.5px solid currentColor;
-  border-radius: 2em;
-  transition:250ms ease-in-out;
-  letter-spacing: 1px;
-  padding:10px 20px;
-}
-.link_button:hover {
-  background: rgba(245, 167, 103, 0.733);
-  color: var(--text-inverse);
-  border-color:rgba(245, 167, 103, 0.733);
-}
-.link_button::after {
-    display: none;
-}
-.nav-scrolled {
-  --text: #333;
-  --text-inverse: #f4f4f4;
-  --background: #f4f4f4;
-  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
-}
-/* Mobile Menu */
-.nav-bar {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; /* works on X axis */
-  align-items: center; /* works on Y axis */
-}
-
-.tre{
-  order:1;
-}
-.nav-l-i.link_button{
-  order:2;
-}
-.nav-l-i{
-  width: 100%;
-  text-align: center;
-  order:2;
-  display: none; /* it hides until we click on it */
-}
-.nav-l-i.active{
-  display: block; /* in js we're add this active class dynimacily in all of our parts when we click the tre menu */
-}
-.tre{
-  cursor: pointer;
-}
-.tre3{
-  background: #999;
-  display: inline-block;
-  height: 2px;
-  position: relative;
-  width: 18px;
-}
-.tre3::before, .tre3::after {
-  background: #999;
-  content:""; /* sa her tpunon me before after e ki tnevojshme qet sen */
-  display: inline-block;
-  height: 2px;
-  position: absolute;
-  width: 18px;
-}
-.tre3::before{
-  top:5px;
-}
-.tre3::after{
-  top:-5px;
-}
-/* Tablet Menu */
-@media all and (min-width:468px){
-  .nav-bar{
-      justify-content: center;
-  }
-  .logo{
-      flex: 1; /* it allows it to grow or sth */
-  }
-  .nav-l-i.link{
-      width: auto;
-      order: 1;
-      display: block;
-  }
-  .tre{
-      order: 2;
-  }
-  .link_button a{
-      text-decoration: none;
-      padding: 7px 15px;
-      background: teal;
-      border: 1px solid #006d6d;
-      border-radius: 50em;
-  }
-  .link_button a:hover{
-      transition: all 0.25s;
-      background: #006d6d;
-      border-color:#005959;
-  } 
-} 
-/* Desktop Menu */
-@media all and (min-width:768px) {
-  .nav-l-i{
-      display: block;
-      width:auto;
-  }
-  .tre{
-      display: none;
-  }
-  .logo {
-      order:0;
-  }
-  .nav-l-i{
-      order:1;
-  }
-  .link_button{
-      order:2;
-  }
-  .nav-bar li{
-      padding: 15px 10px;
-  }
-  .nav-bar li.link_button{
-      padding-right:0;
-  }
 }
 
 /* scroll */
@@ -246,16 +23,16 @@ h4:hover span:nth-child(even){
 }
 .lgr1{
   width:100%;
-  height:400px;
-  background-image:linear-gradient(#625A87     ,#23212A );
+  height:385px;
+  background-image:linear-gradient(#777777, #a0a0a0, white);
   }
   .lgr1 span{
     display:table;
     color:white;
     position:absolute;
-    margin-top:150px;
-    margin-left:80px;
-  font-size:40px;
+    margin-top:110px;
+    margin-left:100px;
+  font-size:80px;
   font-family: 'Roboto Condensed', sans-serif;
   -webkit-box-reflect:below -12px linear-gradient(transparent,rgba(0,0,0,0.2));
   }
@@ -271,6 +48,9 @@ h4:hover span:nth-child(even){
   height:700px;
   background-image:url("mapi.jpg");
 background-size: cover;
+  }
+  .pericon{
+    margin-left: 30px;
   }
   .pericon i{
   color:white;
@@ -295,9 +75,9 @@ background-size: cover;
   margin-left:700px;
   }
   .lastpart{
-  height:400px;
+  height:200px;
   width:100%;
-  background-image:linear-gradient(#625A87     ,#23212A    );
+  background-image:linear-gradient(white,#a0a0a0, #777777);
   }
   .plastpart{
   color:white;
@@ -314,7 +94,7 @@ background-size: cover;
   margin-right: auto;
   }
   table td{
-  color:#C56F5D;
+  color:rgba(245, 167, 103, 0.733);
   margin-top:60px;
   }
   table tr td{
@@ -338,21 +118,21 @@ background-size: cover;
   }
   
   .box{
-    background-color: #23212A  ;
+    background-color: #333  ;
     border-radius: 10px;
     position:relative;
     height:150px;
     width:200px;
     padding:15px;
     
-    margin-top:15px;
-    margin-left:15px;
+    margin-top:5px;
+    margin-left:255px;
   }
   .box .box1{
     position:absolute;
     top:0;
     left:0;
-  background-color:#C56F5D;
+  background-color:rgb(245, 167, 103);
   width:100%;
   height:100%;
   transition:0.5s;
@@ -409,7 +189,7 @@ background-size: cover;
       }
       .inside i{
       align-items: left;
-      color:#23212A;
+      color:#333;
       font-size: 18px;
       }
       .lefti{
@@ -422,7 +202,7 @@ background-size: cover;
         background-color: #E9E9E9;
         }
         .perform table tr td i{
-        color:#23212A;
+        color:#333;
         text-align: left;
         }
       input{
@@ -465,7 +245,7 @@ border:none;
 outline:none;
 border-radius:5px;
 color:white;
-background-color: #C56F5D;
+background-color:rgba(245, 167, 103, 0.733);
 font-size:12px;
 font-weight:500;
 letter-spacing: 1px;
@@ -473,13 +253,13 @@ transition:all 0.3s ease;
 }
 
 .btn button:hover{
-background-color:#23212A  ;
+background-color:#333  ;
 
 }
 .content .filname{
   position:relative;
   color:white;
-  background-color: #C56F5D;
+  background-color: rgba(245, 167, 103, 0.733);
   padding:8px 12px;
   font-size:12px;
   border-radius:5px;
@@ -493,7 +273,7 @@ margin-left:200px;
 
 #persubmit{
 border-radius:5px;
-background-color:#C56F5D ;
+background-color:rgba(245, 167, 103, 0.733);
 transition:all 0.3s ease;
 color:white;
 font-size:15px;
