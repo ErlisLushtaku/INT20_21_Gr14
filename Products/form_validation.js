@@ -1,3 +1,14 @@
+function openForm() {
+    document.getElementById("bigDiv").style.display = "block";
+    $('body').css('overflow', 'hidden');
+}
+
+function closeForm() {
+  document.getElementById("bigDiv").style.display = "none";
+  $('body').css('overflow', '');
+      }
+
+
 function changeBackground(){ 
     var currentTime = new Date().getHours();
     if (7 <= currentTime && currentTime < 20) {
@@ -189,11 +200,3 @@ function change_placeholder(e){
             break;
     }
 }
-function openForm() {
-
-            document.getElementById("bigDiv").style.display = "block";
-}
-function closeForm() {
-
-          document.getElementById("bigDiv").style.display = "none";
-              }
