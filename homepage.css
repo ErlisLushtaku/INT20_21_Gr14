@@ -15,7 +15,7 @@
     align-items: center;
     padding: 100px;
     box-sizing: border-box;
-    background: linear-gradient(180deg,#3a3a3a,#BEBEBE,#ffffff), url(images/kosovo1.png);
+    background: linear-gradient(180deg,#3a3a3a,#BEBEBE,#ffffff), url(images/kosovo1.png); /* background property url(..) */
     background-blend-mode: screen;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -503,7 +503,7 @@ border:5px rgb(202, 173, 134) dotted;
 .w3:hover{
   z-index: 1;
 }
-.w-text1, .w-text2, .w-text3, .w-white{
+.w-text1, .w-text2, .w-text3 {
   background: white;
   width: 400px;
   height: 500px;
@@ -760,8 +760,6 @@ text-align: center;
   height: 400px;
   background: linear-gradient(180deg,rgb(255, 255, 255), rgb(216, 216, 216), #818181);
   margin-top:1600px;
-  border-bottom: 50px solid #333;
-  border-image: url(images/mapi.jpg);
 }
 .big-text{
   font-size:180px;
@@ -802,6 +800,7 @@ column-count:2;
 }
 .datas {
   margin:0 auto;
+  margin-top:40px;
   display: flex;
   width: 700px;
   justify-content: space-between;
