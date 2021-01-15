@@ -30,7 +30,9 @@
                 
                 $(document).ready(function(){
                 $("#meet").click(function(){
-                    $("#team").slideToggle("slow");
+                    $("#team").slideToggle("slow",function(){
+                        alert("Visit our 'Contact Us' page and feel free to text us! "); // call back function
+                    } );
                 });
                 });
 
@@ -69,16 +71,16 @@
                                 <a href="homepage.html" class="link" style="margin-left:140px;">Home</a>
                             </li>
                             <li class="nav-l-i">
-                                <a href="Promotions.html" class="link" target="_blank">Promotions</a>
+                                <a href="Promotions.html" class="link">Promotions</a>
                             </li>
                             <li class="nav-l-i">
-                                <a href="Products/Products.html" class="link" target="_blank">E-Shopping</a>
+                                <a href="Products/Products.html" class="link">E-Shopping</a>
                             </li>
                             <li class="nav-l-i">
-                                <a href="fundingprograms.html" class="link" target="_blank">Funding</a>
+                                <a href="fundingprograms.html" class="link">Funding</a>
                             </li>
                             <li class="nav-l-i">
-                                <a href="Kontakti.html" class="link" target="_blank">Contact Us</a>
+                                <a href="Kontakti.html" class="link">Contact Us</a>
                             </li>
                             <li class="tre"><span class="tre3"></span></li>
                         </ul>
@@ -217,7 +219,7 @@
                     <a href="#d" onclick="playAudio3()"><div class="w3">3</div></a>
                 </div>
 
-                <div class="w-text1">
+                <!-- <div class="w-text1">
                 <h2>PROMOTION<br><br></h2>
                 <p>
                     <ol style="list-style-type: none;">
@@ -227,7 +229,7 @@
                             digital promotion such as display advertising and lead generation.</li>
                     </ol>
                 </p>
-                </div>
+                </div> -->
                 <div class="w-text2">
                     <h2>E-COMMERCE<br><br></h2>
                     <p>
@@ -252,9 +254,18 @@
                         </ol>
                     </p>
                 </div>
-                <div class="w-white">
-                    
-                </div>
+                <div class="w-text1">
+                    <h2>PROMOTION<br><br></h2>
+                    <p>
+                        <ol style="list-style-type: none;">
+                            <li style="font-size:20px;">As a Kosovo's business promotion agency,
+                                <abbr title="Business Promotion Agency">BPA</abbr> works together as one firm to serve our clients
+                                and expand their businesses through
+                                digital promotion such as display advertising and lead generation.</li>
+                        </ol>
+                    </p>
+                    </div>
+        
 
             </div>
             <div class="client-text"> OUR FOCUS IS OUR CLIENTS' SUCCESS</div>
@@ -264,19 +275,19 @@
                     $(".w-text1").show();
                     $(".w-text2").hide();
                     $(".w-text3").hide();
-                    $(".w-white").hide();
+                    
                 });
                 $(".w2").click(function(){
                     $(".w-text2").show();
                     $(".w-text1").hide();
                     $(".w-text3").hide();
-                    $(".w-white").hide();
+                   
                 });
                 $(".w3").click(function(){
                     $(".w-text3").show();
                     $(".w-text2").hide();
                     $(".w-text1").hide();
-                    $(".w-white").hide();
+                   
                 });
                 });
             </script>
@@ -295,7 +306,7 @@
                             <br>
                         </tr>
                         <tr>
-                        <td style="border-right:3px solid black"><img src="images/portfolio.png" alt="Bag Pic" style="width: 30px; height: 30px;"><br/>
+                        <td style="border-right:3px solid; border-image: url(images/black.jpg) 30 stretch;"><img src="images/portfolio.png" alt="Bag Pic" style="width: 30px; height: 30px;"><br/>
                         <p style="color:black; font-size:20px;">Projects</p>
                         <p style="font-size: 60px; color:black; font-weight: bold; font-family: 'Rajdhani', sans-serif;">56</p>
                         </td>
@@ -329,7 +340,7 @@
                         </div>
                         </div>
                         <div class="slide">
-                            <p>“Always a pleasure to work with BPA. Such professional and happy people and you know you’ll receive a quick, innovative and no fuss service.”</p>
+                            <p style="text-wrap:normal;">“Always a pleasure to work with BPA. Such professional and happy people and you know you’ll receive a quick, innovative and no fuss service.”</p>
                         <div class="client-s">
                             <h3>Tea Marleku</h3>
                             <span>Founder at LOTUS</span>
@@ -431,37 +442,52 @@
             </div>
         </section>
         <footer>
+            <!-- Perdorimi i JQuery me HTML, Set Content-->
+            <script>
+                $(document).ready(function(){
+                  $("#address").click(function(){
+                    $("#add1").html("<b>Address</b>");
+                  });
+                  $("#phone").click(function(){
+                    $("#ph1").html("<b>Mobile</b>");
+                  });
+                  $("#email").click(function(){
+                    $("#e1").html("<b>Email</b>");
+                  });
+                });
+                </script>
             <div class="footer-class">
             <p class="big-text">CONTACT</p>
             <p class="high-lighted">TELL US ABOUT YOUR <span>NEW PROJECT</span></p>
             <p class="high-lighted2">AND LET US HELP YOU REALIZE IT</p>
             <div class="datas">
-                
-                <div class="data-box">
+                <div class="data-box" id="address">
                     <div class="ikone">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        <h5>Address</h5>
-                        <h4>Bregu i Diellit, Prishtinë</h4>
+                       <a href="#address"><i class="fa fa-map-marker" aria-hidden="true"></i></a> 
+                        <h5 id="add1"></h5>
+                        <h4 id="add">Bregu i Diellit, p.n.100000<br> Prishtinë</h4>
                     </div>
                 </div>    
-                <div class="data-box">
+                <div class="data-box" id="phone">
                     <div class="ikone">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
-                        <h5>Mobile</h5>
-                        <h4>+38345636363</h4>
+                        <a href="#phone"> <i class="fa fa-phone" aria-hidden="true"></i> </a>
+                        <h5 id="ph1"></h5>
+                        <h4>+38344111222<br>+38345121212</h4>
                     </div>
                 </div>    
-                <div class="data-box">
+                <div class="data-box" id="email">
                     <div class="ikone">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <h5>Email</h5>
-                        <h4>bpak@business.com</h4>
+                        <a href="#email">  <i class="fa fa-envelope" aria-hidden="true"></i></a>
+                        <h5 id="e1"></h5>
+                        <h4>BPAK@gmail.com<br>
+                        contactbusiness@gmail.com</h4>
                     </div>
                 </div>
                 
             </div>
-            </div>
             
+            </div>
+            <div style="background-color: rgb(92, 92, 92);color:rgb(189, 189, 189); height: 35px; padding-top: 5px;">&#169; Copyright 2021 Created By BPA All Rights Reserved</div>
               
         </footer>
             </body>
