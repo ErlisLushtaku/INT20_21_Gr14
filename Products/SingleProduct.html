@@ -13,22 +13,11 @@
         }
     </style>
 
-    <script type="text/javascript" src="jquery-3.5.1.js"></script>
-    <script>
-    function changeBackground(){ 
-        var currentTime = new Date().getHours();
-        if (7 <= currentTime && currentTime < 20) {
-            document.body.style.backgroundColor = "#FFF";
-        }
-        else {
-            document.body.style.backgroundColor = "#FAFAFA";
-        }
-    }
-    </script>
+    <script type="text/javascript" src="jquery-3.5.1.js"></script>  
+    <script type="text/javascript" src="form_validation.js"></script>
 </head>
 
 <body onload="changeBackground()">
-
     <section class="section1 ">
         <header>
             <div class="div1">
@@ -83,22 +72,39 @@
             <p id="city">City: </p>
             <h2 id="size">Size: <span class="red">60cm x 70cm</span></h2>
             <button id="to-cart" class="back-red">ADD TO CART</button>
-            <button id="buy-now" class="back-yellow">BUY NOW</button>
+            <button id="buy-now" class="back-yellow" onclick="openForm()">BUY NOW</button>
         </div>
     </div>
-
+   
+<div id="bigDiv">
+    <div class="form-popup" id="myForm" style="border-radius: 15px;">
+        <form action="/action_page.php" class="form-container">
+          <h4>Contact information</h4>
+          <input type="email" id="email" placeholder="Email" name="email" >
+        <h4>Shipping address</h4>
+          <input type="text" id="name" placeholder="Name" name="name"  >
+          <input type="text" id="surname" placeholder="Surname" name="surname" >
+          <input type="text" id="adress" placeholder="Adress" name="Adress" >
+          <input type="text" id="pcode" placeholder="Postal Code" name="Postal Code" >
+          <input type="text" id="_city" placeholder="City" name="city" > 
+          <select id="mySelect" onchange="change_placeholder(this)">
+            <option value="Albania">Albania</option>
+            <option value="Kosovo">Kosovo</option>
+            <option value="Montenegro">Montenegro</option>
+            <option value="North Macedonia">North Macedonia</option>
+            <option value="Serbia">Serbia</option>
+        </select>
+        <input type="tel" id="phone" name="phone" placeholder="Phone number"  >
+        <input type="checkbox" >
+        <p style="color:#201c1c">Save this information for next time</p>
+        </br>
+          <button type="submit" class="btn" onclick="return validation() ">Summbit</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+</div>
     <script>
-        var product = JSON.parse(localStorage.getItem('prod'));
-        console.log(product);
-
-        document.getElementById("title").innerHTML = product.title;
-        document.getElementById("price").innerHTML += product.price;
-        document.getElementById("big-img").src = product.image;
-        document.getElementById("producer").innerHTML += product.producer;
-        document.getElementById("category").innerHTML += product.category;
-        document.getElementById("city").innerHTML += product.city;
-
-        /* var queryString = location.search.substring(1);
+        var queryString = location.search.substring(1);
         var data = queryString.split("|");
 
         document.getElementById("title").innerHTML = data[0].replace(/%20/g, " ");
@@ -106,9 +112,11 @@
         document.getElementById("big-img").src = data[2];
         document.getElementById("producer").innerHTML += data[3].replace(/%20/g, " ");
         document.getElementById("category").innerHTML += data[4];
-        document.getElementById("city").innerHTML += data[5]; */
+        document.getElementById("city").innerHTML += data[5];
 
         $('#right-div').width($('#buy-now').width() + 30)
+
+      
     </script>
 </body>
 </html>
