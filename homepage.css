@@ -81,6 +81,8 @@ align-content: center;
 .fronti {
   background-color:#e7d1b5;
   background-image: url(images/card.jpg);
+  background-attachment: scroll;
+  background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: overlay;
   color:#333;
@@ -127,7 +129,10 @@ align-content: center;
   color: var(--clr);
   background: #333; 
 }
-
+.backi a{
+  color:#e6b97e;
+  text-decoration: none;
+}
 .logo
 {
     margin:0;
