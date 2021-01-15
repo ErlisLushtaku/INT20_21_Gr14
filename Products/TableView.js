@@ -185,7 +185,10 @@ $.each(art.products, function (index, item) {
     $("#art-container").append(
         $("<tr>").append(
             $("<a>")
-                .attr("href", "SingleProduct.html?" + item.title + "|" + item.price + "|" + item.image + "|" + item.producer + "|" + item.category + "|" + item.city)
+                .click(function () {
+                    localStorage.setItem('prod', JSON.stringify(item));
+                })
+                .attr("href", "SingleProduct.html")
                 .append(
                     $("<td>").text(item.title)),
             $("<td>").text(item.price),
@@ -220,7 +223,10 @@ $.each(food.products, function (index, item) {
     $("#food-container").append(
         $("<tr>").append(
             $("<a>")
-                .attr("href", "SingleProduct.html?" + item.title + "|" + item.price + "|" + item.image + "|" + item.producer + "|" + item.category + "|" + item.city)
+                .click(function () {
+                    localStorage.setItem('prod', JSON.stringify(item));
+                })
+                .attr("href", "SingleProduct.html")
                 .append(
                     $("<td>").text(item.title)),
             $("<td>").text(item.price),
@@ -255,7 +261,10 @@ $.each(textile.products, function (index, item) {
     $("#textile-container").append(
         $("<tr>").append(
             $("<a>")
-                .attr("href", "SingleProduct.html?" + item.title + "|" + item.price + "|" + item.image + "|" + item.producer + "|" + item.category + "|" + item.city)
+                .click(function () {
+                    localStorage.setItem('prod', JSON.stringify(item));
+                })
+                .attr("href", "SingleProduct.html")
                 .append(
                     $("<td>").text(item.title)),
             $("<td>").text(item.price),
@@ -286,6 +295,44 @@ $.each(textile.products, function (index, item) {
     )
 });
 
+function CartProd(title, quantity, price) {
+    this.title = title;
+    this.quantity = quantity;
+    this.price = price;
+}
+
+var cart = JSON.parse(sessionStorage.getItem('cart'));
+
+$.each(cart, function (index, item) {
+    $("#cartList").append(
+        $("<button>")
+            .attr("id", "btn" + index)
+            .click(function () { removeItem("btn" + index) })
+            .append($("<i>").attr("class", "fas fa-times")),
+        $("<dt>").text(item.title),
+        $("<dd>").text(item.quantity).attr('class', 'inline'),
+        $("<dd>").text(item.price)
+    )
+});
+calcTotal();
+
+function passCart() {
+    const cart = []
+
+    var cartList = document.getElementById("cartList");
+    var titles = cartList.getElementsByTagName("dt");
+    var quantities_prices = cartList.getElementsByTagName("dd");
+
+    var ddIndex = 0;
+    for (let i = 0; i < titles.length; i++) {
+        var product = new CartProd(titles[i].innerHTML, quantities_prices[ddIndex].innerHTML, quantities_prices[ddIndex + 1].innerHTML);
+        cart.push(product);
+        ddIndex += 2;
+    }
+
+    sessionStorage.setItem('cart', JSON.stringify(cart));
+}
+
 function removeItem(elementId) {
     var element = document.getElementById(elementId);
     element.nextElementSibling.remove();
@@ -293,49 +340,53 @@ function removeItem(elementId) {
     element.nextElementSibling.remove();
     element.remove();
     calcTotal();
-  }
-  
-  function calcQuantity(title, price) {
+}
+
+function calcQuantity(title, price) {
     var cartList = document.getElementById("cartList").getElementsByTagName("dt");
-  
+
     for (let i = 0; i < cartList.length; i++) {
-      if (cartList[i].innerHTML == title) {
-  
-        let quantity = cartList[i].nextElementSibling;
-        quantity.innerHTML = 'x' + (parseInt(cartList[i].nextElementSibling.innerHTML.substring(1)) + 1).toString();
-  
-        let newPrice = quantity.nextElementSibling;
-        newPrice.innerHTML = (parseFloat(price) * parseInt(quantity.innerHTML.substring(1))).toFixed(2);
-  
-        break;
-      }
+        if (cartList[i].innerHTML == title) {
+
+            let quantity = cartList[i].nextElementSibling;
+            quantity.innerHTML = 'x' + (parseInt(quantity.innerHTML.substring(1)) + 1).toString();
+
+            let newPrice = quantity.nextElementSibling;
+            newPrice.innerHTML = (parseFloat(price) * parseInt(quantity.innerHTML.substring(1))).toFixed(2);
+
+            break;
+        }
     }
-  };
-  
-  function exists(title) {
+};
+
+function exists(title) {
     var cartList = document.getElementById("cartList").getElementsByTagName("dt");
-  
+
     for (let i = 0; i < cartList.length; i++) {
-      if (cartList[i].innerHTML == title) {
-        return true;
-      }
+        if (cartList[i].innerHTML == title) {
+            return true;
+        }
     }
-  
+
     return false;
-  };
-  
-  function calcTotal() {
+};
+
+function calcTotal() {
     var cartList = document.getElementById("cartList").getElementsByTagName("dd");
     var total = 0;
-  
+
     for (let i = 0; i < cartList.length; i++) {
-      if (i % 2 == 1) {
-        total += parseFloat(cartList[i].innerHTML)
-      }
+        if (i % 2 == 1) {
+            total += parseFloat(cartList[i].innerHTML)
+        }
     }
-  
+
     document.getElementById("totalPrice").innerHTML = total.toFixed(2).toString() + "$"
-  };
+};
+
+window.onbeforeunload = function () {
+    passCart();
+};
 
 {/* <table>
       <tr>
