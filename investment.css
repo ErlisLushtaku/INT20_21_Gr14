@@ -275,7 +275,7 @@ background:rgb(63, 61, 61);
 }
 .box5{
   grid-area: box5;
-  margin-top:-167px;
+  margin-top:-150px;
   z-index:6;
 
 }
@@ -285,17 +285,19 @@ background:rgb(63, 61, 61);
 }
 .box6{
   grid-area:box6;
-  background:rgba(48, 46, 46, 0.979);
+  background:rgb(196, 190, 190);
+  z-index:7;
 }
 .box6 canvas{
-  margin-top:20px;
+  margin-top:-30px;
   margin-bottom:0;
+  margin-left:10px;
   float:left;
   }
 
 .box7{
   grid-area:box7;
-  background:rgba(48, 46, 46, 0.979);
+  background:rgb(196, 190, 190);
   align-items: center;
   position:relative;
   text-align:center;
@@ -304,10 +306,14 @@ background:rgb(63, 61, 61);
   font-size:25px;
   color:#fff;
   margin-top:0;
+  z-index:7;
 }
+
 .box7 h3{
+  margin-top:-100px;
   margin-bottom:30px;
   font-size:40px;
+  
 }
 .box8{
   grid-area:box8;
@@ -322,22 +328,15 @@ background:rgb(63, 61, 61);
   display:block;
   
 }
-.box8 h1{
-  font-size:30px;
-  margin-top:10px;
-  margin-bottom: 20px;
-  font-weight: 600;
- 
-  
-}
 .box8 .container{
   width:90%;
   display:flex;
 justify-content: space-between;
 flex-wrap: wrap;
-background: rgba(170, 165, 165, 0.973);
+background:rgb(196, 190, 190);
 border-radius: 50px;
 margin-left:70px;
+margin-top:60px;
 }
 
  .box8 .container .llojet{
@@ -357,6 +356,7 @@ border:5px dashed rgba(48, 46, 46, 0.979);
 position:relative;
 justify-content: center;
 text-align:center;
+padding-top:40px;
  }
  .box8 .container .llojet p{
    padding: 20px;
