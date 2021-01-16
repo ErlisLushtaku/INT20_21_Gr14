@@ -1,4 +1,18 @@
+Array.prototype.check_username = function(username) {
+  let index = -1;
+  let exists = false;
+  for (let i = 0; i < this.length; i++) {
+    if (this[i].username == username) {
+      exists = true;
+      index = i;
+      break;
+    }
+  }
+  return [index, exists];
+}
+
 var submit_form = new Array();
+
 
 users = Array.from(JSON.parse(localStorage.getItem('users')));
 
@@ -6,14 +20,9 @@ function validation() {
   let username = document.getElementById("username").value;
   var index = 0;
   if (users != null) {
-    let exists = false;
-    for (let i = 0; i < users.length; i++) {
-      if (users[i].username == username) {
-        exists = true;
-        index = i;
-        break;
-      }
-    }
+    let userCheck = users.check_username(username);
+    var index = userCheck[0];
+    let exists = userCheck[1];
     if (!exists) {
       window.alert("You must Sign Up first!");
       return false;
