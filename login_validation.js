@@ -35,7 +35,7 @@ function validation() {
 
 function username_validation() {
 
-  var username_pattern = new RegExp(/^(?=.{8,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/);
+  var username_pattern = new RegExp(/^(?=.{8,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/i);
   var username = document.getElementById("username").value;
   
   if (username.match(username_pattern)) {
@@ -50,7 +50,7 @@ function username_validation() {
 }
 function password_validation(index) {
 
-  var password_pattern = new RegExp(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/);
+  var password_pattern = new RegExp(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/i);
   var password = document.getElementById("password").value;
 
   if(users[index].password != password) {
