@@ -5,11 +5,10 @@
         <link rel="shortcut icon" type="image/png" href="images/3d.png">
         <link rel="stylesheet" type="text/css" href="homepage.css">
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script> -->
-        <!-- <script src="js/scroll.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <script src="js/scroll.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="navigation.css">
-        <link href="https://fonts.googleapis.com/css?family=Poppins:300,900&display=swap" rel="stylesheet"/>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -38,8 +37,6 @@
 
         </script>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
-           
             #fotoR
                     {
                         width: 280px;
@@ -50,7 +47,11 @@
                         margin-left: 800px;
                         margin-top:-550px;
                         z-index: 20;
-                    }             
+                    }      
+            @font-face {
+                font-family: 'Per-Clients';
+                src: url('BOLD.ttf');
+            }       
         </style>
             </head>
             <body>
@@ -59,7 +60,7 @@
             <header>
                 <div class="containeer">
                     <div class="div1"></div><div class="logo">
-                        <h4 style="font-family: 'Rajdhani', sans-serif;">
+                        <h4>
                         <span>B</span><span>usiness</span>
                         <span>P</span><span>romotions</span>  
                         <span>A</span><span>gency</span>
@@ -122,7 +123,7 @@
                 </div> 
 
                 <div class="backi">
-                    <p class="permbajtja_prapa">ABOUT US <i class="fas fa-arrow-circle-down"></i></p>
+                   <a href="#aboutus"> <p class="permbajtja_prapa">ABOUT US <i class="fas fa-arrow-circle-down"></i></p> </a>
                 </div>
                 </div>
             </div>
@@ -134,7 +135,7 @@
             </div>
         </section>
 
-        <section class="section2">
+        <section class="section2" id="aboutus">
             <div class="vertical-line">
                 <div class="bpa"><svg width="35px" height="90px" class="bpa-svg">
                     <rect width="35px" height="90px" style="fill:#d88e2c;stroke-width:3;stroke:#d88e2c" />
@@ -224,13 +225,13 @@
             <div class="w-complete">
             
                 <div class="w-karta" id="d">
-                    <a href="#d" onclick="playAudio1()"><div class="w1" id="w11"><span style="margin-top:-30px">1</span></div></a>
-                    <a href="#d" onclick="playAudio2()"><div class="w2">2</div></a>
-                    <a href="#d" onclick="playAudio3()"><div class="w3">3</div></a>
+                    <a href="#d" onclick="playAudio1()"><div class="w1" id="w11"><span style="margin-top:-30px; font-family: 'Per-Clients';">1</span></div></a>
+                    <a href="#d" onclick="playAudio2()"><div class="w2" style="font-family: 'Per-Clients';">2</div></a>
+                    <a href="#d" onclick="playAudio3()"><div class="w3" style="font-family: 'Per-Clients';">3</div></a>
                 </div>
 
                 <div class="w-text2">
-                    <h2>E-COMMERCE<br><br></h2>
+                    <h2 style="font-family: 'Per-Clients';">E-COMMERCE<br><br></h2>
                     <p>
                         <ol style="list-style-type: none;">
                             <li style="font-size:20px;">
@@ -243,7 +244,7 @@
                     </p>
                 </div>
                 <div class="w-text3">
-                    <h2>FUNDING PROGRAMS<br><br></h2>
+                    <h2 style="font-family: 'Per-Clients';">FUNDING PROGRAMS<br><br></h2>
                     <p>
                         <ol style="list-style-type: none;">
                             <li style="font-size:20px;">Through loans, grant writings
@@ -254,7 +255,7 @@
                     </p>
                 </div>
                 <div class="w-text1">
-                    <h2>PROMOTION<br><br></h2>
+                    <h2 style="font-family: 'Per-Clients';">PROMOTION<br><br></h2>
                     <p>
                         <ol style="list-style-type: none;">
                             <li style="font-size:20px;">As a Kosovo's business promotion agency,
@@ -267,7 +268,7 @@
         
 
             </div>
-            <div class="client-text"> OUR FOCUS IS OUR CLIENTS' SUCCESS</div>
+            <div class="client-text" style="font-family: 'Per-Clients';"> OUR FOCUS IS OUR CLIENTS' SUCCESS</div>
             <script>
                 $(document).ready(function(){
                 $(".w1").click(function(){
@@ -294,7 +295,7 @@
             <div class="d-section4" >
                 <div class="trusted-by">
                 <div class="svg-div1"><svg height="200" width="400">
-                        <text x="-92" y="30" fill="#333" transform="rotate(-90 50,50)" style="font-size:30px; font-weight:bold;">Our Clients</text>
+                        <text x="-92" y="30" fill="#333" transform="rotate(-90 55,50)" style="font-size:33px; font-weight:bold;">Our Clients</text>
                         Sorry, your browser does not support inline SVG.
                     </svg>
                     </div>  
@@ -339,14 +340,14 @@
                         </div>
                         </div>
                         <div class="slide">
-                            <p style="text-wrap:normal;">“Always a pleasure to work with BPA. Such professional and happy people and you know you’ll receive a quick, innovative and no fuss service.”</p>
+                            <section class="permultiplec">  <p style="text-wrap:normal;">“Always a pleasure to work with BPA. Such professional and happy people and you know you’ll receive a quick, innovative and no fuss service.”</p> </section>
                         <div class="client-s">
                             <h3>Tea Marleku</h3>
                             <span>Founder at LOTUS</span>
                         </div>
                         </div>
                         <div class="slide">
-                            <p>"One thing that’s difficult in this industry is getting people to follow through on things they say they will do. I think that’s probably the best quality of BPA–I can always count on their team that 100% of what was said will be done."</p>
+                            <section class="permultiplec">"One thing that’s difficult in this industry is getting people to follow through on things they say they will do. I think that’s probably the best quality of BPA–I can always count on their team that 100% of what was said will be done." </section>
                         <div class="client-s">
                             <h3 id="team1">Zef Bisaku</h3>
                             <span>Founder at Priam</span>
