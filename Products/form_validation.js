@@ -1,11 +1,13 @@
 function openForm() {
     document.getElementById("bigDiv").style.display = "block";
     $('body').css('overflow', 'hidden');
+    $(".section1").css('display','none');
 }
 
 function closeForm() {
   document.getElementById("bigDiv").style.display = "none";
   $('body').css('overflow', '');
+  $(".section1").css('display','');
       }
 
 
