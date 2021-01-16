@@ -11,7 +11,7 @@
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  color: red;
+  color: #d88e2c;
 }
 
 header {
@@ -24,23 +24,13 @@ header {
   justify-content: space-between;
   align-items: center;
   /* background-color: rgba(225,225,225,0.7); */
-  background-color: transparent;
+  background: #999999;
   background-image: none;
   z-index: 5000;
 }
 
 
-.section1 {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px;
-  box-sizing: border-box;
-  background-color: white;
-  /* margin-top: -80px; */
-}
+
 
 
 
@@ -49,60 +39,10 @@ body {
   /* display: flex;
   place-items: center; */
   /* font-family: 'Rajdhani', sans-serif; */
+  position: relative;
+  background:linear-gradient(180deg,#999999,#dad8d8,#999999);
 }
 
-.logo {
-  /* margin-right: 250px;
-    margin-top:450px; */
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* min-height: 100vh;   */
-}
-
-.logo h3 {
-  margin: 0;
-  padding: 0;
-  /* font-size: 120px; */
-  text-transform: uppercase;
-  font-size: 20px;
-  /* margin-right: 250px; */
-  margin-left: 120px;
-  /* margin-top:550px; */
-}
-
-h3 span {
-  display: inline-flex;
-  color: #d88e2c;
-  overflow: hidden;
-  font-size: 30px;
-}
-
-h3:hover span {
-  display: inline-flex;
-  color: #d88e2c;
-  background-color: #333;
-  transition-delay: 0.1s;
-  overflow: hidden;
-  z-index: 4000;
-  font-size: 20px;
-}
-
-h3 span:nth-child(even) {
-  overflow: hidden;
-  /* transition: ease-in-out 0.1s; */
-  color: #fff;
-  border-bottom: 8px solid #d88e2c;
-  letter-spacing: -1em;
-  /* qekjo i hek ato shkronjat mas B P A */
-}
-
-h3:hover span:nth-child(even) {
-  letter-spacing: 0;
-  background-color: #333;
-}
 
 .section3 {
   height: 1000px;
@@ -176,7 +116,7 @@ div.product-footer a h3 {
 }
 
 div.product-footer h4 {
-  color: rgb(206, 23, 69);
+  color:#d88e2c;
   text-shadow: none;
 }
 
@@ -211,7 +151,7 @@ div.product .product-footer button {
   padding: 8px;
   color: white;
   font-size: 13px;
-  background-color: rgb(206, 23, 69);
+  background-color: #d88e2c;
 }
 
 div.product:hover .product-footer button {
@@ -220,7 +160,7 @@ div.product:hover .product-footer button {
 }
 
 div.product .product-footer button:hover {
-  background-color: rgb(148, 16, 49);
+  background-color:#d88e2c;
   transition: 1s ease-in-out;
 }
 
@@ -256,7 +196,7 @@ body {
 
 #yourCart h2 {
   padding: 8px;
-  color: rgb(206, 23, 69);
+  color:#d88e2c;
 }
 
 #checkout {
@@ -266,7 +206,7 @@ body {
   padding: 8px;
   color: white;
   font-size: 17px;
-  background-color: rgb(218, 201, 50);
+  background-color: #d88e2c;
 }
 
 #checkout:hover {
@@ -306,7 +246,7 @@ body {
 }
 
 #cartList button:hover {
-  color: rgb(185, 31, 31);
+  color:#d88e2c;
   transition: 0.5s;
 }
 
@@ -345,3 +285,44 @@ dl dd.inline {
 /* .product {
   border-radius: 10px;
 } */
+.custom-shape-divider-top-1610755808 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1610755808 svg {
+  position: relative;
+  display: block;
+  width: calc(184% + 1.3px);
+  height: 500px;
+}
+
+.custom-shape-divider-top-1610755808 .shape-fill {
+  fill: #cccccc;
+  opacity: 0.8;
+}
+.custom-shape-divider-bottom-1610755546 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1610755546 svg {
+  position: relative;
+  display: block;
+  width: calc(177% + 1.3px);
+  height: 248px;
+}
+
+.custom-shape-divider-bottom-1610755546 .shape-fill {
+  fill: #BDBDBD;
+  opacity: 0.5;
+}
