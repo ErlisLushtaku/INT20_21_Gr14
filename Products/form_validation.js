@@ -98,7 +98,7 @@ function name_surname_adress_city_validation(){
 function postalCode_validation(){
     const pcode = document.getElementById("pcode").value;
     const pcode_pattern = /^\d{4,5}$/;
-    if(pcode.match(pcode_pattern)){
+    if(pcode_pattern.exec(pcode)){
         document.getElementById("pcode").setAttribute("style","border:1px green solid ");
         submit_form[2] = true;
     }
@@ -119,7 +119,7 @@ switch(select){
     case "Albania" : 
         var phonenumber = document.getElementById("phone").value;
         var alb_pattern = /^\+?\(?355\)?[-.\s]?\d{2}[-.\s]?\d{3}[-.\s]?\d{3}?/;
-        if(phonenumber.match(alb_pattern)){
+        if(alb_pattern.exec(phonenumber)){
             document.getElementById("phone").setAttribute("style","border:1px green solid ");
             submit_form[3] = true;
         }
@@ -131,7 +131,7 @@ switch(select){
     case "Kosovo" : 
         var kos_pattern = /^\+?\(?383\)?[-.\s]?\d{2}[-.\s]?\d{3}[-.\s]?\d{3}?/;
         var phonenumber = document.getElementById("phone").value;
-        if(phonenumber.match(kos_pattern)){
+        if(kos_pattern.exec(phonenumber)){
             document.getElementById("phone").setAttribute("style","border:1px green solid ");
             submit_form[3] = true;
         }
@@ -143,7 +143,7 @@ switch(select){
     case "Montenegro" : 
         var mont_pattern = /^\+?\(?382\)?[-.\s]?\d{2}[-.\s]?\d{3}[-.\s]?\d{3}?/;
         var phonenumber = document.getElementById("phone").value;
-        if(phonenumber.match(mont_pattern)){
+        if(mont_pattern.exec(phonenumber)){
             document.getElementById("phone").setAttribute("style","border:1px green solid ");
             submit_form[3] = true;
         }
@@ -155,7 +155,7 @@ switch(select){
     case "North Macedonia" :
         var northM_pattern = /^\+?\(?389\)?[-.\s]?\d{2}[-.\s]?\d{6}?/;
         var phonenumber = document.getElementById("phone").value;
-        if(phonenumber.match(northM_pattern)){
+        if(northM_pattern.exec(phonenumber)){
             document.getElementById("phone").setAttribute("style","border:1px green solid ");
             submit_form[3] = true;
         }
@@ -167,7 +167,7 @@ switch(select){
     default : 
         var srb_pattern = /^\+?\(?381\)?[-.\s]?\d{2}[-.\s]?\d{3}[-.\s]?\d{2}[-.\s]?\d{2}?/;
         var phonenumber = document.getElementById("phone").value;
-        if(phonenumber.match(srb_pattern)){
+        if(srb_pattern.match(phonenumber)){
             document.getElementById("phone").setAttribute("style","border:1px green solid ");
             submit_form[3] = true;
         }
