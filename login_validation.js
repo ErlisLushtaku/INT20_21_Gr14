@@ -66,9 +66,7 @@ function password_validation(index) {
     window.alert("Incorrect password")
     document.getElementById("password").setAttribute("style", "border:1px red solid ");
     submit_form[1] = false;
-  }
-
-  if (password.match(password_pattern)) {
+  } else if (password.match(password_pattern)) {
     document.getElementById("password").setAttribute("style", "border:1px green solid ");
     submit_form[1] = true;
   }
