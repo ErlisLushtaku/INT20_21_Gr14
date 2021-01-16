@@ -81,3 +81,22 @@ let drawStroke = function(value, max) {
       message.innerHTML = "Input is " + err;
     }
   }
+
+Array.prototype.check=function(){
+
+  for(var i=0;i<this.length;i++){
+if(document.getElementById("my-score").value==parseInt(this[i])){
+
+  alert("Thank you for your time!");
+}
+
+  }
+}
+function myfunc(){
+var vlerat=["1","2","3","4","5","6","7","8","9","10"];
+vlerat.check();
+}
+
+
+
+
