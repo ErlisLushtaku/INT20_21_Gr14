@@ -20,12 +20,12 @@ var art = {
 
 var food = {
   "products": [
-    new Product("Pite", "50\u20ac", "../Images/abstract2.jpg", "Coloring Prishtina", "CULTURE", "Prishtina"),
-    new Product("Pite", "50\u20ac", "../Images/abstract2.jpg", "Coloring Prishtina", "CULTURE", "Prishtina"),
-    new Product("Pite", "50\u20ac", "../Images/abstract2.jpg", "Coloring Prishtina", "CULTURE", "Prishtina"),
-    new Product("Pite", "50\u20ac", "../Images/abstract2.jpg", "2cm Humans", "CULTURE", "Prishtina"),
-    new Product("Pite", "50\u20ac", "../Images/abstract2.jpg", "2cm Humans", "CULTURE", "Prishtina"),
-    new Product("Pite", "50\u20ac", "../Images/abstract2.jpg", "2cm Humans", "CULTURE", "Prishtina")
+    new Product("Vizatimi", "50\u20ac", "../Images/abstract2.jpg", "Coloring Prishtina", "CULTURE", "Prishtina"),
+    new Product("Vizatimi", "50\u20ac", "../Images/abstract2.jpg", "Coloring Prishtina", "CULTURE", "Prishtina"),
+    new Product("Vizatimi", "50\u20ac", "../Images/abstract2.jpg", "Coloring Prishtina", "CULTURE", "Prishtina"),
+    new Product("Vizatimi", "50\u20ac", "../Images/abstract2.jpg", "2cm Humans", "CULTURE", "Prishtina"),
+    new Product("Vizatimi", "50\u20ac", "../Images/abstract2.jpg", "2cm Humans", "CULTURE", "Prishtina"),
+    new Product("Vizatimi", "50\u20ac", "../Images/abstract2.jpg", "2cm Humans", "CULTURE", "Prishtina")
   ]
 }
 
@@ -81,7 +81,7 @@ $.each(art.products, function (index, item) {
                       .append($("<i>").attr("class", "fas fa-times")),
                     $("<dt>").text(item.title),
                     $("<dd>").text('x1').attr('class', 'inline'),
-                    $("<dd>").text(parseFloat(item.price.slice(0, -1)).toFixed(2) + '$')
+                    $("<dd>").text(parseFloat(item.price.slice(0, -1)).toFixed(2) + '\u20ac')
                   )
                 }
                 else {
@@ -91,7 +91,7 @@ $.each(art.products, function (index, item) {
                 if (document.getElementById("newTotal").innerHTML != "") {
                   console.log(document.getElementById("discount").innerHTML.slice(3, -1));
                   console.log(document.getElementById("totalPrice").innerHTML.slice(0, -1));
-                  document.getElementById("newTotal").innerHTML = " = " + (document.getElementById("totalPrice").innerHTML.slice(0, -1) - document.getElementById("discount").innerHTML.slice(3, -1)).toString() + "$"
+                  document.getElementById("newTotal").innerHTML = " = " + (document.getElementById("totalPrice").innerHTML.slice(0, -1) - document.getElementById("discount").innerHTML.slice(3, -1)).toString() + "\u20ac"
                 }
               }
             })
@@ -140,7 +140,7 @@ $.each(food.products, function (index, item) {
                       .append($("<i>").attr("class", "fas fa-times")),
                     $("<dt>").text(item.title),
                     $("<dd>").text('x1').attr('class', 'inline'),
-                    $("<dd>").text(parseFloat(item.price.slice(0, -1)).toFixed(2) + '$')
+                    $("<dd>").text(parseFloat(item.price.slice(0, -1)).toFixed(2) + '\u20ac')
                   )
                 }
                 else {
@@ -150,7 +150,7 @@ $.each(food.products, function (index, item) {
                 if (document.getElementById("newTotal").innerHTML != "") {
                   console.log(document.getElementById("discount").innerHTML.slice(3, -1));
                   console.log(document.getElementById("totalPrice").innerHTML.slice(0, -1));
-                  document.getElementById("newTotal").innerHTML = " = " + (document.getElementById("totalPrice").innerHTML.slice(0, -1) - document.getElementById("discount").innerHTML.slice(3, -1)).toString() + "$"
+                  document.getElementById("newTotal").innerHTML = " = " + (document.getElementById("totalPrice").innerHTML.slice(0, -1) - document.getElementById("discount").innerHTML.slice(3, -1)).toString() + "\u20ac"
                 }
               }
             })
@@ -199,7 +199,7 @@ $.each(textile.products, function (index, item) {
                       .append($("<i>").attr("class", "fas fa-times")),
                     $("<dt>").text(item.title),
                     $("<dd>").text('x1').attr('class', 'inline'),
-                    $("<dd>").text(parseFloat(item.price.slice(0, -1)).toFixed(2) + '$')
+                    $("<dd>").text(parseFloat(item.price.slice(0, -1)).toFixed(2) + '\u20ac')
                   )
                 }
                 else {
@@ -209,7 +209,7 @@ $.each(textile.products, function (index, item) {
                 if (document.getElementById("newTotal").innerHTML != "") {
                   console.log(document.getElementById("discount").innerHTML.slice(3, -1));
                   console.log(document.getElementById("totalPrice").innerHTML.slice(0, -1));
-                  document.getElementById("newTotal").innerHTML = " = " + (document.getElementById("totalPrice").innerHTML.slice(0, -1) - document.getElementById("discount").innerHTML.slice(3, -1)).toString() + "$"
+                  document.getElementById("newTotal").innerHTML = " = " + (document.getElementById("totalPrice").innerHTML.slice(0, -1) - document.getElementById("discount").innerHTML.slice(3, -1)).toString() + "\u20ac"
                 }
               }
             })
@@ -264,7 +264,7 @@ function removeItem(elementId) {
   if (document.getElementById("newTotal").innerHTML != "") {
     console.log(document.getElementById("discount").innerHTML.slice(3, -1));
     console.log(document.getElementById("totalPrice").innerHTML.slice(0, -1));
-    document.getElementById("newTotal").innerHTML = " = " + (document.getElementById("totalPrice").innerHTML.slice(0, -1) - document.getElementById("discount").innerHTML.slice(3, -1)).toString() + "$"
+    document.getElementById("newTotal").innerHTML = " = " + (document.getElementById("totalPrice").innerHTML.slice(0, -1) - document.getElementById("discount").innerHTML.slice(3, -1)).toString() + "\u20ac"
   }
 }
 
@@ -278,7 +278,7 @@ function calcQuantity(title, price) {
       quantity.innerHTML = 'x' + (parseInt(quantity.innerHTML.substring(1)) + 1).toString();
 
       let newPrice = quantity.nextElementSibling;
-      newPrice.innerHTML = (parseFloat(price.slice(0, -1)) * parseInt(quantity.innerHTML.substring(1))).toFixed(2) + '$';
+      newPrice.innerHTML = (parseFloat(price.slice(0, -1)) * parseInt(quantity.innerHTML.substring(1))).toFixed(2) + '\u20ac';
 
       break;
     }
@@ -307,7 +307,7 @@ function calcTotal() {
     }
   }
 
-  document.getElementById("totalPrice").innerHTML = total.toFixed(2).toString() + "$"
+  document.getElementById("totalPrice").innerHTML = total.toFixed(2).toString() + "\u20ac"
 };
 
 window.onbeforeunload = function () {
@@ -338,11 +338,10 @@ $("#checkout").click(function () {
     let oldTotal = document.getElementById("totalPrice").innerHTML.slice(0, -1);
     let reward = oldTotal * rewardPrc / 100;
     let newTotal = oldTotal - reward;
-    $("#discount").text(" - " + reward + "$");
-    $("#newTotal").text(" = " + newTotal + "$");
+    $("#discount").text(" - " + reward + "\u20ac");
+    $("#newTotal").text(" = " + newTotal + "\u20ac");
   }
 })
-
 /* function addItem(title, price) {
   $("#cartList").append(
     $("<li>").text(title + " - " + price)

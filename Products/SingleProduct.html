@@ -125,7 +125,7 @@
             </dl>
         </div>
         <div id="bottom">
-            <h2>Total: <span id="totalPrice">0$</span></h2>
+            <h2>Total: <span id="totalPrice">0€</span></h2>
             <button id="checkout" onclick="openForm()">CHECKOUT</button>
         </div>
     </div>
@@ -174,7 +174,7 @@
                             .append($("<i>").attr("class", "fas fa-times")),
                         $("<dt>").text(product.title),
                         $("<dd>").text('x1').attr('class', 'inline'),
-                        $("<dd>").text(parseFloat(product.price.slice(0, -1)).toFixed(2) + '$')
+                        $("<dd>").text(parseFloat(product.price.slice(0, -1)).toFixed(2) + '\u20ac')
                     )
                 }
                 else {
@@ -219,7 +219,7 @@
                     quantity.innerHTML = 'x' + (parseInt(quantity.innerHTML.substring(1)) + 1).toString();
 
                     let newPrice = quantity.nextElementSibling;
-                    newPrice.innerHTML = (parseFloat(price.slice(0, -1)) * parseInt(quantity.innerHTML.substring(1))).toFixed(2) + '$';
+                    newPrice.innerHTML = (parseFloat(price.slice(0, -1)) * parseInt(quantity.innerHTML.substring(1))).toFixed(2) + '\u20ac';
 
                     break;
                 }
@@ -248,7 +248,7 @@
                 }
             }
 
-            document.getElementById("totalPrice").innerHTML = total.toFixed(2).toString() + "$"
+            document.getElementById("totalPrice").innerHTML = total.toFixed(2).toString() + "\u20ac"
         };
 
         window.onbeforeunload = function () {
