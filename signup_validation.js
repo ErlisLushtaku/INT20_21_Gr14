@@ -1,5 +1,7 @@
 var submit_form = new Array();
+
 var users = Array.from(JSON.parse(localStorage.getItem('users')));
+
 function signup_validation() {  
   username1_validation();
   password1_validation();
@@ -74,6 +76,5 @@ function addUser() {
 }
 
 window.onbeforeunload = function () {
-  console.log("unloaded");
   localStorage.setItem('users', JSON.stringify(users));
 };
