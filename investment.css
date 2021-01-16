@@ -67,7 +67,8 @@ font-size:25px;
  .open-button {
   background-color: #555;
   color: white;
-  padding: 16px 20px;
+  padding: 10px 15px;
+  margin-top:20px;
   border: none;
   cursor: pointer;
   opacity: 0.8;
@@ -96,6 +97,9 @@ animation-timing-function: step-end;
   border: 5px solid #f1f1f1;
   z-index: 12;
   max-width: 600px;
+  height: 700px;
+  background-color: white;
+
 
 }
 .form-popup h1{
@@ -271,7 +275,7 @@ background:rgb(63, 61, 61);
 }
 .box5{
   grid-area: box5;
-  margin-top:-178px;
+  margin-top:-167px;
   z-index:6;
 
 }
