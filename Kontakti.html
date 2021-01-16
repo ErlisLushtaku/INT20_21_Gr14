@@ -2,22 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-   <link rel="stylesheet" href="rateus.css">
-  <script src="rateus.js"></script>
   <script src="Kontakti.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Roboto+Condensed:ital,wght@1,700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,900&display=swap" rel="stylesheet"/>
+  
 <link rel="stylesheet" href="Kontakti.css">
 <link rel="stylesheet" href="navigation.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
 crossorigin="anonymous" />
   <title>Contact us</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
-  </style>
+  
 </head>
 <body onload="getLocation()">
   <header>
@@ -102,6 +98,11 @@ window.addEventListener('scroll', function () {
       <input type="text" id="company" name="company" class="text-box"  placeholder="Company" required>
       <input type="text" id="budget" name="number" class="text-box" placeholder="Budget" required><br/>
 <textarea name="details" placeholder="Project details (optional)"></textarea>
+<label for="" id="perlabel">Are you investor or a client?</label><br/>
+<input type="radio" id="client" name="person" value="client">
+<label for="" id="l2">Client</label><br/>
+<input type="radio" id="investor" name="person" value="investor">
+<label for="" id="l1">Investor</label><br/>
 <input type="submit" id="persubmit" formtarget="_blank" value="Send" style="margin-bottom:20px;margin-left:210px;opacity:1;" onclick="return validation()">
     </form>
 <div class="content">
@@ -134,7 +135,7 @@ defbtn.addEventListener("change",function(){
 </script>
 
 <div class="midpart">
-   <div class="perimg"></div>
+  <div class="perimg"></div>
   <p class="paragraph">
     <b> <br/>
     </b>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
 *{
     margin:0;
     padding:0;
@@ -79,6 +81,8 @@ align-content: center;
 .fronti {
   background-color:#e7d1b5;
   background-image: url(images/card.jpg);
+  background-attachment: scroll;
+  background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: overlay;
   color:#333;
@@ -125,7 +129,10 @@ align-content: center;
   color: var(--clr);
   background: #333; 
 }
-
+.backi a{
+  color:#e6b97e;
+  text-decoration: none;
+}
 .logo
 {
     margin:0;

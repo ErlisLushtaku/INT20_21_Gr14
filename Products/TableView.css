@@ -1,7 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Rajdhani';
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     /* background-color: rgb(214, 214, 214); */
 }
@@ -9,405 +12,7 @@
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    color: red;
-}
-
-header {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* background-color: rgba(225,225,225,0.7); */
-    background-color: transparent;
-    background-image: none;
-    z-index: 5000;
-}
-
-.div1 {
-    text-transform: uppercase;
-    color: white;
-    text-shadow: 0px 0px 2px rgb(49, 49, 49);
-    width: 25%;
-    text-align: center;
-    font-size: 120px;
-    z-index: 5000;
-}
-
-.div2 {
-    display: flex;
-    justify-content: space-between;
-    margin: 50px;
-    text-decoration: none;
-    z-index: 5000;
-}
-
-a {
-    padding: 20px;
-    text-decoration: none;
-    /* color:  #d88e2c; */
-    color: white;
-    font-weight: bold;
-    background-image: none;
-    font-size: 20px;
-    text-shadow: 0px 0px 2px rgb(10, 10, 10);
-    z-index: 5000;
-    text-transform: uppercase;
-}
-
-.perimg {
-    height: 100px;
-    width: auto;
-    z-index: 5000;
-}
-
-div ul li {
-    list-style: none;
-    position: relative;
-    z-index: 5000;
-}
-
-div ul li ul {
-    display: none;
-    position: absolute;
-    background-color: transparent;
-    border-radius: 0px 0px 4px 4px;
-    /* border: 2px solid darkgray; */
-    z-index: 5000;
-    text-transform: uppercase;
-    color: #d88e2c;
-}
-
-div ul li:hover ul {
-    display: block;
-    z-index: 5000;
-}
-
-div ul li ul li {
-    padding-top: 14px;
-    z-index: 5000;
-}
-
-.section1 {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-    box-sizing: border-box;
-    background-color: white;
-    /* margin-top: -80px; */
-}
-
-.wave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin-bottom: -70px;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
-:root {
-    --level-1: translateZ(3rem);
-    --level-2: translateZ(6rem);
-    --level-3: translateZ(9rem);
-    --fw-normal: 400;
-    --fw-bold: 700;
-    --clr: #e7d1b5;
-}
-
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-}
-
-body {
-    height: 100vh;
-    /* display: flex;
-    place-items: center; */
-    /* font-family: 'Rajdhani', sans-serif; */
-}
-
-.karta {
-    width: 400px;
-    z-index: 1000;
-    margin-left: 170px;
-}
-
-.permbajtja_para {
-    text-align: center;
-    position: relative;
-    padding: 15em 5em;
-    transition: transform 3s;
-    /* tregon per sa sekonda bohet rotate */
-    transform-style: preserve-3d;
-}
-
-.karta:hover .permbajtja_para {
-    transform: rotateY(0.5turn);
-    /* po bohet rotate ne boshtin y */
-}
-
-.fronti, .backi {
-    position: absolute;
-    /* they need to be on top of each other for this effect to work */
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 5em 3em;
-    backface-visibility: hidden;
-    /* nuk e len tekstin para edhe mrapa mu overlap, edhe backgroundit vyn mja ndrru ngjyren */
-    transform-style: preserve-3d;
-    display: grid;
-    align-content: center;
-}
-
-.fronti {
-    background-color: #e7d1b5;
-    background-image: url(images/card.jpg);
-    background-size: cover;
-    background-blend-mode: overlay;
-    color: #333;
-}
-
-.fronti::before {
-    content: '';
-    position: absolute;
-    top: 1em;
-    bottom: 1em;
-    left: 1em;
-    right: 1em;
-    border: 2px solid currentColor;
-    border-radius: 10;
-    transform: var(--level-1);
-}
-
-.titulli {
-    /* transform:translateX(100px); nboshtin X leviz per 100px */
-    font-size: 3.5rem;
-    transform: var(--level-3);
-    /* z axis points it toward us ama when it 
-                                   get closer is doesnt get bigger veq kur t'rotate ka dallim
-                                   and the reason why this is working osht per shkak te preserve-3d qe e kem ma nalt*/
-    order: 2;
-    /* titullin e qet tdytin dmth mas tekstit */
-    text-transform: uppercase;
-}
-
-.subtitle {
-    /* transform:translateZ(2rem); */
-    transform: var(--level-2);
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-size: 0.75rem;
-    font-weight: var(--fw-bold);
-    opacity: 0.7;
-}
-
-.permbajtja_prapa {
-    /* transform:translateZ(2rem); */
-    transform: var(--level-2);
-    font-weight: var(fw--normal);
-    font-size: 1.5rem;
-    line-height: 1.6;
-}
-
-.backi {
-    transform: rotateY(0.5turn);
-    /* tash shkronjat dalin normal jo mrapsht */
-    color: var(--clr);
-    background: #333;
-}
-
-.logo {
-    /* margin-right: 250px;
-      margin-top:450px; */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* min-height: 100vh;   */
-}
-
-.logo h3 {
-    margin: 0;
-    padding: 0;
-    /* font-size: 120px; */
-    text-transform: uppercase;
-    font-size: 20px;
-    /* margin-right: 250px; */
-    margin-left: 120px;
-    /* margin-top:550px; */
-}
-
-h3 span {
-    display: inline-flex;
-    color: #d88e2c;
-    overflow: hidden;
-    font-size: 30px;
-}
-
-h3:hover span {
-    display: inline-flex;
-    color: #d88e2c;
-    background-color: #333;
-    transition-delay: 0.1s;
-    overflow: hidden;
-    z-index: 4000;
-    font-size: 20px;
-}
-
-h3 span:nth-child(even) {
-    overflow: hidden;
-    /* transition: ease-in-out 0.1s; */
-    color: #fff;
-    border-bottom: 8px solid #d88e2c;
-    letter-spacing: -1em;
-    /* qekjo i hek ato shkronjat mas B P A */
-}
-
-h3:hover span:nth-child(even) {
-    letter-spacing: 0;
-    background-color: #333;
-}
-
-/* h3:hover span:nth-child(2){
-      
-      transition-delay:0s ;
-  }
-  h3:hover span:nth-child(4){
-      
-      transition-delay:0s ;
-  }
-  h3:hover span:nth-child(6){
-      
-      transition-delay:0s ;
-  } */
-
-.begin {
-    display: flex;
-    justify-content: space-between;
-    /* flex:2; */
-    order: 3;
-    z-index: 3000;
-}
-
-.karta {
-    flex-basis: 60%;
-    margin-top: 100px;
-}
-
-.header-text {
-    /* border:1px #ccc solid; */
-    width: 560px;
-    height: 70px;
-    margin: 100px;
-    margin-top: 450px;
-    margin-right: 50px;
-    border: 2px #e6b97e solid;
-    border-radius: 20px;
-    box-shadow: 5px -2px 5px #aaaaaa;
-    text-align: center;
-    font-size: 30px;
-    padding: 15px;
-    background-color: #e6b97e;
-    color: #333;
-    font-weight: bold;
-    z-index: 5000;
-}
-
-.header-text .teksti {
-    text-shadow: #333;
-}
-
-/* .begin .karta {
-        position:absolute;
-  } */
-
-/* .custom-shape-divider-bottom-1609280952 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-  }
-  
-  .custom-shape-divider-bottom-1609280952 svg {
-    position: relative;
-    display: block;
-    width: calc(300% + 1.3px);
-    height: 200px;
-  }
-  
-  .custom-shape-divider-bottom-1609280952 .shape-fill {
-    fill: #fff;
-  } */
-
-.hyrja {
-    position: relative;
-    width: 460px;
-    height: 200px;
-    background: rgb(212, 211, 211);
-    color: #333;
-    font-size: 18px;
-    padding: 28px;
-    padding-top: 17px;
-    margin-left: 720px;
-    margin-top: 120px;
-    text-align: center;
-    border-radius: 2px;
-    z-index: 3000;
-}
-
-.hyrja:hover {
-    border: 5px rgb(202, 173, 134) dotted;
-}
-
-.vertical-line {
-    height: 300px;
-    position: absolute;
-    margin-left: 380px;
-    margin-top: 15px;
-    border-radius: 0.5px;
-    /* top:0; */
-}
-
-.bpa-svg {
-    margin-top: 10px;
-    margin-left: 100px;
-}
-
-.b {
-    font-size: 100px;
-    font-family: 'Rajdhani', sans-serif;
-    background: #333;
-    color: #d88e2c;
-}
-
-.pa {
-    font-size: 100px;
-    font-family: 'Rajdhani', sans-serif;
-    background: #333;
-    color: #fff;
-    border-bottom: 20px solid #d88e2c;
-}
-
-.bpa {
-    margin-left: 20px;
-    margin-top: 130px;
-}
-
-.bpa-svg2 {
-    position: absolute;
-    margin-left: 780px;
-    margin-top: 100px;
+    color: #e7d1b5;
 }
 
 .section3 {
@@ -448,6 +53,7 @@ h3:hover span:nth-child(even) {
 
 body {
     position: relative;
+    background:linear-gradient(180deg,#999999,#dad8d8,#999999);
 }
 
 #yourCart {
@@ -474,21 +80,21 @@ body {
 
 #yourCart h2 {
   padding: 8px;
-  color: rgb(206, 23, 69);
+  color: #d88e2c;
 }
 
 #checkout {
-    width: 100px;
+    width: 120px;
     border: 0px;
     border-radius: 5px;
     padding: 8px;
     color: white;
     font-size: 17px;
-    background-color: rgb(218, 201, 50);
+    background-color:#d88e2c;
 }
 
 #checkout:hover {
-    background-color: rgb(170, 156, 33);
+    background-color: #d88e2c;
     transition: 1s;
 }
 
@@ -506,8 +112,8 @@ body {
     color: rgba(255, 255, 255, 0.9);
     background-color: rgba(0, 0, 0, 0.25);
     text-transform: uppercase;
-    border-top: 2px solid rgb(206, 23, 69);
-    border-bottom: 2px solid rgb(206, 23, 69);
+    border-top: 2px solid #d88e2c;
+    border-bottom: 2px solid #d88e2c;
     padding: 7px;
     padding-right: 70px;
 }
@@ -529,7 +135,7 @@ body {
 }
 
 .container tr a:hover td {
-    color: rgb(170, 156, 33);
+    color: #d88e2c;
     transition: 0.5s;
 }
 
@@ -541,24 +147,12 @@ body {
     padding: 5px;
     color: white;
     font-size: 13px;
-    background-color: rgb(206, 23, 69);
+    background-color: #d88e2c;
 }
 
 .container tr button:hover {
-    background-color: rgb(148, 16, 49);
+    background-color: #d88e2c;
     transition: 0.5s ease-in-out;
-}
-
-html {
-    background-image: url(wood.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: left top;
-    background-origin: border-box;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
 }
 
 #icons {
@@ -593,7 +187,7 @@ html {
 }
 
 #cartList button:hover {
-    color: rgb(185, 31, 31);
+    color: #d88e2c;
     transition: 0.5s;
 }
 
@@ -632,3 +226,44 @@ dl dd.inline {
 /* .product {
     border-radius: 10px;
   } */
+  .custom-shape-divider-top-1610755808 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1610755808 svg {
+    position: relative;
+    display: block;
+    width: calc(184% + 1.3px);
+    height: 500px;
+}
+
+.custom-shape-divider-top-1610755808 .shape-fill {
+    fill: #cccccc;
+    opacity: 0.8;
+}
+.custom-shape-divider-bottom-1610755546 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1610755546 svg {
+    position: relative;
+    display: block;
+    width: calc(177% + 1.3px);
+    height: 248px;
+}
+
+.custom-shape-divider-bottom-1610755546 .shape-fill {
+    fill: #BDBDBD;
+    opacity: 0.5;
+}
