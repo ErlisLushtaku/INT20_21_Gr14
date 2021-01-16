@@ -13,8 +13,9 @@ Array.prototype.check_username = function(username) {
 
 var submit_form = new Array();
 
-
-users = Array.from(JSON.parse(localStorage.getItem('users')));
+if(JSON.parse(localStorage.getItem('users'))!=null) {
+  users = JSON.parse(localStorage.getItem('users'));
+}
 
 function validation() {
   let username = document.getElementById("username").value;

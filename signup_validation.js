@@ -1,7 +1,12 @@
 var submit_form = new Array();
 
-var users = Array.from(JSON.parse(localStorage.getItem('users')));
+var users = new Array();
+if(JSON.parse(localStorage.getItem('users'))!=null) {
+  users = JSON.parse(localStorage.getItem('users'));
+}
 
+console.log(JSON.parse(localStorage.getItem('users')))
+console.log(users)
 function signup_validation() {  
   username1_validation();
   password1_validation();
