@@ -252,7 +252,7 @@ animation:animate 6s linear infinite;
 }
 .box6{
   grid-area:box6;
-  background:rgba(48, 46, 46, 0.979);
+  background:rgb(196, 190, 190);
 }
 .box6 .photo1{
   align-items: center;
@@ -275,7 +275,7 @@ figcaption{
 
 .box7{
   grid-area:box7;
-  background:rgba(48, 46, 46, 0.979);
+  background:rgb(196, 190, 190);
   align-items: left;
   position:relative;
   text-align:left;
@@ -314,7 +314,7 @@ figcaption{
   display:flex;
 justify-content: space-between;
 flex-wrap: wrap;
-background: rgba(170, 165, 165, 0.973);
+background: rgb(196, 190, 190);
 border-radius: 50px;
 }
 
