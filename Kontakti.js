@@ -85,6 +85,57 @@ function getLocation() {
         }
   }
   
+
+  Date.prototype.checkmonth=function(){
+switch(this.getMonth()){
+case 0:
+this.myProp="January";
+break;
+case 1:
+this.myProp="February";
+break;
+case 2:
+this.myProp="March";
+break;
+case 3:
+this.myProp="April";
+break;
+case 4:
+this.myProp="May";
+break;
+case 5:
+this.myProp="June";
+break;
+case 6:
+this.myProp="July";
+break;
+case 7:
+this.myProp="August";
+break;
+case 8:
+this.myProp="September";
+break;
+case 9:
+this.myProp="October";
+break;
+case 10:
+this.myProp="November";
+break;
+case 11:
+this.myProp="December";
+break;
+default:
+  break;
+}
+
+
+  }
+function checkm(){
+var muaji=new Date();
+muaji.checkmonth();
+document.getElementById("searchi").innerHTML="Planning on doing investmens on your businesses? You searched the right place on "+muaji.myProp;
+}  
+
   
   
   
