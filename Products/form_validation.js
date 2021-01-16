@@ -1,13 +1,18 @@
 function openForm() {
     document.getElementById("bigDiv").style.display = "block";
+    $('#yourCart').css('z-index','10000');
+    $('#yourCart').css('background','white');
     $('body').css('overflow', 'hidden');
     $(".section1").css('display','none');
+
 }
 
 function closeForm() {
   document.getElementById("bigDiv").style.display = "none";
   $('body').css('overflow', '');
   $(".section1").css('display','');
+  $('#yourCart').css('z-index','');
+  $('#yourCart').css('background','');
       }
 
 
@@ -99,14 +104,22 @@ function name_surname_adress_city_validation(){
 }
 function postalCode_validation(){
     const pcode = document.getElementById("pcode").value;
-    const pcode_pattern = /^\d{4,5}$/;
-    if(pcode_pattern.exec(pcode)){
-        document.getElementById("pcode").setAttribute("style","border:1px green solid ");
-        submit_form[2] = true;
-    }
-    else {
+    submit_form[2] = true;
+    if(isNaN(pcode)){
         document.getElementById("pcode").setAttribute("style","border:1px red solid ");
         submit_form[2] = false;
+    }
+    else if (pcode.length<4 || pcode.length>5){
+        document.getElementById("pcode").setAttribute("style","border:1px red solid ");
+        submit_form[2] = false;
+    }
+    else if((/\./).test(pcode)){
+        document.getElementById("pcode").setAttribute("style","border:1px red solid ");
+        submit_form[2] = false;
+    }
+    else{
+        document.getElementById("pcode").setAttribute("style","border:1px green solid ");
+        submit_form[2] = true;
     }
 
 }
@@ -169,7 +182,7 @@ switch(select){
     default : 
         var srb_pattern = /^\+?\(?381\)?[-.\s]?\d{2}[-.\s]?\d{3}[-.\s]?\d{2}[-.\s]?\d{2}?/;
         var phonenumber = document.getElementById("phone").value;
-        if(srb_pattern.match(phonenumber)){
+        if(srb_pattern.exec(phonenumber)){
             document.getElementById("phone").setAttribute("style","border:1px green solid ");
             submit_form[3] = true;
         }
