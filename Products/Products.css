@@ -311,3 +311,7 @@ dl dd.inline {
   padding-top:-20px;
   color:#333;
 }
+
+#discount {
+  color: rgb(211, 12, 12);
+}
