@@ -20,9 +20,9 @@ var art = {
 
 var food = {
     "products": [
-        new Product("Vizatimi 1", "50$", "ProductsImages/2.jfif", "Ngjyra", "trend", "Prishtina"),
-        new Product("Vizatimi 1", "50$", "ProductsImages/2.jfif", "Ngjyra", "trend", "Prishtina"),
-        new Product("Vizatimi 1", "50$", "ProductsImages/2.jfif", "Ngjyra", "trend", "Prishtina"),
+        new Product("Pite", "50$", "ProductsImages/2.jfif", "Ngjyra", "trend", "Prishtina"),
+        new Product("Fli", "50$", "ProductsImages/2.jfif", "Ngjyra", "trend", "Prishtina"),
+        new Product("Mjalte", "50$", "ProductsImages/2.jfif", "Ngjyra", "trend", "Prishtina"),
         new Product("Vizatimi 1", "50$", "ProductsImages/2.jfif", "Ngjyra", "trend", "Prishtina"),
         new Product("Vizatimi 1", "50$", "ProductsImages/2.jfif", "Ngjyra", "trend", "Prishtina"),
         new Product("Vizatimi 1", "50$", "ProductsImages/2.jfif", "Ngjyra", "trend", "Prishtina")
@@ -155,9 +155,8 @@ $.each(textile.products, function (index, item) {
 });
 
 function CartProd(title, quantity, price) {
-    this.title = title;
+    Product.call(this, title, price);
     this.quantity = quantity;
-    this.price = price;
 }
 
 var cart = JSON.parse(sessionStorage.getItem('cart'));
