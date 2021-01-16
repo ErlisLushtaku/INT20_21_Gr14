@@ -1,6 +1,7 @@
 var submit_form = new Array();
 
 users = Array.from(JSON.parse(localStorage.getItem('users')));
+
 function validation() {
   let username = document.getElementById("username").value;
   var index = 0;
@@ -19,6 +20,7 @@ function validation() {
     }
   }
   else {
+    window.alert("You must Sign Up first!");
     return false;
   }
 
@@ -56,7 +58,7 @@ function password_validation(index) {
     document.getElementById("password").setAttribute("style", "border:1px red solid ");
     submit_form[1] = false;
   }
-  
+
   if (password.match(password_pattern)) {
     document.getElementById("password").setAttribute("style", "border:1px green solid ");
     submit_form[1] = true;
