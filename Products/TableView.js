@@ -9,35 +9,35 @@ function Product(title, price, image, producer, category, city) {
 
 var art = {
     "products": [
-        new Product("Vizatimi 1", "50$", "ProductsImages/1.jpg", "Ngjyra", "trend", "Prishtina"),
-        new Product("Vizatimi 2", "50$", "ProductsImages/1.jpg", "Ngjyra", "trend", "Prishtina"),
-        new Product("Vizatimi 3", "50$", "ProductsImages/1.jpg", "Ngjyra", "trend", "Prishtina"),
-        new Product("Vizatimi 4", "50$", "ProductsImages/1.jpg", "Ngjyra", "trend", "Prishtina"),
-        new Product("Vizatimi 5", "50$", "ProductsImages/1.jpg", "Ngjyra", "trend", "Prishtina"),
-        new Product("Vizatimi 6", "50$", "ProductsImages/1.jpg", "Ngjyra", "trend", "Prishtina")
-    ]
+        new Product("Vizatimi 1", "100\u20ac", "../Images/abstract2.jpg", "Paint Me", "ART", "Prishtina"),
+        new Product("Vizatimi 2", "130\u20ac", "../Images/abstract4.jpg", "Paint Me", "ART", "Prishtina"),
+        new Product("Vizatimi 3", "180\u20ac", "../Images/abstract3.jpg", "Paint Me", "ART", "Prishtina"),
+        new Product("Bucket Hat", "20\u20ac", "../Images/yarny2.png", "Yarnyhandmade", "ART", "Vushtrri"),
+        new Product("Crop Top", "25\u20ac", "../Images/yarny3.png", "Yarnyhandmade", "ART", "Vushtrri"),
+        new Product("Crop Top", "35\u20ac", "../Images/yarny4.png", "Yarnyhandmade", "ART", "Vushtrri")
+      ]
 }
 
 var food = {
     "products": [
-        new Product("Pite", "50$", "ProductsImages/2.jfif", "Ngjyra", "trend", "Prishtina"),
-        new Product("Fli", "50$", "ProductsImages/2.jfif", "Ngjyra", "trend", "Prishtina"),
-        new Product("Mjalte", "50$", "ProductsImages/2.jfif", "Ngjyra", "trend", "Prishtina"),
-        new Product("Vizatimi 1", "50$", "ProductsImages/2.jfif", "Ngjyra", "trend", "Prishtina"),
-        new Product("Vizatimi 1", "50$", "ProductsImages/2.jfif", "Ngjyra", "trend", "Prishtina"),
-        new Product("Vizatimi 1", "50$", "ProductsImages/2.jfif", "Ngjyra", "trend", "Prishtina")
-    ]
+        new Product("Pite", "50\u20ac", "../Images/abstract2.jpg", "Coloring Prishtina", "CULTURE", "Prishtina"),
+        new Product("Pite", "50\u20ac", "../Images/abstract2.jpg", "Coloring Prishtina", "CULTURE", "Prishtina"),
+        new Product("Pite", "50\u20ac", "../Images/abstract2.jpg", "Coloring Prishtina", "CULTURE", "Prishtina"),
+        new Product("Pite", "50\u20ac", "../Images/abstract2.jpg", "2cm Humans", "CULTURE", "Prishtina"),
+        new Product("Pite", "50\u20ac", "../Images/abstract2.jpg", "2cm Humans", "CULTURE", "Prishtina"),
+        new Product("Pite", "50\u20ac", "../Images/abstract2.jpg", "2cm Humans", "CULTURE", "Prishtina")
+      ]
 }
 
 var textile = {
     "products": [
-        new Product("Vizatimi 1", "50$", "ProductsImages/3.jpg", "Ngjyra", "trend", "Prishtina"),
-        new Product("Vizatimi 1", "50$", "ProductsImages/3.jpg", "Ngjyra", "trend", "Prishtina"),
-        new Product("Vizatimi 1", "50$", "ProductsImages/3.jpg", "Ngjyra", "trend", "Prishtina"),
-        new Product("Vizatimi 1", "50$", "ProductsImages/3.jpg", "Ngjyra", "trend", "Prishtina"),
-        new Product("Vizatimi 1", "50$", "ProductsImages/3.jpg", "Ngjyra", "trend", "Prishtina"),
-        new Product("Vizatimi 1", "50$", "ProductsImages/3.jpg", "Ngjyra", "trend", "Prishtina")
-    ]
+        new Product("Bakllav", "30\u20ac", "../Images/bakllav.png", "Flizza", "FOODS", "Prishtina"),
+        new Product("Fli", "25\u20ac", "ProductsImages/2.jfif", "Flizza", "FOODS", "Prishtina"),
+        new Product("Kadaif", "20\u20ac", "../Images/kadaif.jpg", "Flizza", "FOODS", "Prishtina"),
+        new Product("Chocolate Cake", "20\u20ac", "../Images/chocolate.jpg", "Dolcetto Vjosa", "FOODS", "Prishtina"),
+        new Product("Fruit Cake", "20\u20ac", "../Images/heart.jpg", "Dolcetto Vjosa", "FOODS", "Prishtina"),
+        new Product("Harry Potter and the Cake of Secrets", "25\u20ac", "../Images/hp.jpg", "Dolcetto Vjosa", "FOODS", "Prishtina")
+      ]
 }
 
 $.each(art.products, function (index, item) {
