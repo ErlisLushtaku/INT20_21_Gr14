@@ -129,7 +129,7 @@
         </section>
 
         <div id="yourCart" style="margin-top:20px;  z-index: 4000;">
-            <h2 style="text-decoration: underline;">Your Cart</h2>
+            <h2 style="text-decoration: underline; color: #333;">Your Cart</h2>
             <div id="scrollable">
                 <dl id="cartList">
 
@@ -137,13 +137,13 @@
             </div>
             <div id="bottom">
                 <h2>Total: <span id="totalPrice">0$</span></h2>
-                <button id="checkout" onclick="openForm()">CHECKOUT</button>
+                <button id="checkout" onclick="openForm()" style="width: 120px;  background-color:#d88e2c;">CHECKOUT</button>
             </div>
         </div>
     </section>
     <script type="text/javascript" src="TableView.js"></script>
 
-    <div id="bigDiv">
+    <div id="bigDiv" style="z-index: 6000;">
         <div class="form-popup" id="myForm" style="border-radius: 15px;">
             <form action="/action_page.php" class="form-container">
                 <h4>Contact information</h4>

@@ -66,6 +66,7 @@ body {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(116, 114, 114, 0.5);
+    color: #d88e2c;
 }
 
 #bottom {
@@ -80,21 +81,21 @@ body {
 
 #yourCart h2 {
   padding: 8px;
-  color: #d88e2c;
 }
 
 #checkout {
-    width: 120px;
+    
     border: 0px;
     border-radius: 5px;
     padding: 8px;
     color: white;
     font-size: 17px;
-    background-color:#d88e2c;
+   
 }
 
 #checkout:hover {
-    background-color: #d88e2c;
+    background-color: #333;
+    color:white;
     transition: 1s;
 }
 
