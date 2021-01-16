@@ -367,7 +367,7 @@ margin-left:70px;
 .box8 a{
   display:inline-block;
 padding:5px 5px;
-background:#F79B44;
+background:url(images/pie.png) right bottom no-repeat, url(images/card.jpg) left top repeat;;
 text-decoration:none;
 color:rgb(19, 17, 17);
 margin-top: 2px;
