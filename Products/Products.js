@@ -9,9 +9,9 @@ function Product(title, price, image, producer, category, city) {
 
 var art = {
   "products": [
-    new Product("Vizatimi 1", "100\u20ac", "../Images/abstract2.jpg", "Paint Me", "ART", "Prishtina"),
-    new Product("Vizatimi 2", "130\u20ac", "../Images/abstract4.jpg", "Paint Me", "ART", "Prishtina"),
-    new Product("Vizatimi 3", "180\u20ac", "../Images/abstract3.jpg", "Paint Me", "ART", "Prishtina"),
+    new Product("Mild Interruption", "100\u20ac", "../Images/abstract2.jpg", "Paint Me", "ART", "Prishtina"),
+    new Product("Mona Lisa and the Cat Lady", "130\u20ac", "../Images/abstract4.jpg", "Paint Me", "ART", "Prishtina"),
+    new Product("An Instinct for Dragons", "180\u20ac", "../Images/abstract3.jpg", "Paint Me", "ART", "Prishtina"),
     new Product("Bucket Hat", "20\u20ac", "../Images/yarny2.png", "Yarnyhandmade", "ART", "Vushtrri"),
     new Product("Crop Top", "25\u20ac", "../Images/yarny3.png", "Yarnyhandmade", "ART", "Vushtrri"),
     new Product("Crop Top", "35\u20ac", "../Images/yarny4.png", "Yarnyhandmade", "ART", "Vushtrri")
