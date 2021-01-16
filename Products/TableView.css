@@ -12,21 +12,8 @@
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    color: red;
+    color: #e7d1b5;
 }
-
-.section1 {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-    box-sizing: border-box;
-    background-color: white;
-    /* margin-top: -80px; */
-}
-
 
 .section3 {
     height: 1000px;
@@ -66,6 +53,7 @@
 
 body {
     position: relative;
+    background:linear-gradient(180deg,#999999,#dad8d8,#999999);
 }
 
 #yourCart {
@@ -92,21 +80,21 @@ body {
 
 #yourCart h2 {
   padding: 8px;
-  color: rgb(206, 23, 69);
+  color: #d88e2c;
 }
 
 #checkout {
-    width: 100px;
+    width: 120px;
     border: 0px;
     border-radius: 5px;
     padding: 8px;
     color: white;
     font-size: 17px;
-    background-color: rgb(218, 201, 50);
+    background-color:#d88e2c;
 }
 
 #checkout:hover {
-    background-color: rgb(170, 156, 33);
+    background-color: #d88e2c;
     transition: 1s;
 }
 
@@ -124,8 +112,8 @@ body {
     color: rgba(255, 255, 255, 0.9);
     background-color: rgba(0, 0, 0, 0.25);
     text-transform: uppercase;
-    border-top: 2px solid rgb(206, 23, 69);
-    border-bottom: 2px solid rgb(206, 23, 69);
+    border-top: 2px solid #d88e2c;
+    border-bottom: 2px solid #d88e2c;
     padding: 7px;
     padding-right: 70px;
 }
@@ -147,7 +135,7 @@ body {
 }
 
 .container tr a:hover td {
-    color: rgb(170, 156, 33);
+    color: #d88e2c;
     transition: 0.5s;
 }
 
@@ -159,24 +147,12 @@ body {
     padding: 5px;
     color: white;
     font-size: 13px;
-    background-color: rgb(206, 23, 69);
+    background-color: #d88e2c;
 }
 
 .container tr button:hover {
-    background-color: rgb(148, 16, 49);
+    background-color: #d88e2c;
     transition: 0.5s ease-in-out;
-}
-
-html {
-    background-image: url(wood.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: left top;
-    background-origin: border-box;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
 }
 
 #icons {
@@ -211,7 +187,7 @@ html {
 }
 
 #cartList button:hover {
-    color: rgb(185, 31, 31);
+    color: #d88e2c;
     transition: 0.5s;
 }
 
@@ -250,3 +226,44 @@ dl dd.inline {
 /* .product {
     border-radius: 10px;
   } */
+  .custom-shape-divider-top-1610755808 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1610755808 svg {
+    position: relative;
+    display: block;
+    width: calc(184% + 1.3px);
+    height: 500px;
+}
+
+.custom-shape-divider-top-1610755808 .shape-fill {
+    fill: #cccccc;
+    opacity: 0.8;
+}
+.custom-shape-divider-bottom-1610755546 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1610755546 svg {
+    position: relative;
+    display: block;
+    width: calc(177% + 1.3px);
+    height: 248px;
+}
+
+.custom-shape-divider-bottom-1610755546 .shape-fill {
+    fill: #BDBDBD;
+    opacity: 0.5;
+}
