@@ -209,7 +209,7 @@ function calcQuantity(title, price) {
             quantity.innerHTML = 'x' + (parseInt(quantity.innerHTML.substring(1)) + 1).toString();
 
             let newPrice = quantity.nextElementSibling;
-            newPrice.innerHTML = (parseFloat(price.slice(0, -1)) * parseInt(quantity.innerHTML.substring(1))).toFixed(2) + '$';
+            newPrice.innerHTML = (parseFloat(price.slice(0, -1)) * parseInt(quantity.innerHTML.substring(1))).toFixed(2) + '\u20ac';
 
             break;
         }
@@ -238,7 +238,7 @@ function calcTotal() {
         }
     }
 
-    document.getElementById("totalPrice").innerHTML = total.toFixed(2).toString() + "$"
+    document.getElementById("totalPrice").innerHTML = total.toFixed(2).toString() + "\u20ac"
 };
 
 window.onbeforeunload = function () {
