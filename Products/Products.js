@@ -224,7 +224,7 @@ $.each(cart, function (index, item) {
 calcTotal();
 
 function passCart() {
-  const cart = []
+  const cart = [];
 
   var cartList = document.getElementById("cartList");
   var titles = cartList.getElementsByTagName("dt");

@@ -82,15 +82,15 @@
 }
 
 .red {
-    color: rgb(206, 23, 69);
+    color:  #d88e2c;
 }
 
 .back-yellow {
-    background-color: rgb(218, 201, 50);
+    background-color: #333;
 }
 
 .back-red {
-    background-color: rgb(206, 23, 69);
+    background-color:  #d88e2c;
 }
 
 #size {
@@ -108,12 +108,12 @@
 }
 
 #to-cart:hover {
-    background-color: rgb(148, 16, 49);
+    background-color:  #d88e2c;
     transition: 1s;
 }
 
 #buy-now:hover {
-    background-color: rgb(170, 156, 33);
+    background-color: #333;
     transition: 1s;
 }
 
@@ -140,21 +140,22 @@
 
 #yourCart h2 {
     padding: 8px;
-    color: rgb(206, 23, 69);
+    color:  #d88e2c;
 }
 
 #checkout {
-    width: 100px;
+    width: 120px;
     border: 0px;
     border-radius: 5px;
     padding: 8px;
     color: white;
     font-size: 17px;
-    background-color: rgb(218, 201, 50);
+    background-color:  #d88e2c;
 }
 
 #checkout:hover {
-    background-color: rgb(170, 156, 33);
+    background-color: #333;
+    color:white;
     transition: 1s;
 }
 
@@ -168,7 +169,7 @@
 }
 
 #cartList button:hover {
-    color: rgb(185, 31, 31);
+    color:  #d88e2c;
     transition: 0.5s;
 }
 
@@ -253,7 +254,7 @@ dl dd.inline {
     outline: none;
   }
   .form-container .btn {
-    background-color: rgb(206, 23, 69);
+    background-color:  #d88e2c;
     color: white;
     padding: 16px 20px;
     border: none;
@@ -264,7 +265,7 @@ dl dd.inline {
 
   }
   .form-container .cancel {
-    background-color: rgb(218, 201, 50);
+    background-color:#333;
     
   }
   

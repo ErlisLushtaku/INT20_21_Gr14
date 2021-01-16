@@ -103,6 +103,14 @@ window.addEventListener('scroll', function () {
 <label for="" id="l2">Client</label><br/>
 <input type="radio" id="investor" name="person" value="investor">
 <label for="" id="l1">Investor</label><br/>
+<label for="categories-choice" style="font-size: 17px; padding-left: 18px; padding-top:10px;">What are you looking for?</label>
+<input list="categories" id="categories-choice" name="categories-choice"/>
+<datalist id="categories">
+    <option value="Promote my business">
+    <option value="Be part of the funding programs">
+    <option value="Be part of the team">
+    <option value="Other">
+</datalist>
 <input type="submit" id="persubmit" formtarget="_blank" value="Send" style="margin-bottom:20px;margin-left:210px;opacity:1;" onclick="return validation()">
     </form>
 <div class="content">

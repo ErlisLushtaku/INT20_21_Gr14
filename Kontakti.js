@@ -35,7 +35,7 @@ function getLocation() {
   }
   function name_validation(){
   
-      const name_pattern = new RegExp(/^([a-zA-Z]){2,30}$/);
+      const name_pattern = new RegExp(/^([a-zA-Z]){2,30}$/gi);
       const name = document.getElementById("name").value;
   
       if(name.match(name_pattern)){
@@ -49,7 +49,7 @@ function getLocation() {
   
   }
   function email_validation(){
-      const email_pattern = new RegExp(/^[^ ]+@[^ ]+\.[a-z]{2,3}$/);
+      const email_pattern = new RegExp(/^[^ ]+@[^ ]+\.[a-z]{2,3}$/gi);
       const email = document.getElementById("email").value;
       if(email.match(email_pattern)){
           document.getElementById("email").setAttribute("style","border:1px green solid ");
@@ -61,7 +61,7 @@ function getLocation() {
         }
   }
   function company_validaton(){
-      const company_pattern = new RegExp(/^([a-zA-Z ]){2,30}$/);
+      const company_pattern = new RegExp(/^([a-zA-Z ]){2,30}$/gi);
       const company = document.getElementById("company").value;
       if(company.match(company_pattern)){
           document.getElementById("company").setAttribute("style","border:1px green solid ");
