@@ -224,15 +224,7 @@ h3:hover span:nth-child(even){
   border-radius: 2px;
   z-index:3000;
 }
-.hyrja-scroll{
-  opacity: 0;
-  transform:translateY(5px);
-  transition:all 0.5s ease-out;
-}
-.hyrja-scroll.show {
-  opacity: 1;
-  transform:translateY(0);
-}
+
 
 .hyrja:hover{
 border:5px rgb(202, 173, 134) dotted;
