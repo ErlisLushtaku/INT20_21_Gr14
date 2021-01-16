@@ -6,7 +6,9 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-
+a {
+  text-decoration: none;
+}
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -15,9 +17,6 @@
 
 body {
   height: 100vh;
-  /* display: flex;
-  place-items: center; */
-  /* font-family: 'Rajdhani', sans-serif; */
   position: relative;
   background:linear-gradient(180deg,#999999,#dad8d8,#999999);
 }
@@ -61,7 +60,7 @@ body {
   text-align: center;
   margin-top: 80px;
   margin-bottom: 20px;
-  background-color: #f4f4f4;
+  background-color: rgba(244, 244, 244,0.5);
 }
 
 #art-h1 {
@@ -116,7 +115,6 @@ div.product:hover img {
 div.product:hover {
   transform: scale(1.1);
   box-shadow: 0 25px 40px rgba(116, 114, 114, 0.5);
-  /* background: linear-gradient(180deg,#f0be7c,rgb(34, 34, 34)); */
   transition: 0.5s ease-in-out;
 }
 
@@ -145,7 +143,7 @@ div.product .product-footer button:hover {
 }
 
 div.product .product-footer a h3:hover {
-  color: rgb(177, 163, 39);
+  color: rgb(131, 131, 131);
   transition: 0.7s;
 }
 
@@ -161,6 +159,7 @@ body {
   height: 550px;
   padding: 20px;
   border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.4);
   box-shadow: 0 0 20px rgba(116, 114, 114, 0.5);
 }
 
@@ -174,10 +173,6 @@ body {
   max-height: 380px;
 }
 
-#yourCart h2 {
-  padding: 8px;
-  color:#d88e2c;
-}
 
 #checkout {
   width: 100px;
@@ -186,7 +181,7 @@ body {
   padding: 8px;
   color: white;
   font-size: 17px;
-  background-color: #d88e2c;
+  background: #d88e2c;
 }
 
 #checkout:hover {
@@ -306,4 +301,13 @@ dl dd.inline {
 .custom-shape-divider-bottom-1610755546 .shape-fill {
   fill: #BDBDBD;
   opacity: 0.5;
+}
+.datalist1{
+  position: relative;
+  z-index: 5200;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 130px;
+  margin-top:0px;
+  padding-top:-20px;
+  color:#333;
 }
