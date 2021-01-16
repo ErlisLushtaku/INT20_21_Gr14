@@ -246,7 +246,7 @@ animation:animate 6s linear infinite;
 }
 .box5{
   grid-area: box5;
-  margin-top:-167px;
+  margin-top:-150px;
   z-index:6;
 
 }
