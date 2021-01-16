@@ -88,6 +88,11 @@ $.each(art.products, function (index, item) {
                   calcQuantity(item.title, item.price);
                 }
                 calcTotal();
+                if (document.getElementById("newTotal").innerHTML != "") {
+                  console.log(document.getElementById("discount").innerHTML.slice(3, -1));
+                  console.log(document.getElementById("totalPrice").innerHTML.slice(0, -1));
+                  document.getElementById("newTotal").innerHTML = " = " + (document.getElementById("totalPrice").innerHTML.slice(0, -1) - document.getElementById("discount").innerHTML.slice(3, -1)).toString() + "$"
+                }
               }
             })
           )
@@ -142,6 +147,11 @@ $.each(food.products, function (index, item) {
                   calcQuantity(item.title, item.price);
                 }
                 calcTotal();
+                if (document.getElementById("newTotal").innerHTML != "") {
+                  console.log(document.getElementById("discount").innerHTML.slice(3, -1));
+                  console.log(document.getElementById("totalPrice").innerHTML.slice(0, -1));
+                  document.getElementById("newTotal").innerHTML = " = " + (document.getElementById("totalPrice").innerHTML.slice(0, -1) - document.getElementById("discount").innerHTML.slice(3, -1)).toString() + "$"
+                }
               }
             })
           )
@@ -196,6 +206,11 @@ $.each(textile.products, function (index, item) {
                   calcQuantity(item.title, item.price);
                 }
                 calcTotal();
+                if (document.getElementById("newTotal").innerHTML != "") {
+                  console.log(document.getElementById("discount").innerHTML.slice(3, -1));
+                  console.log(document.getElementById("totalPrice").innerHTML.slice(0, -1));
+                  document.getElementById("newTotal").innerHTML = " = " + (document.getElementById("totalPrice").innerHTML.slice(0, -1) - document.getElementById("discount").innerHTML.slice(3, -1)).toString() + "$"
+                }
               }
             })
           )
@@ -246,6 +261,11 @@ function removeItem(elementId) {
   $("#" + elementId).next().remove();
   $("#" + elementId).remove();
   calcTotal();
+  if (document.getElementById("newTotal").innerHTML != "") {
+    console.log(document.getElementById("discount").innerHTML.slice(3, -1));
+    console.log(document.getElementById("totalPrice").innerHTML.slice(0, -1));
+    document.getElementById("newTotal").innerHTML = " = " + (document.getElementById("totalPrice").innerHTML.slice(0, -1) - document.getElementById("discount").innerHTML.slice(3, -1)).toString() + "$"
+  }
 }
 
 function calcQuantity(title, price) {
@@ -293,6 +313,35 @@ function calcTotal() {
 window.onbeforeunload = function () {
   passCart();
 };
+
+function random(min, max) {
+  const num = Math.floor(Math.random() * (max - min + 1)) + min;
+  return num;
+};
+
+function CurrentUser(coupon) {
+  this.coupon = coupon;
+}
+
+var checkoutClicked;
+
+$("#checkout").click(function () {
+  checkoutClicked = localStorage.getItem("checkoutClicked");
+  if (checkoutClicked == null) {
+    checkoutClicked = "false";
+  }
+  console.log(checkoutClicked);
+  if (checkoutClicked == "false") {
+    localStorage.setItem("checkoutClicked", "true");
+    console.log(checkoutClicked);
+    let rewardPrc = random(5, 25);
+    let oldTotal = document.getElementById("totalPrice").innerHTML.slice(0, -1);
+    let reward = oldTotal * rewardPrc / 100;
+    let newTotal = oldTotal - reward;
+    $("#discount").text(" - " + reward + "$");
+    $("#newTotal").text(" = " + newTotal + "$");
+  }
+})
 
 /* function addItem(title, price) {
   $("#cartList").append(
