@@ -5,8 +5,6 @@ if(JSON.parse(localStorage.getItem('users'))!=null) {
   users = JSON.parse(localStorage.getItem('users'));
 }
 
-console.log(JSON.parse(localStorage.getItem('users')))
-console.log(users)
 function signup_validation() {  
   username1_validation();
   password1_validation();

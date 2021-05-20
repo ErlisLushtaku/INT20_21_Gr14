@@ -1,4 +1,4 @@
-Array.prototype.check_username = function(username) {
+Array.prototype.check_username = function (username) {
   let index = -1;
   let exists = false;
   for (let i = 0; i < this.length; i++) {
@@ -13,9 +13,11 @@ Array.prototype.check_username = function(username) {
 
 var submit_form = new Array();
 
-if(JSON.parse(localStorage.getItem('users'))!=null) {
+if (JSON.parse(localStorage.getItem('users')) != null) {
   users = JSON.parse(localStorage.getItem('users'));
 }
+
+console.log(users[0]);
 
 function validation() {
   let username = document.getElementById("username").value;
@@ -47,7 +49,7 @@ function username_validation() {
 
   var username_pattern = new RegExp(/^(?=.{8,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/i);
   var username = document.getElementById("username").value;
-  
+
   if (username.match(username_pattern)) {
     document.getElementById("username").setAttribute("style", "border:1px green solid ");
     submit_form[0] = true;
@@ -63,7 +65,7 @@ function password_validation(index) {
   var password_pattern = new RegExp(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/i);
   var password = document.getElementById("password").value;
 
-  if(users[index].password != password) {
+  if (users[index].password != password) {
     window.alert("Incorrect password")
     document.getElementById("password").setAttribute("style", "border:1px red solid ");
     submit_form[1] = false;

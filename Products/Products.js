@@ -53,19 +53,21 @@ $.each(art.products, function (index, item) {
             .click(function () {
               localStorage.setItem('prod', JSON.stringify(item));
             })
-            .attr("href", "SingleProduct.html?")
+            .attr("href", "SingleProduct.html")
             .append($("<img>")
               .attr("src", item.image)
             )
           ),
         $("<div>")
           .attr("class", "product-footer")
-          .append($("<a>")
-            .click(function () {
-              localStorage.setItem('prod', JSON.stringify(item));
-            })
-            .attr("href", "SingleProduct.html?")
-            .append($("<h3>").text(item.title))
+          .append(
+            $("<a>")
+              .click(function () {
+                localStorage.setItem('prod', JSON.stringify(item));
+              })
+              .attr("href", "SingleProduct.html?")
+              .append(
+                $("<h3>").text(item.title))
           )
           .append($("<h4>").text(item.price))
           .append(
@@ -89,8 +91,6 @@ $.each(art.products, function (index, item) {
                 }
                 calcTotal();
                 if (document.getElementById("newTotal").innerHTML != "") {
-                  console.log(document.getElementById("discount").innerHTML.slice(3, -1));
-                  console.log(document.getElementById("totalPrice").innerHTML.slice(0, -1));
                   document.getElementById("newTotal").innerHTML = " = " + (document.getElementById("totalPrice").innerHTML.slice(0, -1) - document.getElementById("discount").innerHTML.slice(3, -1)).toString() + "\u20ac"
                 }
               }
@@ -148,8 +148,6 @@ $.each(food.products, function (index, item) {
                 }
                 calcTotal();
                 if (document.getElementById("newTotal").innerHTML != "") {
-                  console.log(document.getElementById("discount").innerHTML.slice(3, -1));
-                  console.log(document.getElementById("totalPrice").innerHTML.slice(0, -1));
                   document.getElementById("newTotal").innerHTML = " = " + (document.getElementById("totalPrice").innerHTML.slice(0, -1) - document.getElementById("discount").innerHTML.slice(3, -1)).toString() + "\u20ac"
                 }
               }
@@ -207,8 +205,6 @@ $.each(textile.products, function (index, item) {
                 }
                 calcTotal();
                 if (document.getElementById("newTotal").innerHTML != "") {
-                  console.log(document.getElementById("discount").innerHTML.slice(3, -1));
-                  console.log(document.getElementById("totalPrice").innerHTML.slice(0, -1));
                   document.getElementById("newTotal").innerHTML = " = " + (document.getElementById("totalPrice").innerHTML.slice(0, -1) - document.getElementById("discount").innerHTML.slice(3, -1)).toString() + "\u20ac"
                 }
               }
@@ -262,8 +258,6 @@ function removeItem(elementId) {
   $("#" + elementId).remove();
   calcTotal();
   if (document.getElementById("newTotal").innerHTML != "") {
-    console.log(document.getElementById("discount").innerHTML.slice(3, -1));
-    console.log(document.getElementById("totalPrice").innerHTML.slice(0, -1));
     document.getElementById("newTotal").innerHTML = " = " + (document.getElementById("totalPrice").innerHTML.slice(0, -1) - document.getElementById("discount").innerHTML.slice(3, -1)).toString() + "\u20ac"
   }
 }
@@ -319,29 +313,28 @@ function random(min, max) {
   return num;
 };
 
-function CurrentUser(coupon) {
-  this.coupon = coupon;
-}
-
 var checkoutClicked;
 
 $("#checkout").click(function () {
   checkoutClicked = localStorage.getItem("checkoutClicked");
+
   if (checkoutClicked == null) {
     checkoutClicked = "false";
   }
-  console.log(checkoutClicked);
+
   if (checkoutClicked == "false") {
     localStorage.setItem("checkoutClicked", "true");
-    console.log(checkoutClicked);
+
     let rewardPrc = random(5, 25);
     let oldTotal = document.getElementById("totalPrice").innerHTML.slice(0, -1);
     let reward = oldTotal * rewardPrc / 100;
     let newTotal = oldTotal - reward;
+
     $("#discount").text(" - " + reward + "\u20ac");
     $("#newTotal").text(" = " + newTotal + "\u20ac");
   }
 })
+
 /* function addItem(title, price) {
   $("#cartList").append(
     $("<li>").text(title + " - " + price)
